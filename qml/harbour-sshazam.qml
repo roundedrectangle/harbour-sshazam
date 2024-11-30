@@ -20,7 +20,7 @@ ApplicationWindow {
         path: '/apps/harbour-sshazam'
         id: appConfiguration
 
-        property string history: "[]"
+        property string history: '[]'
 
         ConfigurationGroup {
             id: appSettings
@@ -34,7 +34,7 @@ ApplicationWindow {
 
         function addToHistory(value) {
             var parsed = JSON.parse(history)
-            parsed.insert(0, value)
+            parsed.splice(0, 0, value)
             history = JSON.stringify(parsed)
         }
     }
@@ -81,7 +81,12 @@ ApplicationWindow {
                     trackFound = true
                     title = res[2]
                     subtitle = res[3]
-                    appConfiguration.addToHistory(res[1])
+                    try { appConfiguration.addToHistory(res[1]) }
+                    catch (err) {
+                        console.log("Error adding to history "+err)
+                        console.log("Proceeding with reset")
+                        appConfiguration.history = '[]'
+                    }
                 } else {
                     trackFound = false
                     title = ''

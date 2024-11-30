@@ -18,8 +18,12 @@
 <context>
     <name>FirstPage</name>
     <message>
-        <source>Show Page 2</source>
-        <translation>Zur Seite 2</translation>
+        <source>Recognition Result</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>History</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

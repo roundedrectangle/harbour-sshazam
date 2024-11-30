@@ -1,5 +1,5 @@
-%define package_library "yes"
-%define use_rust "no"
+%define package_library "no"
+%define use_rust "yes"
 # See README
 
 Name:       harbour-sshazam
@@ -22,9 +22,10 @@ Requires: pyotherside-qml-plugin-python3-qt5
 BuildRequires:  python3-base
 BuildRequires:  python3-devel
 BuildRequires: python3-pip
-if %{use_rust} == "yes"
-Requires: ffmpeg
 %endif
+
+%if %{package_library} == "yes" && %{use_rust} == "yes"
+Requires: ffmpeg
 %endif
 
 %if %{package_library} == "no"

@@ -3,16 +3,12 @@ import Sailfish.Silica 1.0
 import QtGraphicalEffects 1.0
 
 Page {
-    id: page
-
-    // The effective value will be restricted by ApplicationWindow.allowedOrientations
     allowedOrientations: Orientation.All
 
-    // To enable PullDownMenu, place our content in a SilicaFlickable
     SilicaListView {
+        id: listView
         anchors.fill: parent
         model: ListModel {
-            id: history
             function loadHistory() {
                 appConfiguration.getHistory().forEach(function (record) {
                     py.loadHistoryRecord(record, function(t,s) {
@@ -23,19 +19,9 @@ Page {
             Component.onCompleted: loadHistory()
         }
 
-        // PullDownMenu and PushUpMenu must be declared in SilicaFlickable, SilicaListView or SilicaGridView
-        PullDownMenu {
-            MenuItem {
-                text: qsTr("Show Page 2")
-                onClicked: pageStack.animatorPush(Qt.resolvedUrl("SecondPage.qml"))
-            }
-        }
-
         header: Column {
             width: parent.width
-            PageHeader {
-                title: "SShazam"
-            }
+            PageHeader { title: "SShazam" }
 
             Item {
                 height: Screen.width-Theme.horizontalPageMargin*2
@@ -85,21 +71,8 @@ Page {
                 }
             }
 
-            /*ButtonLayout {
-                Button {
-                    text: "Recognize"
-                    icon.source: "image://theme/icon-m-music"
-                    onClicked: py.call('main.record', [], function (res) {
-                        if (!res[0]) return
-                        console.log(JSON.stringify(res))
-                        py.title = res[1]
-                        py.subtitle = res[2]
-                    })
-                }
-            }*/
-
             SectionHeader {
-                text: "Recognition Result"
+                text: qsTr("Recognition Result")
                 visible: py.trackFound
             }
 
@@ -121,7 +94,8 @@ Page {
             }
 
             SectionHeader {
-                text: "History"
+                text: qsTr("History")
+                visible: listView.model.count > 0
             }
         }
 
@@ -140,28 +114,5 @@ Page {
                 }
             }
         }
-
-        /*// Tell SilicaFlickable the height of its content.
-        contentHeight: column.height
-
-        // Place our content in a Column.  The PageHeader is always placed at the top
-        // of the page, followed by our content.
-        Column {
-            id: column
-
-            width: page.width
-            spacing: Theme.paddingLarge
-            PageHeader {
-                title: qsTr("UI Template")
-            }
-            Label {
-                x: Theme.horizontalPageMargin
-                text: qsTr("Hello Sailors")
-                color: Theme.secondaryHighlightColor
-                font.pixelSize: Theme.fontSizeExtraLarge
-            }
-        }*/
-
-
     }
 }
