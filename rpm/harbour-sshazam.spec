@@ -22,6 +22,9 @@ Requires: pyotherside-qml-plugin-python3-qt5
 BuildRequires:  python3-base
 BuildRequires:  python3-devel
 BuildRequires: python3-pip
+if %{use_rust} == "yes"
+Requires: ffmpeg
+%endif
 %endif
 
 %if %{package_library} == "no"
