@@ -120,7 +120,7 @@ Page {
                 }
             }
 
-            SectionHeader  {
+            SectionHeader {
                 text: "History"
             }
         }

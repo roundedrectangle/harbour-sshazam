@@ -3,19 +3,27 @@ import sys, io, asyncio
 import logging
 from pathlib import Path
 import json
-
-# Pyotherside waits for all components to be created before running module import callback
-
-script_path = Path(__file__).absolute().parent # /usr/share/harbour-saildiscord/python
-sys.path.append(str(script_path.parent / 'lib/deps')) # /usr/share/harbour-saildiscord/lib/deps
-import shazamio
-# import soundfile as sf
-# import sounddevice as sd
-import pasimple
+import configparser
 
 logging.basicConfig()
 
+# Pyotherside waits for all components to be created before running module import callback
+
+script_path = Path(__file__).absolute().parent # /usr/share/harbour-sshazam/python
+sys.path.append(str(script_path.parent / 'lib/deps')) # /usr/share/harbour-sshazam/lib/deps
+
+while True: # FIXME
+    try:
+        import shazamio
+    except configparser.MissingSectionHeaderError:
+        logging.info("Workarounding configparser.MissingSectionHeaderError...")
+        continue
+    break
+
+import pasimple
+
 shazam = shazamio.Shazam()
+use_rust = 'recognize' in dir(shazam)
 
 def load(out):
     if isinstance(out, str):
@@ -26,7 +34,10 @@ def load(out):
     return (True, json.dumps(out), track.title, track.subtitle)
 
 async def _recognize(path):
-    out = await shazam.recognize(path)
+    if use_rust:
+        out = await shazam.recognize(path)
+    else:
+        out = await shazam.recognize_song(path)
     return load(out)
 
 def recognize(path):

@@ -1,4 +1,5 @@
 %define package_library "yes"
+%define use_rust "no"
 # See README
 
 Name:       harbour-sshazam
@@ -48,8 +49,16 @@ Uses Python and shazamio to connect to Shazam API. Local detection is planned
 %make_build
 
 %if %{package_library} == "yes"
-python3 -m pip install shazamio pasimple --target=%_builddir/deps
+
+%if %{use_rust} == "yes"
+python3 -m pip install shazamio --target=%_builddir/deps
+%else
+python3 -m pip install git+https://github.com/roundedrectangle/ShazamIO --target=%_builddir/deps
+%endif
+
+python3 -m pip install pasimple --target=%_builddir/deps
 rm -rf %_builddir/deps/bin
+
 %endif
 
 %install
