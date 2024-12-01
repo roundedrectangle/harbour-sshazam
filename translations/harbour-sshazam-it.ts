@@ -5,14 +5,14 @@
     <name>CoverPage</name>
     <message>
         <source>My Cover</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
     <name>Errors</name>
     <message>
         <source>Python error: %1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -27,46 +27,46 @@
     </message>
     <message>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Impostazioni</translation>
     </message>
     <message>
         <source>Reload history</source>
-        <translation type="unfinished"></translation>
+        <translation>Ricarica cronologia</translation>
     </message>
     <message>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Rimuovi</translation>
     </message>
     <message>
         <source>Could not remove record. Please try again. History was outdated</source>
-        <translation type="unfinished"></translation>
+        <translation>Non posso rimuovere l&apos;album. Per favore prova di nuovo. La cronologia non era aggiornata</translation>
     </message>
 </context>
 <context>
     <name>SettingsPage</name>
     <message>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Impostazioni</translation>
     </message>
     <message>
         <source>Recognition time</source>
-        <translation type="unfinished"></translation>
+        <translation>Durata riconoscimento</translation>
     </message>
     <message>
         <source>Rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Frequenza</translation>
     </message>
     <message>
         <source>Clear history</source>
-        <translation type="unfinished"></translation>
+        <translation>Elimina cronologia</translation>
     </message>
     <message>
         <source>Reset settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Resetta impostazioni</translation>
     </message>
     <message>
         <source>Show info messages in notifications</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra messaggi d&apos;informazione nelle notifiche</translation>
     </message>
 </context>
 </TS>
