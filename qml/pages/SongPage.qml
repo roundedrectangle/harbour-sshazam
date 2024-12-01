@@ -20,61 +20,95 @@ Page {
                              }
             Component {
                 id: songComponent
-                PagedView {
-                    id: songView
-                    model: pages
-                    width: Screen.width
-                    height: width
+                Column {
+                    width: parent.width
+                    PagedView {
+                        id: songView
+                        model: pages
+                        width: Screen.width
+                        height: width
 
-                    delegate: Image {
-                        width: PagedView.contentWidth
-                        height: PagedView.contentHeight
-                        source: image
-                        fillMode: Image.PreserveAspectCrop
+                        delegate: Image {
+                            width: PagedView.contentWidth
+                            height: PagedView.contentHeight
+                            source: image
+                            fillMode: Image.PreserveAspectCrop
+                        }
+
+                        SectionHeader {
+                            anchors.top: parent.top
+                            text: tab
+                            Rectangle {
+                                z: -1
+                                color: Theme.overlayBackgroundColor
+                                opacity: 0.75
+                                width: parent.parent.width
+                                height: parent.height + Theme.paddingSmall
+                                x: -parent.x
+                            }
+                        }
+
+                        Rectangle {
+                            anchors.bottom: parent.bottom
+                            width: infoColumn.width
+                            height: infoColumn.height + infoColumn.anchors.bottomMargin + Theme.paddingLarge
+                            opacity: 0.75
+                            color: Theme.overlayBackgroundColor
+                        }
+
+                        Column {
+                            id: infoColumn
+                            width: parent.width
+                            anchors {
+                                bottom: parent.bottom
+                                bottomMargin: Theme.paddingLarge
+                            }
+                            Label {
+                                text: title
+                                color: Theme.highlightColor
+                                font.pixelSize: Theme.fontSizeHuge
+
+                                x: Theme.paddingLarge
+                                width: parent.width-2*x
+                                wrapMode: Text.Wrap
+                            }
+
+                            Label {
+                                text: subtitle
+                                color: Theme.secondaryHighlightColor
+
+                                x: Theme.paddingLarge
+                                width: parent.width-2*x
+                                wrapMode: Text.Wrap
+                            }
+                            Label {
+                                text: songView.model.get(songView.currentIndex).caption
+                                font.pixelSize: Theme.fontSizeSmall
+                                color: Theme.secondaryColor
+
+                                x: Theme.paddingLarge
+                                width: parent.width-2*x
+                                wrapMode: Text.Wrap
+                                horizontalAlignment: Text.AlignHCenter
+                            }
+                        }
                     }
 
-                    Rectangle {
-                        anchors.bottom: parent.bottom
-                        width: infoColumn.width
-                        height: infoColumn.height + infoColumn.anchors.bottomMargin + Theme.paddingLarge
-                        opacity: 0.75
-                        color: Theme.overlayBackgroundColor
-                    }
-
-                    Column {
-                        id: infoColumn
+                    ColumnView {
                         width: parent.width
-                        anchors {
-                            bottom: parent.bottom
-                            bottomMargin: Theme.paddingLarge
-                        }
-                        Label {
-                            text: title
-                            color: Theme.highlightColor
-                            font.pixelSize: Theme.fontSizeHuge
-
-                            x: Theme.paddingLarge
-                            width: parent.width-2*x
-                            wrapMode: Text.Wrap
-                        }
-
-                        Label {
-                            text: subtitle
-                            color: Theme.secondaryHighlightColor
-
-                            x: Theme.paddingLarge
-                            width: parent.width-2*x
-                            wrapMode: Text.Wrap
-                        }
-                        Label {
-                            text: songView.model.get(songView.currentIndex).caption
-                            font.pixelSize: Theme.fontSizeSmall
-                            color: Theme.secondaryColor
-
-                            x: Theme.paddingLarge
-                            width: parent.width-2*x
-                            wrapMode: Text.Wrap
-                            horizontalAlignment: Text.AlignHCenter
+                        model: meta
+                        itemHeight: Theme.itemSizeExtraLarge
+                        delegate: Column {
+                            height: Theme.itemSizeExtraLarge
+                            width: parent.width
+                            SectionHeader { text: title }
+                            Label {
+                                text: model.text
+                                palette.primaryColor: Theme.highlightColor
+                                x: Theme.horizontalPageMargin
+                                width: parent.width - 2*x
+                                wrapMode: Text.Wrap
+                            }
                         }
                     }
                 }

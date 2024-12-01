@@ -4,7 +4,6 @@ from typing import List, Optional, Union
 import shazamio
 from shazamio.schemas.models import (
     SongSection, VideoSection, LyricsSection, RelatedSection, ArtistSection,
-    SongMetadata, SongMetaPages
 )
 
 def convert_sections(sections: Optional[List[Union[SongSection, VideoSection, LyricsSection, RelatedSection, ArtistSection]]]):
