@@ -97,18 +97,15 @@ Page {
                     ColumnView {
                         width: parent.width
                         model: meta
-                        itemHeight: Theme.itemSizeExtraLarge
-                        delegate: Column {
-                            height: Theme.itemSizeExtraLarge
-                            width: parent.width
-                            SectionHeader { text: title }
-                            Label {
-                                text: model.text
-                                palette.primaryColor: Theme.highlightColor
-                                x: Theme.horizontalPageMargin
-                                width: parent.width - 2*x
-                                wrapMode: Text.Wrap
-                            }
+                        itemHeight: Theme.itemSizeSmall
+                        delegate: Label {
+                            text: ('<font color="'+Theme.secondaryColor+'">%1:</font> <font color="'+Theme.primaryColor+'">%2</font>').arg(model.title).arg(model.text)
+                            palette.primaryColor: Theme.highlightColor
+                            verticalAlignment: Qt.AlignVCenter
+                            x: Theme.horizontalPageMargin
+                            width: parent.width - 2*x
+                            height: Theme.itemSizeSmall
+                            wrapMode: Text.Wrap
                         }
                     }
                 }
