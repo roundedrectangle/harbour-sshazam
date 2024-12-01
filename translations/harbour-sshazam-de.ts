@@ -18,6 +18,14 @@
 <context>
     <name>FirstPage</name>
     <message>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reload history</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Recognition Result</source>
         <translation type="unfinished"></translation>
     </message>
@@ -25,16 +33,40 @@
         <source>History</source>
         <translation type="unfinished"></translation>
     </message>
-</context>
-<context>
-    <name>SecondPage</name>
     <message>
-        <source>Nested Page</source>
-        <translation>Unterseite</translation>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Item</source>
-        <translation>Element</translation>
+        <source>Could not remove record. Please try again. History was outdated</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SettingsPage</name>
+    <message>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Recognition time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clear history</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reset settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show info messages in notifications</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

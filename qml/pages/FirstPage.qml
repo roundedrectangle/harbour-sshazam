@@ -7,16 +7,33 @@ Page {
 
     SilicaListView {
         id: listView
-        anchors.fill: parent
+        anchors {
+            fill: parent
+            bottomMargin: Theme.paddingLarge
+        }
+        spacing: Theme.paddingLarge
         model: ListModel {
             function loadHistory() {
-                appConfiguration.getHistory().forEach(function (record) {
-                    py.loadHistoryRecord(record, function(t,s) {
-                        append({ title: t, subtitle: s })
+                py.trackFound = false
+                clear()
+                appConfiguration.getHistory().forEach(function (record, i) {
+                    py.loadHistoryRecord(record, function(t,s,i) {
+                        append({ arrIndex: i, raw: record, title: t, subtitle: s, image: i })
                     })
                 })
             }
             Component.onCompleted: loadHistory()
+        }
+
+        PullDownMenu {
+            MenuItem {
+                text: qsTr("Settings")
+                onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
+            }
+            MenuItem {
+                text: qsTr("Reload history")
+                onClicked: listView.model.loadHistory()
+            }
         }
 
         header: Column {
@@ -27,6 +44,7 @@ Page {
                 height: Screen.width-Theme.horizontalPageMargin*2
                 width: height
                 anchors.horizontalCenter: parent.horizontalCenter
+
                 IconButton {
                     icon.source: "image://theme/icon-l-music"
                     anchors.centerIn: parent
@@ -36,9 +54,7 @@ Page {
                     height: parent.height - Theme.itemSizeLarge
                     width: height
 
-                    Behavior on height {
-                        NumberAnimation { duration: 500 }
-                    }
+                    Behavior on height { NumberAnimation { duration: 500 } }
 
                     Timer {
                         id: animationTimer
@@ -55,6 +71,7 @@ Page {
                     onClicked: {
                         if (animationTimer.running) return
                         animationTimer.start()
+                        if (py.trackFound) listView.model.loadHistory()
                         py.recognize(function() {
                             animationTimer.stop()
                             height = parent.height - Theme.itemSizeLarge
@@ -74,11 +91,19 @@ Page {
             SectionHeader {
                 text: qsTr("Recognition Result")
                 visible: py.trackFound
+                opacity: visible ? 1 : 0
+                height: visible ? implicitHeight : 0
+                Behavior on opacity { FadeAnimation {} }
+                Behavior on height { NumberAnimation { duration: 200 } }
             }
 
             ListItem {
                 contentHeight: Theme.itemSizeExtraLarge
                 visible: py.trackFound
+                opacity: visible ? 1 : 0
+                height: visible ? implicitHeight : 0
+                Behavior on opacity { FadeAnimation {} }
+                Behavior on height { NumberAnimation { duration: 200 } }
 
                 Column {
                     width: parent.width - Theme.horizontalPageMargin*2
@@ -91,17 +116,17 @@ Page {
                         color: Theme.secondaryColor
                     }
                 }
+
+                onClicked: pageStack.push(Qt.resolvedUrl('SongPage.qml'), { title: py.title, subtitle: py.subtitle, image: py.image })
             }
 
             SectionHeader {
                 text: qsTr("History")
-                visible: listView.model.count > 0
+                opacity: listView.model.count > 0 ? 1 : 0
             }
         }
 
         delegate: ListItem {
-            contentHeight: Theme.itemSizeExtraLarge
-
             Column {
                 width: parent.width - Theme.horizontalPageMargin*2
                 anchors.horizontalCenter: parent.horizontalCenter
@@ -113,6 +138,25 @@ Page {
                     color: Theme.secondaryColor
                 }
             }
+
+            onClicked: pageStack.push(Qt.resolvedUrl('SongPage.qml'), { title: title, subtitle: subtitle, image: image })
+
+            menu: Component { ContextMenu {
+                    MenuItem {
+                        text: qsTr("Remove")
+                        onClicked: {
+                            var history = appConfiguration.getHistory()
+                            if (history.length === listView.model.length) {
+                                listView.model.loadHistory()
+                                shared.showError(qsTr("Could not remove record. Please try again. History was outdated"))
+                                return
+                            }
+                            history.splice(arrIndex, 1)
+                            appConfiguration.setHistory(history)
+                            listView.model.loadHistory()
+                        }
+                    }
+                } }
         }
     }
 }

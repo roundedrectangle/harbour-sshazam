@@ -14,6 +14,7 @@ ApplicationWindow {
         id: notifier
         replacesId: 0
         onReplacesIdChanged: if (replacesId !== 0) replacesId = 0
+        isTransient: !appSettings.infoInNotifications
     }
 
     ConfigurationGroup {
@@ -25,17 +26,25 @@ ApplicationWindow {
         ConfigurationGroup {
             id: appSettings
             path: 'settings'
-            // placeholder
+
+            property int recognitionTime: 10
+            property int rate: 41000
+            property bool infoInNotifications: true
+
+            onRecognitionTimeChanged: py.applySettings()
+            onRateChanged: py.applySettings()
         }
 
-        function getHistory() {
-            return JSON.parse(history)
+        function getHistory() { return JSON.parse(history) }
+
+        function setHistory(newValue) {
+            history = JSON.stringify(newValue)
         }
 
         function addToHistory(value) {
-            var parsed = JSON.parse(history)
+            var parsed = getHistory()
             parsed.splice(0, 0, value)
-            history = JSON.stringify(parsed)
+            setHistory(parsed)
         }
     }
 
@@ -59,9 +68,12 @@ ApplicationWindow {
     Python {
         id: py
 
+        property bool initialized: false
+
         property bool trackFound: false
         property string title
         property string subtitle
+        property string image
 
         onError: shared.showError(qsTranslate("Errors", "Python error: %1").arg(traceback))
         onReceived: console.log("got message from python: " + data)
@@ -69,9 +81,14 @@ ApplicationWindow {
         Component.onCompleted: {
             addImportPath(Qt.resolvedUrl("../python"))
             importModule('main', function() {
-                // call('main.recognize', ['/home/defaultuser/Music/Lensko - Circles [NCS Release].mp3'], function (res) {console.log(res)})
-                //call('main.record', [], function (res) {console.log(res)})
+                applySettings(true)
+                initialized = true
             })
+        }
+
+        function applySettings(force) {
+            if (initialized || force)
+                call('main.set_settings', [appSettings.recognitionTime, appSettings.rate, Qt.locale().uiLanguages[0]])
         }
 
         function recognize(finalCallback) {
@@ -81,6 +98,7 @@ ApplicationWindow {
                     trackFound = true
                     title = res[2]
                     subtitle = res[3]
+                    image = res[4]
                     try { appConfiguration.addToHistory(res[1]) }
                     catch (err) {
                         console.log("Error adding to history "+err)
@@ -99,7 +117,7 @@ ApplicationWindow {
         function loadHistoryRecord(record, callback) {
             call('main.load', [record], function (res) {
                 if (res[0]) {
-                    callback(res[2], res[3])
+                    callback(res[2], res[3], res[4])
                 } else return
             })
         }
