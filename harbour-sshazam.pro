@@ -20,6 +20,7 @@ DISTFILES += qml/harbour-sshazam.qml \
     qml/cover/CoverPage.qml \
     qml/pages/FirstPage.qml \
     qml/pages/SecondPage.qml \
+    qml/pages/SettingsPage.qml \
     rpm/harbour-sshazam.changes.in \
     rpm/harbour-sshazam.changes.run.in \
     rpm/harbour-sshazam.spec \

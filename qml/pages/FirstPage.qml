@@ -12,11 +12,18 @@ Page {
             function loadHistory() {
                 appConfiguration.getHistory().forEach(function (record) {
                     py.loadHistoryRecord(record, function(t,s) {
-                        append({ title: t, subtitle: s })
+                        append({ raw: record, title: t, subtitle: s })
                     })
                 })
             }
             Component.onCompleted: loadHistory()
+        }
+
+        PullDownMenu {
+            MenuItem {
+                text: qsTr("Settings")
+                onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
+            }
         }
 
         header: Column {
@@ -36,9 +43,7 @@ Page {
                     height: parent.height - Theme.itemSizeLarge
                     width: height
 
-                    Behavior on height {
-                        NumberAnimation { duration: 500 }
-                    }
+                    Behavior on height { NumberAnimation { duration: 500 } }
 
                     Timer {
                         id: animationTimer
@@ -74,11 +79,19 @@ Page {
             SectionHeader {
                 text: qsTr("Recognition Result")
                 visible: py.trackFound
+                opacity: visible ? 1 : 0
+                height: visible ? implicitHeight : 0
+                Behavior on opacity { FadeAnimation {} }
+                Behavior on height { NumberAnimation { duration: 200 } }
             }
 
             ListItem {
                 contentHeight: Theme.itemSizeExtraLarge
                 visible: py.trackFound
+                opacity: visible ? 1 : 0
+                height: visible ? implicitHeight : 0
+                Behavior on opacity { FadeAnimation {} }
+                Behavior on height { NumberAnimation { duration: 200 } }
 
                 Column {
                     width: parent.width - Theme.horizontalPageMargin*2

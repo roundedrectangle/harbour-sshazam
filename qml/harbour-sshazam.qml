@@ -25,7 +25,12 @@ ApplicationWindow {
         ConfigurationGroup {
             id: appSettings
             path: 'settings'
-            // placeholder
+
+            property int recognitionTime: 10
+            property int rate: 41000
+
+            onRecognitionTimeChanged: py.applySettings()
+            onRateChanged: py.applySettings()
         }
 
         function getHistory() {
@@ -59,6 +64,8 @@ ApplicationWindow {
     Python {
         id: py
 
+        property bool initialized: false
+
         property bool trackFound: false
         property string title
         property string subtitle
@@ -69,9 +76,14 @@ ApplicationWindow {
         Component.onCompleted: {
             addImportPath(Qt.resolvedUrl("../python"))
             importModule('main', function() {
-                // call('main.recognize', ['/home/defaultuser/Music/Lensko - Circles [NCS Release].mp3'], function (res) {console.log(res)})
-                //call('main.record', [], function (res) {console.log(res)})
+                applySettings(true)
+                initialized = true
             })
+        }
+
+        function applySettings(force) {
+            if (initialized || force)
+                call('main.set_settings', [appSettings.recognitionTime, appSettings.rate])
         }
 
         function recognize(finalCallback) {

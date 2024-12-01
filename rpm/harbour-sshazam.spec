@@ -1,5 +1,5 @@
 %define package_library "no"
-%define use_rust "yes"
+%define use_rust "no"
 # See README
 
 Name:       harbour-sshazam
