@@ -51,6 +51,13 @@ Page {
                     Behavior on opacity { FadeAnimator{} }
                 }
             }
+
+            ButtonLayout {
+                Button {
+                    text: qsTr("Clear history")
+                    onClicked: appConfiguration.history = '[]'
+                }
+            }
         }
     }
 }

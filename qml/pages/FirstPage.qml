@@ -10,9 +10,10 @@ Page {
         anchors.fill: parent
         model: ListModel {
             function loadHistory() {
-                appConfiguration.getHistory().forEach(function (record) {
+                clear()
+                appConfiguration.getHistory().forEach(function (record, i) {
                     py.loadHistoryRecord(record, function(t,s) {
-                        append({ raw: record, title: t, subtitle: s })
+                        append({ arrIndex: i, raw: record, title: t, subtitle: s })
                     })
                 })
             }
@@ -24,6 +25,10 @@ Page {
                 text: qsTr("Settings")
                 onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
             }
+            MenuItem {
+                text: qsTr("Reload history")
+                onClicked: listView.model.loadHistory()
+            }
         }
 
         header: Column {
@@ -34,6 +39,7 @@ Page {
                 height: Screen.width-Theme.horizontalPageMargin*2
                 width: height
                 anchors.horizontalCenter: parent.horizontalCenter
+
                 IconButton {
                     icon.source: "image://theme/icon-l-music"
                     anchors.centerIn: parent
@@ -60,6 +66,10 @@ Page {
                     onClicked: {
                         if (animationTimer.running) return
                         animationTimer.start()
+                        if (py.trackFound) {
+                            py.trackFound = false
+                            listView.model.loadHistory()
+                        }
                         py.recognize(function() {
                             animationTimer.stop()
                             height = parent.height - Theme.itemSizeLarge
@@ -126,6 +136,23 @@ Page {
                     color: Theme.secondaryColor
                 }
             }
+
+            menu: Component { ContextMenu {
+                    MenuItem {
+                        text: qsTr("Remove")
+                        onClicked: {
+                            var history = appConfiguration.getHistory()
+                            if (history.length === listView.model.length) {
+                                listView.model.loadHistory()
+                                shared.showError(qsTr("Could not remove record. Please try again. History was outdated"))
+                                return
+                            }
+                            history.splice(arrIndex, 1)
+                            appConfiguration.setHistory(history)
+                            listView.model.loadHistory()
+                        }
+                    }
+                } }
         }
     }
 }

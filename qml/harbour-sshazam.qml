@@ -33,14 +33,16 @@ ApplicationWindow {
             onRateChanged: py.applySettings()
         }
 
-        function getHistory() {
-            return JSON.parse(history)
+        function getHistory() { return JSON.parse(history) }
+
+        function setHistory(newValue) {
+            history = JSON.stringify(newValue)
         }
 
         function addToHistory(value) {
-            var parsed = JSON.parse(history)
+            var parsed = getHistory()
             parsed.splice(0, 0, value)
-            history = JSON.stringify(parsed)
+            setHistory(parsed)
         }
     }
 
