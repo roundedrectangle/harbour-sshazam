@@ -5,61 +5,61 @@
     <name>Errors</name>
     <message>
         <source>Python error: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Ошибка Python: %1</translation>
     </message>
 </context>
 <context>
     <name>FirstPage</name>
     <message>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройки</translation>
     </message>
     <message>
         <source>Reload history</source>
-        <translation type="unfinished"></translation>
+        <translation>Перезагрузить историю</translation>
     </message>
     <message>
         <source>Recognition Result</source>
-        <translation type="unfinished"></translation>
+        <translation>Результат распознования</translation>
     </message>
     <message>
         <source>History</source>
-        <translation type="unfinished"></translation>
+        <translation>История</translation>
     </message>
     <message>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалить</translation>
     </message>
     <message>
         <source>Could not remove record. Please try again. History was outdated</source>
-        <translation type="unfinished"></translation>
+        <translation>Не удалось удалить запись. Пожалуйста, попробуйте ещё раз. История была устаревшей</translation>
     </message>
 </context>
 <context>
     <name>SettingsPage</name>
     <message>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройки</translation>
     </message>
     <message>
         <source>Recognition time</source>
-        <translation type="unfinished"></translation>
+        <translation>Время распознования</translation>
     </message>
     <message>
         <source>Rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Частота</translation>
     </message>
     <message>
         <source>Clear history</source>
-        <translation type="unfinished"></translation>
+        <translation>Очистить историю</translation>
     </message>
     <message>
         <source>Reset settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Сбросить настройки</translation>
     </message>
     <message>
         <source>Show info messages in notifications</source>
-        <translation type="unfinished"></translation>
+        <translation>Показывать информационные сообщения в уведомлениях</translation>
     </message>
 </context>
 </TS>

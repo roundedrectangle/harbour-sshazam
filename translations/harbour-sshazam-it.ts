@@ -2,13 +2,6 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="it_IT">
 <context>
-    <name>CoverPage</name>
-    <message>
-        <source>My Cover</source>
-        <translation></translation>
-    </message>
-</context>
-<context>
     <name>Errors</name>
     <message>
         <source>Python error: %1</source>
