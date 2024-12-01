@@ -63,6 +63,12 @@ ApplicationWindow {
             notifier.publish()
             console.log(text)
         }
+
+        function arrayToListModel(_parent, arr) {
+            var listModel = Qt.createQmlObject('import QtQuick 2.0;ListModel{}', _parent)
+            arr.forEach(function(el, i) { listModel.append(el) })
+            return listModel
+        }
     }
 
     Python {
@@ -73,7 +79,7 @@ ApplicationWindow {
         property bool trackFound: false
         property string title
         property string subtitle
-        property string image
+        property var sections: []
 
         onError: shared.showError(qsTranslate("Errors", "Python error: %1").arg(traceback))
         onReceived: console.log("got message from python: " + data)
@@ -98,7 +104,7 @@ ApplicationWindow {
                     trackFound = true
                     title = res[2]
                     subtitle = res[3]
-                    image = res[4]
+                    sections = res[4]
                     try { appConfiguration.addToHistory(res[1]) }
                     catch (err) {
                         console.log("Error adding to history "+err)

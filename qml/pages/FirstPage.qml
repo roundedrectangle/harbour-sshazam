@@ -17,8 +17,8 @@ Page {
                 py.trackFound = false
                 clear()
                 appConfiguration.getHistory().forEach(function (record, i) {
-                    py.loadHistoryRecord(record, function(t,s,i) {
-                        append({ arrIndex: i, raw: record, title: t, subtitle: s, image: i })
+                    py.loadHistoryRecord(record, function(t,s,se) {
+                        append({ arrIndex: i, raw: record, title: t, subtitle: s, sections: se })
                     })
                 })
             }
@@ -117,7 +117,7 @@ Page {
                     }
                 }
 
-                onClicked: pageStack.push(Qt.resolvedUrl('SongPage.qml'), { title: py.title, subtitle: py.subtitle, image: py.image })
+                onClicked: pageStack.push(Qt.resolvedUrl('SongPage.qml'), { title: py.title, subtitle: py.subtitle, sections: py.image })
             }
 
             SectionHeader {
@@ -139,7 +139,7 @@ Page {
                 }
             }
 
-            onClicked: pageStack.push(Qt.resolvedUrl('SongPage.qml'), { title: title, subtitle: subtitle, image: image })
+            onClicked: pageStack.push(Qt.resolvedUrl('SongPage.qml'), { title: title, subtitle: subtitle, sections: sections })
 
             menu: Component { ContextMenu {
                     MenuItem {
