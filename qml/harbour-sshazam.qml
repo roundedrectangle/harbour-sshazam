@@ -4,6 +4,7 @@ import "pages"
 import io.thp.pyotherside 1.0
 import Nemo.Notifications 1.0
 import Nemo.Configuration 1.0
+import Nemo.DBus 2.0
 
 ApplicationWindow {
     initialPage: Component { FirstPage { } }
@@ -30,9 +31,10 @@ ApplicationWindow {
             property int recognitionTime: 10
             property int rate: 41000
             property bool infoInNotifications: true
+            property string proxyType: "g"
+            property string customProxy: ""
 
-            onRecognitionTimeChanged: py.applySettings()
-            onRateChanged: py.applySettings()
+            onValueChanged: py.applySettings()
         }
 
         function getHistory() { return JSON.parse(history) }
@@ -46,6 +48,36 @@ ApplicationWindow {
             parsed.splice(0, 0, value)
             setHistory(parsed)
         }
+    }
+
+    DBusInterface {
+        id: globalProxy
+        bus: DBus.SystemBus
+        service: 'net.connman'
+        path: '/'
+        iface: 'org.sailfishos.connman.GlobalProxy'
+
+        signalsEnabled: true
+        function propertyChanged(name, value) { updateProxy() }
+
+        property string url
+        Component.onCompleted: updateProxy()
+
+        function updateProxy() {
+            // Sets the `url` to the global proxy URL, if enabled. Only manual proxy is supported, only the first address is used and excludes are not supported: FIXME
+            // When passing only one parameter, you can pass it without putting it into an array (aka [] brackets)
+            typedCall('GetProperty', {type: 's', value: 'Active'}, function (active){
+                if (active) typedCall('GetProperty', {type: 's', value: 'Configuration'}, function(conf) {
+                    if (conf['Method'] === 'manual') url = conf['Servers'][0]
+                    else url=''
+                }, function(e){url=''}); else url=''
+            }, function(e){url=''})
+        }
+    }
+
+    Connections {
+        target: globalProxy
+        onUrlChanged: py.applySettings()
     }
 
     QtObject {
@@ -68,6 +100,14 @@ ApplicationWindow {
             var listModel = Qt.createQmlObject('import QtQuick 2.0;ListModel{}', _parent)
             arr.forEach(function(el, i) { listModel.append(el) })
             return listModel
+        }
+
+        function getProxy() {
+            switch (appSettings.proxyType) {
+            case "g": return globalProxy.url
+            case "n": return ''
+            case "c": return appSettings.customProxy
+            }
         }
     }
 
@@ -94,7 +134,7 @@ ApplicationWindow {
 
         function applySettings(force) {
             if (initialized || force)
-                call('main.set_settings', [appSettings.recognitionTime, appSettings.rate, Qt.locale().uiLanguages[0]])
+                call('main.set_settings', [appSettings.recognitionTime, appSettings.rate, Qt.locale().uiLanguages[0], shared.getProxy()])
         }
 
         function recognize(finalCallback) {

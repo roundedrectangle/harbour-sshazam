@@ -22,18 +22,20 @@ while True: # FIXME
 
 import pasimple
 
-from util import convert_sections
+from util import convert_proxy, convert_sections
 
 shazam = shazamio.Shazam()
 use_rust = 'recognize' in dir(shazam)
 
 duration = 10 # seconds
 rate = 41000
+proxy = None
 
-def set_settings(d, r, l):
-    global duration, rate
+def set_settings(d, r, l, p):
+    global duration, rate, shazam, proxy
     duration, rate = d, r
     shazam.language = l
+    proxy = convert_proxy(p)
 
 def load(out):
     if isinstance(out, str):
@@ -46,9 +48,9 @@ def load(out):
 
 async def _recognize(path):
     if use_rust:
-        out = await shazam.recognize(path)
+        out = await shazam.recognize(path, proxy)
     else:
-        out = await shazam.recognize_song(path)
+        out = await shazam.recognize_song(path, proxy)
     return load(out)
 
 def recognize(path):
