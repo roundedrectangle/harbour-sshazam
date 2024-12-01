@@ -85,7 +85,7 @@ ApplicationWindow {
 
         function applySettings(force) {
             if (initialized || force)
-                call('main.set_settings', [appSettings.recognitionTime, appSettings.rate])
+                call('main.set_settings', [appSettings.recognitionTime, appSettings.rate, Qt.locale().uiLanguages[0]])
         }
 
         function recognize(finalCallback) {

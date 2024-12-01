@@ -7,9 +7,14 @@ Page {
 
     SilicaListView {
         id: listView
-        anchors.fill: parent
+        anchors {
+            fill: parent
+            bottomMargin: Theme.paddingLarge
+        }
+        spacing: Theme.paddingLarge
         model: ListModel {
             function loadHistory() {
+                py.trackFound = false
                 clear()
                 appConfiguration.getHistory().forEach(function (record, i) {
                     py.loadHistoryRecord(record, function(t,s) {
@@ -66,10 +71,7 @@ Page {
                     onClicked: {
                         if (animationTimer.running) return
                         animationTimer.start()
-                        if (py.trackFound) {
-                            py.trackFound = false
-                            listView.model.loadHistory()
-                        }
+                        if (py.trackFound) listView.model.loadHistory()
                         py.recognize(function() {
                             animationTimer.stop()
                             height = parent.height - Theme.itemSizeLarge
@@ -123,7 +125,7 @@ Page {
         }
 
         delegate: ListItem {
-            contentHeight: Theme.itemSizeExtraLarge
+            //contentHeight: Theme.itemSizeExtraLarge
 
             Column {
                 width: parent.width - Theme.horizontalPageMargin*2

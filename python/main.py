@@ -28,9 +28,10 @@ use_rust = 'recognize' in dir(shazam)
 duration = 10 # seconds
 rate = 41000
 
-def set_settings(d, r):
+def set_settings(d, r, l):
     global duration, rate
     duration, rate = d, r
+    shazam.language = l
 
 def load(out):
     if isinstance(out, str):
