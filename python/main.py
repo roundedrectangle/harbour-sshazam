@@ -15,6 +15,7 @@ sys.path.append(str(script_path.parent / 'lib/deps')) # /usr/share/harbour-sshaz
 while True: # FIXME
     try:
         import shazamio
+        import shazamio.factory_misc as shz_f
     except configparser.MissingSectionHeaderError:
         logging.info("Workarounding configparser.MissingSectionHeaderError...")
         continue
@@ -38,8 +39,17 @@ def load(out):
         out = json.loads(out)
     track = shazamio.Serialize.full_track(out).track
     if not track:
-        return (False,'','','')
-    return (True, json.dumps(out), track.title, track.subtitle)
+        return (False,)
+    
+    img = ''
+    for sec in track.sections or ():
+        if isinstance(sec, shz_f.SongSection):
+            for page in sec.meta_pages:
+                if page.image:
+                    # We use last image, so no need to `break`
+                    img = page.image
+
+    return (True, json.dumps(out), track.title, track.subtitle, img)
 
 async def _recognize(path):
     if use_rust:
@@ -49,7 +59,6 @@ async def _recognize(path):
     return load(out)
 
 def recognize(path):
-    # '/home/defaultuser/Music/Tobu - Higher.mp3'
     return asyncio.run(_recognize(path))
 
 def record():

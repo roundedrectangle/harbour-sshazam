@@ -17,8 +17,8 @@ Page {
                 py.trackFound = false
                 clear()
                 appConfiguration.getHistory().forEach(function (record, i) {
-                    py.loadHistoryRecord(record, function(t,s) {
-                        append({ arrIndex: i, raw: record, title: t, subtitle: s })
+                    py.loadHistoryRecord(record, function(t,s,i) {
+                        append({ arrIndex: i, raw: record, title: t, subtitle: s, image: i })
                     })
                 })
             }
@@ -116,17 +116,17 @@ Page {
                         color: Theme.secondaryColor
                     }
                 }
+
+                onClicked: pageStack.push(Qt.resolvedUrl('SongPage.qml'), { title: py.title, subtitle: py.subtitle, image: py.image })
             }
 
             SectionHeader {
                 text: qsTr("History")
-                visible: listView.model.count > 0
+                opacity: listView.model.count > 0 ? 1 : 0
             }
         }
 
         delegate: ListItem {
-            //contentHeight: Theme.itemSizeExtraLarge
-
             Column {
                 width: parent.width - Theme.horizontalPageMargin*2
                 anchors.horizontalCenter: parent.horizontalCenter
@@ -138,6 +138,8 @@ Page {
                     color: Theme.secondaryColor
                 }
             }
+
+            onClicked: pageStack.push(Qt.resolvedUrl('SongPage.qml'), { title: title, subtitle: subtitle, image: image })
 
             menu: Component { ContextMenu {
                     MenuItem {

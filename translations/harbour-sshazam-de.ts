@@ -18,19 +18,19 @@
 <context>
     <name>FirstPage</name>
     <message>
-        <source>Recognition Result</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>History</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Reload history</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Recognition Result</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>History</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -58,6 +58,14 @@
     </message>
     <message>
         <source>Clear history</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reset settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show info messages in notifications</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

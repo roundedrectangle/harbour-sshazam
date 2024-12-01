@@ -14,6 +14,7 @@ ApplicationWindow {
         id: notifier
         replacesId: 0
         onReplacesIdChanged: if (replacesId !== 0) replacesId = 0
+        isTransient: !appSettings.infoInNotifications
     }
 
     ConfigurationGroup {
@@ -28,6 +29,7 @@ ApplicationWindow {
 
             property int recognitionTime: 10
             property int rate: 41000
+            property bool infoInNotifications: true
 
             onRecognitionTimeChanged: py.applySettings()
             onRateChanged: py.applySettings()
@@ -71,6 +73,7 @@ ApplicationWindow {
         property bool trackFound: false
         property string title
         property string subtitle
+        property string image
 
         onError: shared.showError(qsTranslate("Errors", "Python error: %1").arg(traceback))
         onReceived: console.log("got message from python: " + data)
@@ -95,6 +98,7 @@ ApplicationWindow {
                     trackFound = true
                     title = res[2]
                     subtitle = res[3]
+                    image = res[4]
                     try { appConfiguration.addToHistory(res[1]) }
                     catch (err) {
                         console.log("Error adding to history "+err)
@@ -113,7 +117,7 @@ ApplicationWindow {
         function loadHistoryRecord(record, callback) {
             call('main.load', [record], function (res) {
                 if (res[0]) {
-                    callback(res[2], res[3])
+                    callback(res[2], res[3], res[4])
                 } else return
             })
         }

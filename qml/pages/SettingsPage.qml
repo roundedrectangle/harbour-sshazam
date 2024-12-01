@@ -57,6 +57,17 @@ Page {
                     text: qsTr("Clear history")
                     onClicked: appConfiguration.history = '[]'
                 }
+
+                Button {
+                    text: qsTr("Reset settings")
+                    onClicked: appSettings.clear()
+                }
+            }
+
+            TextSwitch {
+                text: qsTr("Show info messages in notifications")
+                checked: appSettings.infoInNotifications
+                onCheckedChanged: appSettings.infoInNotifications = checked
             }
         }
     }
