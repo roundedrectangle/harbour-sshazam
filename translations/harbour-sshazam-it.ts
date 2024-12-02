@@ -34,6 +34,22 @@
         <source>Could not remove record. Please try again. History was outdated</source>
         <translation>Non posso rimuovere l&apos;album. Per favore prova di nuovo. La cronologia non era aggiornata</translation>
     </message>
+    <message>
+        <source>Recording</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Processing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Almost done</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Loading</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SettingsPage</name>

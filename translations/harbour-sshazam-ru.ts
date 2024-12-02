@@ -34,6 +34,22 @@
         <source>Could not remove record. Please try again. History was outdated</source>
         <translation>Не удалось удалить запись. Пожалуйста, попробуйте ещё раз. История была устаревшей</translation>
     </message>
+    <message>
+        <source>Recording</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Processing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Almost done</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Loading</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SettingsPage</name>

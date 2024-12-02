@@ -120,11 +120,14 @@ ApplicationWindow {
         property string title
         property string subtitle
         property var sections: []
+        property int recognitionState: 0
 
         onError: shared.showError(qsTranslate("Errors", "Python error: %1").arg(traceback))
         onReceived: console.log("got message from python: " + data)
 
         Component.onCompleted: {
+            setHandler('recordingstate', function (state) { recognitionState = state })
+
             addImportPath(Qt.resolvedUrl("../python"))
             importModule('main', function() {
                 applySettings(true)
@@ -156,6 +159,7 @@ ApplicationWindow {
                     title = ''
                     subtitle = ''
                 }
+                recognitionState = 0
                 finalCallback()
             })
         }

@@ -51,12 +51,15 @@ async def _recognize(path):
         out = await shazam.recognize(path, proxy)
     else:
         out = await shazam.recognize_song(path, proxy)
+    qsend('recordingstate', 4)
     return load(out)
 
 def recognize(path):
     return asyncio.run(_recognize(path))
 
 def record():
+    qsend('recordingstate', 2)
     f = io.BytesIO()
     pasimple.record_wav(f, duration, sample_rate=rate)
+    qsend('recordingstate', 3)
     return asyncio.run(_recognize(f.getvalue()))

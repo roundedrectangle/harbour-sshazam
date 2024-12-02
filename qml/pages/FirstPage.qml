@@ -88,6 +88,26 @@ Page {
                 }
             }
 
+            Label {
+                text: switch (py.recognitionState) {
+                      case 2: return qsTr("Recording")
+                      case 3: return qsTr("Processing")
+                      case 4: return qsTr("Almost done")
+                      default: return qsTr("Loading")
+                      }
+                visible: animationTimer.running && py.recognitionState > 0
+                color: Theme.highlightColor
+                font.pixelSize: Theme.fontSizeMedium
+                x: Theme.horizontalPageMargin
+                width: parent.width - 2*x
+                horizontalAlignment: Qt.AlignHCenter
+
+                opacity: visible ? 1 : 0
+                height: visible ? implicitHeight : 0
+                Behavior on opacity { FadeAnimation {} }
+                Behavior on height { NumberAnimation { duration: 200 } }
+            }
+
             SectionHeader {
                 text: qsTr("Recognition Result")
                 visible: py.trackFound
@@ -97,7 +117,7 @@ Page {
                 Behavior on height { NumberAnimation { duration: 200 } }
             }
 
-            ListItem {
+            BackgroundItem {
                 contentHeight: Theme.itemSizeExtraLarge
                 visible: py.trackFound
                 opacity: visible ? 1 : 0
