@@ -33,7 +33,6 @@ Page {
                     Behavior on opacity { FadeAnimator{} }
                 }
             }
-
             TextField {
                 id: rateField
                 label: qsTr("Sample rate")
@@ -51,6 +50,12 @@ Page {
                     opacity: rateField.text == "41000" ? 0 : 1
                     Behavior on opacity { FadeAnimator{} }
                 }
+            }
+            TextField {
+                label: qsTr("Shazam language")
+                description: qsTr("Example: en-US. Leave empty to use system language")
+                text: appSettings.language
+                onTextChanged: appSettings.language = text
             }
 
             SectionHeader { text: qsTr("Debugging") }
@@ -103,6 +108,8 @@ Page {
                     onClicked: appSettings.clear()
                 }
             }
+
+            Item { width:1; height: Theme.paddingLarge }
         }
     }
 }

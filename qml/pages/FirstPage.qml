@@ -106,6 +106,7 @@ Page {
                 height: visible ? implicitHeight : 0
                 Behavior on opacity { FadeAnimation {} }
                 Behavior on height { NumberAnimation { duration: 200 } }
+                onHeightChanged: listView.positionViewAtBeginning()
             }
 
             SectionHeader {
@@ -115,6 +116,7 @@ Page {
                 height: visible ? implicitHeight : 0
                 Behavior on opacity { FadeAnimation {} }
                 Behavior on height { NumberAnimation { duration: 200 } }
+                onHeightChanged: listView.positionViewAtBeginning()
             }
 
             BackgroundItem {
@@ -124,6 +126,7 @@ Page {
                 height: visible ? implicitHeight : 0
                 Behavior on opacity { FadeAnimation {} }
                 Behavior on height { NumberAnimation { duration: 200 } }
+                onHeightChanged: listView.positionViewAtBeginning()
 
                 Column {
                     width: parent.width - Theme.horizontalPageMargin*2
@@ -143,10 +146,14 @@ Page {
             SectionHeader {
                 text: qsTr("History")
                 opacity: listView.model.count > 0 ? 1 : 0
+                Behavior on opacity { FadeAnimator {} }
             }
         }
 
         delegate: ListItem {
+            id: listItem
+            ListView.onAdd: AddAnimation { target: listItem }
+
             Column {
                 width: parent.width - Theme.horizontalPageMargin*2
                 anchors.horizontalCenter: parent.horizontalCenter

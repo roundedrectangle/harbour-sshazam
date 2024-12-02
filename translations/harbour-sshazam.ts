@@ -121,5 +121,13 @@
         <source>Storage</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Shazam language</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Example: en-US. Leave empty to use system language</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

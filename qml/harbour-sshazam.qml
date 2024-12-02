@@ -30,6 +30,7 @@ ApplicationWindow {
 
             property int recognitionTime: 10
             property int rate: 41000
+            property string language: ""
             property bool infoInNotifications: true
             property string proxyType: "g"
             property string customProxy: ""
@@ -137,7 +138,12 @@ ApplicationWindow {
 
         function applySettings(force) {
             if (initialized || force)
-                call('main.set_settings', [appSettings.recognitionTime, appSettings.rate, Qt.locale().uiLanguages[0], shared.getProxy()])
+                call('main.set_settings', [
+                         appSettings.recognitionTime,
+                         appSettings.rate,
+                         !!appSettings.language ? appSettings.language :  Qt.locale().uiLanguages[0],
+                         shared.getProxy(),
+                     ])
         }
 
         function recognize(finalCallback) {
