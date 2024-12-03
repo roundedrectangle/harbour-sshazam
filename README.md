@@ -2,6 +2,11 @@
 
 Shazam for SailfishOS. WIP
 
+## Known issues
+
+- armv7hl builds are slow at processing. This is because armv7hl doesn't use Rust for now
+- recognition button is blurry
+
 ## Building
 
 Make sure to set the variables in SPEC file corrently. They're placed at the top of the file and can contain eathier `yes` or `no` in them.
