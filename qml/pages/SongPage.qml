@@ -27,15 +27,21 @@ Page {
                         model: pages
                         width: Screen.width
                         height: width
+                        property bool active: true
 
                         delegate: Image {
                             width: PagedView.contentWidth
                             height: PagedView.contentHeight
                             source: image
                             fillMode: Image.PreserveAspectCrop
+
+                            MouseArea {
+                                anchors.fill: parent
+                                onClicked: songView.active = !songView.active
+                            }
                         }
 
-                        SectionHeader {
+                        /*SectionHeader {
                             anchors.top: parent.top
                             text: tab
                             Rectangle {
@@ -46,14 +52,19 @@ Page {
                                 height: parent.height + Theme.paddingSmall
                                 x: -parent.x
                             }
-                        }
+
+                            opacity: songView.active ? 1.0 : 0.0
+                            Behavior on opacity { FadeAnimator {}}
+                        }*/
 
                         Rectangle {
                             anchors.bottom: parent.bottom
                             width: infoColumn.width
                             height: infoColumn.height + infoColumn.anchors.bottomMargin + Theme.paddingLarge
-                            opacity: 0.75
                             color: Theme.overlayBackgroundColor
+
+                            opacity: songView.active ? 0.75 : 0.0
+                            Behavior on opacity { FadeAnimator {}}
                         }
 
                         Column {
@@ -91,6 +102,9 @@ Page {
                                 wrapMode: Text.Wrap
                                 horizontalAlignment: Text.AlignHCenter
                             }
+
+                            opacity: songView.active ? 1.0 : 0.0
+                            Behavior on opacity { FadeAnimator {}}
                         }
                     }
 
