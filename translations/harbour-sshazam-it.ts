@@ -36,19 +36,19 @@
     </message>
     <message>
         <source>Recording</source>
-        <translation type="unfinished"></translation>
+        <translation>Sto registrando</translation>
     </message>
     <message>
         <source>Processing</source>
-        <translation type="unfinished"></translation>
+        <translation>Sto processando</translation>
     </message>
     <message>
         <source>Almost done</source>
-        <translation type="unfinished"></translation>
+        <translation>Quasi fatto</translation>
     </message>
     <message>
         <source>Loading</source>
-        <translation type="unfinished"></translation>
+        <translation>Caricamento</translation>
     </message>
 </context>
 <context>
@@ -75,59 +75,59 @@
     </message>
     <message>
         <source>Recognition</source>
-        <translation type="unfinished"></translation>
+        <translation>Riconoscimento</translation>
     </message>
     <message>
         <source>Sample rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Frequenza campionamento</translation>
     </message>
     <message>
         <source>Debugging</source>
-        <translation type="unfinished"></translation>
+        <translation>Debugging</translation>
     </message>
     <message>
         <source>Networking</source>
-        <translation type="unfinished"></translation>
+        <translation>Rete</translation>
     </message>
     <message>
         <source>Login page always uses the global proxy regardless of these settings. Attachments, avatars and other static elements may not use proxy at all. Restart the app to apply</source>
-        <translation type="unfinished"></translation>
+        <translation>La pagina di accesso usa sempre le impostazioni globali del proxy a discapito di queste impostazioni. Allegati, avatar e altri elementi statici potrebbero non usare il proxy del tutto. Riavvia l&apos;app per applicare</translation>
     </message>
     <message>
         <source>Proxy</source>
-        <translation type="unfinished"></translation>
+        <translation>Proxy</translation>
     </message>
     <message>
         <source>global proxy</source>
-        <translation type="unfinished"></translation>
+        <translation>proxy globale</translation>
     </message>
     <message>
         <source>disable</source>
-        <translation type="unfinished"></translation>
+        <translation>disabilita</translation>
     </message>
     <message>
         <source>custom</source>
-        <translation type="unfinished"></translation>
+        <translation>personalizzato</translation>
     </message>
     <message>
         <source>HTTP proxy address</source>
-        <translation type="unfinished"></translation>
+        <translation>Indirizzo proxy HTTP</translation>
     </message>
     <message>
         <source>Specify port by semicolon, if required</source>
-        <translation type="unfinished"></translation>
+        <translation>Specifica la porta con un punto e virgola, se necessario</translation>
     </message>
     <message>
         <source>Storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Memoria</translation>
     </message>
     <message>
         <source>Shazam language</source>
-        <translation type="unfinished"></translation>
+        <translation>Lingua di Shazam</translation>
     </message>
     <message>
         <source>Example: en-US. Leave empty to use system language</source>
-        <translation type="unfinished"></translation>
+        <translation>Esempio: it-IT. Lascia vuoto per usare la lingua di sistema</translation>
     </message>
 </context>
 </TS>
