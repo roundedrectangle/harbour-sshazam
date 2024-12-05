@@ -37,7 +37,7 @@ Requires: python3-pip
 
 %define __provides_exclude_from ^%{_datadir}/.*$
 %global _missing_build_ids_terminate_build 0
-%define __requires_exclude ^libgfortran-daac5196.*$
+%define __requires_exclude ^libgfortran-daac5196|libopenblas64_p-r0-cecebdce.*$
 
 %description
 Uses Python and shazamio to connect to Shazam API. Local detection is planned
