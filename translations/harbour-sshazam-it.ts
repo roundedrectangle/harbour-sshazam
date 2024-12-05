@@ -65,6 +65,10 @@
         <source>Loading</source>
         <translation>Caricamento</translation>
     </message>
+    <message>
+        <source>About</source>
+        <translation type="unfinished">Info</translation>
+    </message>
 </context>
 <context>
     <name>LicenseListPart</name>

@@ -1,8 +1,8 @@
 from re import L
 from typing import List, Optional, Union
 import urllib.parse
+from datetime import datetime, timezone
 
-import shazamio
 from shazamio.schemas.models import (
     SongSection, VideoSection, LyricsSection, RelatedSection, ArtistSection,
 )
@@ -31,3 +31,7 @@ def convert_proxy(proxy):
     p = urllib.parse.ParseResult('http', netloc, path, *p[3:])
 
     return p.geturl()
+
+def qml_date(date: datetime):
+    """Convert to UTC Unix timestamp using milliseconds"""
+    return date.timestamp()*1000

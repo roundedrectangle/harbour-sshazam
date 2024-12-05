@@ -10,7 +10,7 @@ Page {
     SilicaListView {
         id: root
         anchors.fill: parent
-        model: sections
+        model: shared.arrayToListModel(parent, sections)
 
         delegate: Loader {
             width: parent.width

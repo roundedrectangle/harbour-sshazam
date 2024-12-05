@@ -17,8 +17,8 @@ Page {
                 py.trackFound = false
                 clear()
                 appConfiguration.getHistory().forEach(function (record, i) {
-                    py.loadHistoryRecord(record, function(t,s,se) {
-                        append({ arrIndex: i, raw: record, title: t, subtitle: s, sections: se })
+                    py.loadHistoryRecord(record, function(t,s,se,d) {
+                        append({ arrIndex: i, raw: record, title: t, subtitle: s, sections: se, date: d })
                     })
                 })
             }
@@ -144,7 +144,7 @@ Page {
                     }
                 }
 
-                onClicked: pageStack.push(Qt.resolvedUrl('SongPage.qml'), { title: py.title, subtitle: py.subtitle, sections: py.image })
+                onClicked: pageStack.push(Qt.resolvedUrl('SongPage.qml'), { title: py.title, subtitle: py.subtitle, sections: py.sections })
             }
 
             SectionHeader {
@@ -157,8 +157,10 @@ Page {
         delegate: ListItem {
             id: listItem
             ListView.onAdd: AddAnimation { target: listItem }
+            contentHeight: historyItem.height
 
             Column {
+                id: historyItem
                 width: parent.width - Theme.horizontalPageMargin*2
                 anchors.horizontalCenter: parent.horizontalCenter
                 Label {
@@ -167,6 +169,9 @@ Page {
                 Label {
                     text: subtitle
                     color: Theme.secondaryColor
+                }
+                Label {
+                    text: Format.formatDate(date, Formatter.TimepointRelative)
                 }
             }
 

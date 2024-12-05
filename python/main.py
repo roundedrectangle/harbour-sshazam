@@ -4,6 +4,7 @@ import logging
 from pathlib import Path
 import json
 import configparser
+from datetime import datetime
 
 logging.basicConfig()
 
@@ -22,7 +23,7 @@ while True: # FIXME
 
 import pasimple
 
-from util import convert_proxy, convert_sections
+from util import convert_proxy, convert_sections, qml_date
 
 shazam = shazamio.Shazam()
 use_rust = 'recognize' in dir(shazam)
@@ -37,14 +38,16 @@ def set_settings(d, r, l, p):
     shazam.language = l
     proxy = convert_proxy(p)
 
-def load(out):
+def load(out, new=False):
     if isinstance(out, str):
         out = json.loads(out)
+    if new:
+        out['__sshazam_date'] = qml_date(datetime.now())
     track = shazamio.Serialize.full_track(out).track
     if not track:
         return (False,)
 
-    return (True, json.dumps(out), track.title, track.subtitle, convert_sections(track.sections))
+    return (True, json.dumps(out), track.title, track.subtitle, convert_sections(track.sections), out.get('__sshazam_date', -1))
 
 async def _recognize(path):
     if use_rust:
@@ -52,7 +55,7 @@ async def _recognize(path):
     else:
         out = await shazam.recognize_song(path, proxy)
     qsend('recordingstate', 4)
-    return load(out)
+    return load(out, new=True)
 
 def recognize(path):
     return asyncio.run(_recognize(path))

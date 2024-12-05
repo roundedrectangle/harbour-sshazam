@@ -98,6 +98,7 @@ ApplicationWindow {
         }
 
         function arrayToListModel(_parent, arr) {
+            if (!arr.forEach) return arr
             var listModel = Qt.createQmlObject('import QtQuick 2.0;ListModel{}', _parent)
             arr.forEach(function(el, i) { listModel.append(el) })
             return listModel
@@ -106,7 +107,7 @@ ApplicationWindow {
         function getProxy() {
             switch (appSettings.proxyType) {
             case "g": return globalProxy.url
-            case "n": return ''
+            case "n": return
             case "c": return appSettings.customProxy
             }
         }
@@ -154,6 +155,7 @@ ApplicationWindow {
                     title = res[2]
                     subtitle = res[3]
                     sections = res[4]
+                    console.log("Date found (not using because it is .now())", res[5] < 0 ? null : new Date(res[5]))
                     try { appConfiguration.addToHistory(res[1]) }
                     catch (err) {
                         console.log("Error adding to history "+err)
@@ -173,7 +175,7 @@ ApplicationWindow {
         function loadHistoryRecord(record, callback) {
             call('main.load', [record], function (res) {
                 if (res[0]) {
-                    callback(res[2], res[3], res[4])
+                    callback(res[2], res[3], res[4], res[5] < 0 ? undefined : new Date(res[5]))
                 } else return
             })
         }
