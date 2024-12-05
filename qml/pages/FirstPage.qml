@@ -137,11 +137,15 @@ Page {
                     width: parent.width - Theme.horizontalPageMargin*2
                     anchors.horizontalCenter: parent.horizontalCenter
                     Label {
+                        width: parent.width
+                        truncationMode: TruncationMode.Fade
                         text: py.title
                     }
                     Label {
-                        text: py.subtitle
+                        width: parent.width
                         color: Theme.secondaryColor
+                        truncationMode: TruncationMode.Fade
+                        text: py.subtitle
                     }
                 }
 
