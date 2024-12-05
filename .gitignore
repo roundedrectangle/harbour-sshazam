@@ -61,8 +61,6 @@ compile_commands.json
 # Opal
 libs/opal-translations
 libs/opal-docs
-SailDiscord/libs/opal-translations
-SailDiscord/opal-docs
 
 # python venvs, for vscode autocompletions
 .venv

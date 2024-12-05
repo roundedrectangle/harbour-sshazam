@@ -24,6 +24,8 @@ BuildRequires:  python3-devel
 BuildRequires: python3-pip
 %endif
 
+%define __provides_exclude_from ^%{_datadir}/.*$
+
 %if %{package_library} == "yes" && %{use_rust} == "yes"
 Requires: ffmpeg
 %endif
