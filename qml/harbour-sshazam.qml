@@ -155,12 +155,11 @@ ApplicationWindow {
                     title = res[2]
                     subtitle = res[3]
                     sections = res[4]
-                    console.log("Date found (not using because it is .now())", res[5] < 0 ? null : new Date(res[5]))
                     try { appConfiguration.addToHistory(res[1]) }
                     catch (err) {
                         console.log("Error adding to history "+err)
-                        console.log("Proceeding with reset")
-                        appConfiguration.history = '[]'
+                        //console.log("Proceeding with reset")
+                        //appConfiguration.history = '[]'
                     }
                 } else {
                     trackFound = false
