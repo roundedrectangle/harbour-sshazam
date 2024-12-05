@@ -18,6 +18,7 @@ SOURCES += src/harbour-sshazam.cpp
 
 DISTFILES += qml/harbour-sshazam.qml \
     qml/cover/CoverPage.qml \
+    qml/pages/AboutPage.qml \
     qml/pages/FirstPage.qml \
     qml/pages/SecondPage.qml \
     qml/pages/SettingsPage.qml \
@@ -40,7 +41,14 @@ CONFIG += sailfishapp_i18n
 TRANSLATIONS += translations/harbour-sshazam-it.ts \
     translations/harbour-sshazam-ru.ts
 
+images.files = images
+images.path = /usr/share/$${TARGET}
+
 python.files = python
 python.path = /usr/share/$${TARGET}
 
-INSTALLS += python
+INSTALLS += python images
+
+DEFINES += APP_VERSION=\\\"$$VERSION\\\"
+DEFINES += APP_RELEASE=\\\"$$RELEASE\\\"
+include(libs/opal-cached-defines.pri)

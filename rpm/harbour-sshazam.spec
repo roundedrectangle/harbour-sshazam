@@ -42,7 +42,7 @@ Requires: python3-pip
 %define __requires_exclude ^libgfortran-daac5196|libopenblas64_p-r0-cecebdce.*$
 
 %description
-Uses Python and shazamio to connect to Shazam API. Local detection is planned
+Uses Shazam's API to recognize music
 
 
 %prep
@@ -50,7 +50,9 @@ Uses Python and shazamio to connect to Shazam API. Local detection is planned
 
 %build
 
-%qmake5 
+%qmake5 \
+    VERSION=%{version} \
+    RELEASE=%{release}
 
 %make_build
 

@@ -10,12 +10,12 @@ Name=SShazam
 # Remember to comment out the following line, if you do not want to use
 # a different app name in German locale (de).
 Name[de]=harbour-sshazam
-Categories=AudioVideo;Audio;
+Categories=AudioVideo;Audio
 
 [X-Sailjail]
 # Replace with your organization as a reverse domain name
-OrganizationName=org.myorg
+OrganizationName=io.github.roundedrectangle
 # ApplicationName does not have to be identical to Name
-ApplicationName=sshazam
+ApplicationName=harbour-sshazam
 # Add the required permissions here
 Permissions=Audio;Internet;Compatibility

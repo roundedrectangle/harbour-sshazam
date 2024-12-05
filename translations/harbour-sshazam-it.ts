@@ -2,6 +2,21 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="it_IT">
 <context>
+    <name>AboutPage</name>
+    <message>
+        <source>Shazam for SailfishOS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Translations</source>
+        <translation type="unfinished">Traduzioni</translation>
+    </message>
+    <message>
+        <source>Italian</source>
+        <translation type="unfinished">Italiano</translation>
+    </message>
+</context>
+<context>
     <name>Errors</name>
     <message>
         <source>Python error: %1</source>
@@ -49,85 +64,6 @@
     <message>
         <source>Loading</source>
         <translation>Caricamento</translation>
-    </message>
-</context>
-<context>
-    <name>SettingsPage</name>
-    <message>
-        <source>Settings</source>
-        <translation>Impostazioni</translation>
-    </message>
-    <message>
-        <source>Recognition time</source>
-        <translation>Durata riconoscimento</translation>
-    </message>
-    <message>
-        <source>Clear history</source>
-        <translation>Elimina cronologia</translation>
-    </message>
-    <message>
-        <source>Reset settings</source>
-        <translation>Resetta impostazioni</translation>
-    </message>
-    <message>
-        <source>Show info messages in notifications</source>
-        <translation>Mostra messaggi d&apos;informazione nelle notifiche</translation>
-    </message>
-    <message>
-        <source>Recognition</source>
-        <translation>Riconoscimento</translation>
-    </message>
-    <message>
-        <source>Sample rate</source>
-        <translation>Frequenza campionamento</translation>
-    </message>
-    <message>
-        <source>Debugging</source>
-        <translation>Debugging</translation>
-    </message>
-    <message>
-        <source>Networking</source>
-        <translation>Rete</translation>
-    </message>
-    <message>
-        <source>Login page always uses the global proxy regardless of these settings. Attachments, avatars and other static elements may not use proxy at all. Restart the app to apply</source>
-        <translation>La pagina di accesso usa sempre le impostazioni globali del proxy a discapito di queste impostazioni. Allegati, avatar e altri elementi statici potrebbero non usare il proxy del tutto. Riavvia l&apos;app per applicare</translation>
-    </message>
-    <message>
-        <source>Proxy</source>
-        <translation>Proxy</translation>
-    </message>
-    <message>
-        <source>global proxy</source>
-        <translation>proxy globale</translation>
-    </message>
-    <message>
-        <source>disable</source>
-        <translation>disabilita</translation>
-    </message>
-    <message>
-        <source>custom</source>
-        <translation>personalizzato</translation>
-    </message>
-    <message>
-        <source>HTTP proxy address</source>
-        <translation>Indirizzo proxy HTTP</translation>
-    </message>
-    <message>
-        <source>Specify port by semicolon, if required</source>
-        <translation>Specifica la porta con un punto e virgola, se necessario</translation>
-    </message>
-    <message>
-        <source>Storage</source>
-        <translation>Memoria</translation>
-    </message>
-    <message>
-        <source>Shazam language</source>
-        <translation>Lingua di Shazam</translation>
-    </message>
-    <message>
-        <source>Example: en-US. Leave empty to use system language</source>
-        <translation>Esempio: it-IT. Lascia vuoto per usare la lingua di sistema</translation>
     </message>
 </context>
 <context>
@@ -264,178 +200,84 @@
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation>Le tue contribuzioni per le traduzioni o per il codice sono le benvenute.</translation>
     </message>
+</context>
+<context>
+    <name>SettingsPage</name>
     <message>
-        <source>Author</source>
-        <translation>Autore</translation>
-    </message>
-    <message numerus="yes">
-        <source>Author(s)</source>
-        <translation>
-            <numerusform>Autore</numerusform>
-            <numerusform>Autori</numerusform>
-        </translation>
+        <source>Settings</source>
+        <translation>Impostazioni</translation>
     </message>
     <message>
-        <source>Maintainer</source>
-        <translation>Mantenitore</translation>
-    </message>
-    <message numerus="yes">
-        <source>Maintainer(s)</source>
-        <translation>
-            <numerusform>Mantenitore</numerusform>
-            <numerusform>Mantenitori</numerusform>
-        </translation>
+        <source>Recognition time</source>
+        <translation>Durata riconoscimento</translation>
     </message>
     <message>
-        <source>Programming</source>
-        <translation>Programmazione</translation>
+        <source>Clear history</source>
+        <translation>Elimina cronologia</translation>
     </message>
     <message>
-        <source>Icon Design</source>
-        <translation>Stile Icone</translation>
+        <source>Reset settings</source>
+        <translation>Resetta impostazioni</translation>
     </message>
     <message>
-        <source>Third-party libraries</source>
-        <translation>Librerie di terze parti</translation>
+        <source>Show info messages in notifications</source>
+        <translation>Mostra messaggi d&apos;informazione nelle notifiche</translation>
     </message>
     <message>
-        <source>Data</source>
-        <translation>Data</translation>
+        <source>Recognition</source>
+        <translation>Riconoscimento</translation>
     </message>
     <message>
-        <source>Data License</source>
-        <translation>Data Licenza</translation>
-    </message>
-    <message numerus="yes">
-        <source>Data License(s)</source>
-        <translation>
-            <numerusform>Data Licenza</numerusform>
-            <numerusform>Data Licenze</numerusform>
-        </translation>
+        <source>Sample rate</source>
+        <translation>Frequenza campionamento</translation>
     </message>
     <message>
-        <source>Terms of Use</source>
-        <translation>Termini di utilizzo</translation>
+        <source>Debugging</source>
+        <translation>Debugging</translation>
     </message>
     <message>
-        <source>Belarusian</source>
-        <translation type="unfinished"></translation>
+        <source>Networking</source>
+        <translation>Rete</translation>
     </message>
     <message>
-        <source>Chinese</source>
-        <translation>Cinese</translation>
+        <source>Login page always uses the global proxy regardless of these settings. Attachments, avatars and other static elements may not use proxy at all. Restart the app to apply</source>
+        <translation>La pagina di accesso usa sempre le impostazioni globali del proxy a discapito di queste impostazioni. Allegati, avatar e altri elementi statici potrebbero non usare il proxy del tutto. Riavvia l&apos;app per applicare</translation>
     </message>
     <message>
-        <source>Czech</source>
-        <translation>Ceco</translation>
+        <source>Proxy</source>
+        <translation>Proxy</translation>
     </message>
     <message>
-        <source>Dutch</source>
-        <translation>Olandese</translation>
+        <source>global proxy</source>
+        <translation>proxy globale</translation>
     </message>
     <message>
-        <source>English</source>
-        <translation>Inglese</translation>
+        <source>disable</source>
+        <translation>disabilita</translation>
     </message>
     <message>
-        <source>Estonian</source>
-        <translation>Estone</translation>
+        <source>custom</source>
+        <translation>personalizzato</translation>
     </message>
     <message>
-        <source>Finnish</source>
-        <translation>Finlandese</translation>
+        <source>HTTP proxy address</source>
+        <translation>Indirizzo proxy HTTP</translation>
     </message>
     <message>
-        <source>French</source>
-        <translation>Francese</translation>
+        <source>Specify port by semicolon, if required</source>
+        <translation>Specifica la porta con un punto e virgola, se necessario</translation>
     </message>
     <message>
-        <source>German</source>
-        <translation>Tedesco</translation>
+        <source>Storage</source>
+        <translation>Memoria</translation>
     </message>
     <message>
-        <source>Greek</source>
-        <translation>Greco</translation>
+        <source>Shazam language</source>
+        <translation>Lingua di Shazam</translation>
     </message>
     <message>
-        <source>Hungarian</source>
-        <translation>Ungherese</translation>
-    </message>
-    <message>
-        <source>Indonesian</source>
-        <translation>Indonesiano</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation>Italiano</translation>
-    </message>
-    <message>
-        <source>Lithuanian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Norwegian Bokmål</source>
-        <translation>Norvegese Bokmål</translation>
-    </message>
-    <message>
-        <source>Polish</source>
-        <translation>Polacco</translation>
-    </message>
-    <message>
-        <source>Portuguese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Brazilian Portuguese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Romanian</source>
-        <translation>Rumeno</translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation>Russo</translation>
-    </message>
-    <message>
-        <source>Serbian</source>
-        <translation>Serbo</translation>
-    </message>
-    <message>
-        <source>Slovak</source>
-        <translation>Slovacco</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation>Spagnolo</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation>Svedese</translation>
-    </message>
-    <message>
-        <source>Tamil</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Turkish</source>
-        <translation>Turco</translation>
-    </message>
-    <message>
-        <source>Ukrainian</source>
-        <translation>Ucraino</translation>
-    </message>
-    <message>
-        <source>Norwegian Nynorsk</source>
-        <translation>Norvegese Nynorsk</translation>
-    </message>
-    <message>
-        <source>Latvian</source>
-        <translation>Lettone</translation>
-    </message>
-    <message>
-        <source>Dutch (Belgium)</source>
-        <translation>Olandese (Belgio)</translation>
+        <source>Example: en-US. Leave empty to use system language</source>
+        <translation>Esempio: it-IT. Lascia vuoto per usare la lingua di sistema</translation>
     </message>
 </context>
 </TS>
