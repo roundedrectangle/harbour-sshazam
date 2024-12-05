@@ -159,18 +159,30 @@ Page {
             ListView.onAdd: AddAnimation { target: listItem }
             contentHeight: historyItem.height
 
-            Column {
+            Item {
                 id: historyItem
                 width: parent.width - Theme.horizontalPageMargin*2
                 anchors.horizontalCenter: parent.horizontalCenter
-                Label {
-                    text: title
+                height: Math.max(children[0].height, dateLbl.height)
+                Column {
+                    width: parent.width - (date ? (dateLbl.width + Theme.paddingLarge) : 0)
+                    Label {
+                        width: parent.width
+                        truncationMode: TruncationMode.Fade
+                        text: title
+                        //text: title + " " + Theme.highlightText(subtitle, subtitle, Theme.secondaryColor)
+                    }
+                    Label {
+                        width: parent.width
+                        color: Theme.secondaryColor
+                        truncationMode: TruncationMode.Fade
+                        text: subtitle
+                    }
                 }
                 Label {
-                    text: subtitle
+                    id: dateLbl
+                    anchors.right: parent.right
                     color: Theme.secondaryColor
-                }
-                Label {
                     text: Format.formatDate(date, Formatter.TimepointRelative)
                 }
             }
