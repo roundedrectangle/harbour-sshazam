@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import QtGraphicalEffects 1.0
+import "../modules/Opal/SmartScrollbar"
 
 Page {
     allowedOrientations: Orientation.All
@@ -152,6 +153,18 @@ Page {
                 opacity: listView.model.count > 0 ? 1 : 0
                 Behavior on opacity { FadeAnimator {} }
             }
+        }
+
+        SmartScrollbar {
+            flickable: listView
+
+            readonly property int scrollIndex: !!flickable ?
+                flickable.indexAt(flickable.contentX, flickable.contentY) : -1
+            readonly property var scrollData: !!flickable ? listView.model.get(scrollIndex+1) : null
+
+            //smartWhen: !!flickable ? !!flickable.itemAt(flickable.contentX, flickable.contentY) : false
+            text: "%1 / %2".arg(scrollIndex + 2).arg(flickable.count)
+            description: (!!scrollData && !!scrollData.title) ? Format.formatDate(scrollData.date, Formatter.TimepointRelative) : ''
         }
 
         delegate: ListItem {
