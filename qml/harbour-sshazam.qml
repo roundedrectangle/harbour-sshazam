@@ -174,9 +174,8 @@ ApplicationWindow {
 
         function loadHistoryRecord(record, callback) {
             call('main.load', [record], function (res) {
-                if (res[0]) {
+                if (res[0])
                     callback(res[2], res[3], res[4], res[5] < 0 ? undefined : new Date(res[5]))
-                } else return
             })
         }
     }
