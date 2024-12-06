@@ -284,14 +284,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Export history</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Import history</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Select items to backup</source>
         <translation type="unfinished"></translation>
     </message>
@@ -341,6 +333,14 @@
     </message>
     <message>
         <source>All items you select will be overwritten! If you select recognition history your current history will be overwritten!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export backup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Import backup</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

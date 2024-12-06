@@ -51,23 +51,23 @@
     </message>
     <message>
         <source>Recording</source>
-        <translation type="unfinished"></translation>
+        <translation>Запись</translation>
     </message>
     <message>
         <source>Processing</source>
-        <translation type="unfinished"></translation>
+        <translation>Обработка</translation>
     </message>
     <message>
         <source>Almost done</source>
-        <translation type="unfinished"></translation>
+        <translation>Почти готово</translation>
     </message>
     <message>
         <source>Loading</source>
-        <translation type="unfinished"></translation>
+        <translation>Загрузка</translation>
     </message>
     <message>
         <source>About</source>
-        <translation type="unfinished">О программе</translation>
+        <translation>О программе</translation>
     </message>
 </context>
 <context>
@@ -227,119 +227,119 @@
     </message>
     <message>
         <source>Recognition</source>
-        <translation type="unfinished"></translation>
+        <translation>Распознавание</translation>
     </message>
     <message>
         <source>Sample rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Частота</translation>
     </message>
     <message>
         <source>Debugging</source>
-        <translation type="unfinished"></translation>
+        <translation>Отладка</translation>
     </message>
     <message>
         <source>Networking</source>
-        <translation type="unfinished"></translation>
+        <translation>Сеть</translation>
     </message>
     <message>
         <source>Proxy</source>
-        <translation type="unfinished"></translation>
+        <translation>Прокси</translation>
     </message>
     <message>
         <source>global proxy</source>
-        <translation type="unfinished"></translation>
+        <translation>глобальный прокси</translation>
     </message>
     <message>
         <source>disable</source>
-        <translation type="unfinished"></translation>
+        <translation>отключить</translation>
     </message>
     <message>
         <source>custom</source>
-        <translation type="unfinished"></translation>
+        <translation>пользовательский</translation>
     </message>
     <message>
         <source>HTTP proxy address</source>
-        <translation type="unfinished"></translation>
+        <translation>адрес HTTP-прокси</translation>
     </message>
     <message>
         <source>Specify port by semicolon, if required</source>
-        <translation type="unfinished"></translation>
+        <translation>Укажите порт через двоеточие, если нужно</translation>
     </message>
     <message>
         <source>Storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Хранилище</translation>
     </message>
     <message>
         <source>Shazam language</source>
-        <translation type="unfinished"></translation>
+        <translation>Язык Shazam</translation>
     </message>
     <message>
         <source>Example: en-US. Leave empty to use system language</source>
-        <translation type="unfinished"></translation>
+        <translation>Пример: en-US. Оставьте пустым, чтобы использовать системный язык</translation>
     </message>
     <message>
         <source>Album arts and other static elements may not use proxy at all. App restart might be required</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Export history</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Import history</source>
-        <translation type="unfinished"></translation>
+        <translation>Обложки альбомов и другие статические элементы могут не использовать прокси вообще. Может потребоваться перезвгрузка приложения</translation>
     </message>
     <message>
         <source>Select items to backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберете, что включить в бэкап</translation>
     </message>
     <message>
         <source>Recognition history</source>
-        <translation type="unfinished"></translation>
+        <translation>История распознавания</translation>
     </message>
     <message>
         <source>Basic settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Основные настройки</translation>
     </message>
     <message>
         <source>Include Recognition section</source>
-        <translation type="unfinished"></translation>
+        <translation>Включают секцию Распознавание</translation>
     </message>
     <message>
         <source>Other settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Другие настройки</translation>
     </message>
     <message>
         <source>Include Debugging and Networking sections</source>
-        <translation type="unfinished"></translation>
+        <translation>Включают секции Отладка и Сеть</translation>
     </message>
     <message>
         <source>Unknown error: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Неизвестная ошибка: %1</translation>
     </message>
     <message>
         <source>Insufficient permissions</source>
-        <translation type="unfinished"></translation>
+        <translation>Недостаточно прав</translation>
     </message>
     <message>
         <source>Export in progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Экспорт в процессе</translation>
     </message>
     <message>
         <source>An error occured</source>
-        <translation type="unfinished"></translation>
+        <translation>Произошла ошибка</translation>
     </message>
     <message>
         <source>Select items to import</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберете, что нужно импортировать</translation>
     </message>
     <message>
         <source>Import in progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Импорт в процессе</translation>
     </message>
     <message>
         <source>All items you select will be overwritten! If you select recognition history your current history will be overwritten!</source>
-        <translation type="unfinished"></translation>
+        <translation>Все элементы, которые вы выберете будут перезаписаны! Если вы выберете историю распознования ваша текущая история будет перезаписана!</translation>
+    </message>
+    <message>
+        <source>Export backup</source>
+        <translation>Экспорт бэкапа</translation>
+    </message>
+    <message>
+        <source>Import backup</source>
+        <translation>Импорт бэкапа</translation>
     </message>
 </context>
 </TS>

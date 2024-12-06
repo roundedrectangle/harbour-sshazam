@@ -109,11 +109,11 @@ Page {
                     onClicked: appSettings.clear()
                 }
                 Button {
-                    text: qsTr("Export history")
+                    text: qsTr("Export backup")
                     onClicked: pageStack.push(itemsDialog)
                 }
                 Button {
-                    text: qsTr("Import history")
+                    text: qsTr("Import backup")
                     onClicked: {
                         var dialog = pageStack.push("Sailfish.Pickers.FilePickerPage", { nameFilters: ['*.json'] })
                         dialog.selectedContentPropertiesChanged.connect(function () {
