@@ -115,7 +115,7 @@ Page {
                 Button {
                     text: qsTr("Import history")
                     onClicked: {
-                        var dialog = pageStack.push("Sailfish.Pickers.FilePickerPage", { nameFilters: ['*.sussybaka'] })
+                        var dialog = pageStack.push("Sailfish.Pickers.FilePickerPage", { nameFilters: ['*.json'] })
                         dialog.selectedContentPropertiesChanged.connect(function () {
                             var page = pageStack.push(loadingPage)
                             py.importHistory(dialog.selectedContentProperties.filePath, page.importCallback)
@@ -137,7 +137,16 @@ Page {
             Column {
                 width: parent.width
 
-                DialogHeader { title: qsTr("Select items to backup") }
+                DialogHeader { title: doExport ? qsTr("Select items to backup") : qsTr("Select items to import") }
+                Label {
+                    text: qsTr("All items you select will be overwritten! If you select recognition history your current history will be overwritten!")
+                    visible: !doExport
+                    x: Theme.horizontalPageMargin
+                    width: parent.width-x*2
+                    wrapMode: Text.Wrap
+                    color: Theme.highlightColor
+                    font.pixelSize: Theme.fontSizeSmall
+                }
                 IconTextSwitch {
                     id: historySwitch
                     visible: doExport || ('history' in importData)
@@ -181,6 +190,7 @@ Page {
         id: loadingPage
         Page {
             backNavigation: false
+            property bool importing: false
 
             function showError(hintText, text) {
                 error.hintText = hintText
@@ -224,7 +234,7 @@ Page {
                 BusyLabel {
                     id: busyLabel
                     running: true
-                    text: qsTr("Export in progress")
+                    text: importing ? qsTr("Import in progress") : qsTr("Export in progress")
                 }
                 ViewPlaceholder {
                     id: error

@@ -70,7 +70,7 @@ def record():
 
 def export_history(path: Union[Path, str], dateLocaleString: str, backup) -> tuple:
     dateLocaleString = dateLocaleString.replace('/', '-').replace(' ', '-')
-    path = Path(path) / f"sshazam-backup-{dateLocaleString}.sussybaka"
+    path = Path(path) / f"sshazam-backup-{dateLocaleString}.json"
     backup = json.dumps(backup)
     try:
         with open(path, 'w') as f:

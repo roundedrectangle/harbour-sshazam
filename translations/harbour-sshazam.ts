@@ -314,18 +314,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Are you sure?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>All your current settings and recognition history will be overwritten!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Entries in backup you selected:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Unknown error: %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -339,6 +327,18 @@
     </message>
     <message>
         <source>An error occured</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select items to import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Items you select will be overwritten! If you select recognition history your current history will be overwritten!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Import in progress</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
