@@ -4,5 +4,6 @@ import Sailfish.Silica 1.0
 CoverBackground {
     CoverPlaceholder {
         text: "SShazam"
+        icon.source: "image://theme/icon-l-music"
     }
 }
