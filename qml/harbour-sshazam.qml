@@ -111,6 +111,20 @@ ApplicationWindow {
             case "c": return appSettings.customProxy
             }
         }
+
+        function applyBackup(backup, backupHistory, backupSettings, backupMiscSettings, callback) {
+            if (backupHistory) appConfiguration.history = backup.history
+            if (backupSettings) {
+                appSettings.recognitionTime = backup.recognitionTime
+                appSettings.rate = backup.rate
+                appSettings.language = backup.language
+            }
+            if (backupMiscSettings) {
+                appSettings.infoInNotifications = backup.infoInNotifications
+                appSettings.proxyType = backup.proxyType
+                appSettings.customProxy = backup.customProxy
+            }
+        }
     }
 
     Python {
@@ -193,6 +207,14 @@ ApplicationWindow {
             }
            call('main.export_history', [path, new Date().toLocaleString(Qt.locale(), Locale.ShortFormat), backup], function(res) {
                 if (res[0] === 1) callback(res[0], res[1], res[2])
+                else callback(res[0])
+           })
+        }
+
+        function importHistory(path, callback) {
+            call('main.import_history', [path], function(res) {
+                if (res[0] === 1) callback(res[0], res[1], res[2], res[3])
+                else if (res[0] === 0) callback(res[0], res[1])
                 else callback(res[0])
            })
         }

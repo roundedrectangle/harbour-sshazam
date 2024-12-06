@@ -72,10 +72,18 @@ def export_history(path: Union[Path, str], dateLocaleString: str, backup) -> tup
     dateLocaleString = dateLocaleString.replace('/', '-').replace(' ', '-')
     path = Path(path) / f"sshazam-backup-{dateLocaleString}.sussybaka"
     backup = json.dumps(backup)
-    logging.info(backup)
     try:
         with open(path, 'w') as f:
             f.write(backup)
     except PermissionError: return (2,)
     except Exception as e: return (1, str(type(e)), str(e))
     return (0,)
+
+def import_history(path: Union[Path, str]):
+    try:
+        with open(path, 'r') as f:
+            backup = f.read()
+        backup = json.loads(backup)
+    except PermissionError: return (2,)
+    except Exception as e: return (1, '', str(type(e)), str(e))
+    return (0, backup)

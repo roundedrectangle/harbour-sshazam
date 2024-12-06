@@ -315,5 +315,33 @@
         <source>Include Debugging and Networking sections</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Are you sure?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All your current settings and recognition history will be overwritten!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entries in backup you selected:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown error: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Insufficient permissions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export in progress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>An error occured</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

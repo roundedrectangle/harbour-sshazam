@@ -110,10 +110,17 @@ Page {
                 }
                 Button {
                     text: qsTr("Export history")
-                    onClicked: pageStack.push(exportItemsDialog)
+                    onClicked: pageStack.push(itemsDialog)
                 }
                 Button {
                     text: qsTr("Import history")
+                    onClicked: {
+                        var dialog = pageStack.push("Sailfish.Pickers.FilePickerPage", { nameFilters: ['*.sussybaka'] })
+                        dialog.selectedContentPropertiesChanged.connect(function () {
+                            var page = pageStack.push(loadingPage)
+                            py.importHistory(dialog.selectedContentProperties.filePath, page.importCallback)
+                        })
+                    }
                 }
             }
 
@@ -122,43 +129,50 @@ Page {
     }
 
     Component {
-        id: exportItemsDialog
+        id: itemsDialog
         Dialog {
             property string selectedPath
+            property var importData: ({})
+            property bool doExport: true
             Column {
                 width: parent.width
 
-                DialogHeader {
-                    title: qsTr("Select items to backup")
-                }
+                DialogHeader { title: qsTr("Select items to backup") }
                 IconTextSwitch {
                     id: historySwitch
+                    visible: doExport || ('history' in importData)
                     text: qsTr("Recognition history")
                     icon.source: "image://theme/icon-m-history"
                 }
                 IconTextSwitch {
                     id: basicSwitch
+                    visible: doExport || ('recognitionTime' in importData)
                     text: qsTr("Basic settings")
                     description: qsTr("Include Recognition section")
                     icon.source: "image://theme/icon-m-sounds"
                 }
                 IconTextSwitch {
                     id: otherSwitch
+                    visible: doExport || ('infoInNotifications' in importData)
                     text: qsTr("Other settings")
                     description: qsTr("Include Debugging and Networking sections")
                     icon.source: "image://theme/icon-m-setting"
                 }
             }
 
-            acceptDestination: "Sailfish.Pickers.FolderPickerPage"
-
+            canAccept: historySwitch.checked || basicSwitch.checked || otherSwitch.checked
+            acceptDestination: doExport ? "Sailfish.Pickers.FolderPickerPage" : loadingPage
             onAcceptDestinationInstanceChanged: {
-                if (!acceptDestinationInstance) return
+                if (!acceptDestinationInstance || !doExport) return
                 acceptDestinationInstance.selectedPathChanged.connect(function() {
                     pageStack.completeAnimation()
                     var page = pageStack.replace(loadingPage)
-                    py.exportHistory(selectedPath, historySwitch.checked, basicSwitch.checked, otherSwitch.checked, page.callback)
+                    py.exportHistory(acceptDestinationInstance.selectedPath, historySwitch.checked, basicSwitch.checked, otherSwitch.checked, page.callback)
                 })
+            }
+            onAccepted: {
+                shared.applyBackup(importData, historySwitch.checked, basicSwitch.checked, otherSwitch.checked)
+                acceptDestinationInstance.finish()
             }
         }
     }
@@ -174,12 +188,10 @@ Page {
                 busyLabel.running = false
             }
 
-            function callback(result, extraErrorName, extraErrorDescription) {
+            function callbackBase(finalCallback, result, extraErrorName, extraErrorDescription) {
                 switch (result) {
                 case 0:
-                    pageStack.clear()
-                    pageStack.completeAnimation()
-                    pageStack.push(Qt.resolvedUrl('FirstPage.qml'))
+                    finalCallback()
                     break
                 case 1:
                     showError(extraErrorDescription, qsTr("Unknown error: %1").arg(extraErrorName))
@@ -188,6 +200,23 @@ Page {
                     showError(qsTr("Insufficient permissions"))
                     break
                 }
+            }
+
+            function finish() {
+                pageStack.clear()
+                pageStack.completeAnimation()
+                pageStack.push(Qt.resolvedUrl('FirstPage.qml'))
+            }
+
+            function callback(result, extraErrorName, extraErrorDescription) {
+                callbackBase(finish, result, extraErrorName, extraErrorDescription)
+            }
+
+            function importCallback(result, data, extraErrorName, extraErrorDescription) {
+                callbackBase(function () {
+                    pageStack.completeAnimation()
+                    pageStack.push(itemsDialog, { importData: data, doExport: false })
+                }, result, extraErrorName, extraErrorDescription)
             }
 
             SilicaFlickable {
