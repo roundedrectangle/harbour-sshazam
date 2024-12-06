@@ -244,10 +244,6 @@
         <translation>Rete</translation>
     </message>
     <message>
-        <source>Login page always uses the global proxy regardless of these settings. Attachments, avatars and other static elements may not use proxy at all. Restart the app to apply</source>
-        <translation>La pagina di accesso usa sempre le impostazioni globali del proxy a discapito di queste impostazioni. Allegati, avatar e altri elementi statici potrebbero non usare il proxy del tutto. Riavvia l&apos;app per applicare</translation>
-    </message>
-    <message>
         <source>Proxy</source>
         <translation>Proxy</translation>
     </message>
@@ -282,6 +278,42 @@
     <message>
         <source>Example: en-US. Leave empty to use system language</source>
         <translation>Esempio: it-IT. Lascia vuoto per usare la lingua di sistema</translation>
+    </message>
+    <message>
+        <source>Album arts and other static elements may not use proxy at all. App restart might be required</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export history</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Import history</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select items to backup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Recognition history</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Basic settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Include Recognition section</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Other settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Include Debugging and Networking sections</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

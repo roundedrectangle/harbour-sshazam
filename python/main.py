@@ -5,6 +5,7 @@ from pathlib import Path
 import json
 import configparser
 from datetime import datetime
+from typing import Union
 
 logging.basicConfig()
 
@@ -66,3 +67,15 @@ def record():
     pasimple.record_wav(f, duration, sample_rate=rate)
     qsend('recordingstate', 3)
     return asyncio.run(_recognize(f.getvalue()))
+
+def export_history(path: Union[Path, str], dateLocaleString: str, backup) -> tuple:
+    dateLocaleString = dateLocaleString.replace('/', '-').replace(' ', '-')
+    path = Path(path) / f"sshazam-backup-{dateLocaleString}.sussybaka"
+    backup = json.dumps(backup)
+    logging.info(backup)
+    try:
+        with open(path, 'w') as f:
+            f.write(backup)
+    except PermissionError: return (2,)
+    except Exception as e: return (1, str(type(e)), str(e))
+    return (0,)

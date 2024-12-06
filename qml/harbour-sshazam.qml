@@ -177,5 +177,24 @@ ApplicationWindow {
                     callback(res[2], res[3], res[4], res[5])
             })
         }
+
+        function exportHistory(path, backupHistory, backupSettings, backupMiscSettings, callback) {
+            var backup = {}
+            if (backupHistory) backup.history = appConfiguration.history
+            if (backupSettings) {
+                backup.recognitionTime = appSettings.recognitionTime
+                backup.rate = appSettings.rate
+                backup.language = appSettings.language
+            }
+            if (backupMiscSettings) {
+                backup.infoInNotifications = appSettings.infoInNotifications
+                backup.proxyType = appSettings.proxyType
+                backup.customProxy = appSettings.customProxy
+            }
+           call('main.export_history', [path, new Date().toLocaleString(Qt.locale(), Locale.ShortFormat), backup], function(res) {
+                if (res[0] === 1) callback(res[0], res[1], res[2])
+                else callback(res[0])
+           })
+        }
     }
 }

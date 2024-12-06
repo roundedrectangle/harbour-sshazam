@@ -187,7 +187,6 @@ Page {
                         width: parent.width
                         truncationMode: TruncationMode.Fade
                         text: title
-                        //text: title + " " + Theme.highlightText(subtitle, subtitle, Theme.secondaryColor)
                     }
                     Label {
                         width: parent.width

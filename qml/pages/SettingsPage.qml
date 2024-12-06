@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import Sailfish.Pickers 1.0
 
 Page {
     allowedOrientations: Orientation.All
@@ -70,7 +71,7 @@ Page {
                 width: parent.width - 2*x
                 x: Theme.horizontalPageMargin
                 wrapMode: Text.Wrap
-                text: qsTr("Login page always uses the global proxy regardless of these settings. Attachments, avatars and other static elements may not use proxy at all. Restart the app to apply")
+                text: qsTr("Album arts and other static elements may not use proxy at all. App restart might be required")
                 font.pixelSize: Theme.fontSizeSmall
                 color: Theme.secondaryHighlightColor
                 bottomPadding: Theme.paddingMedium
@@ -107,9 +108,101 @@ Page {
                     text: qsTr("Reset settings")
                     onClicked: appSettings.clear()
                 }
+                Button {
+                    text: qsTr("Export history")
+                    onClicked: pageStack.push(exportItemsDialog)
+                }
+                Button {
+                    text: qsTr("Import history")
+                }
             }
 
             Item { width:1; height: Theme.paddingLarge }
+        }
+    }
+
+    Component {
+        id: exportItemsDialog
+        Dialog {
+            property string selectedPath
+            Column {
+                width: parent.width
+
+                DialogHeader {
+                    title: qsTr("Select items to backup")
+                }
+                IconTextSwitch {
+                    id: historySwitch
+                    text: qsTr("Recognition history")
+                    icon.source: "image://theme/icon-m-history"
+                }
+                IconTextSwitch {
+                    id: basicSwitch
+                    text: qsTr("Basic settings")
+                    description: qsTr("Include Recognition section")
+                    icon.source: "image://theme/icon-m-sounds"
+                }
+                IconTextSwitch {
+                    id: otherSwitch
+                    text: qsTr("Other settings")
+                    description: qsTr("Include Debugging and Networking sections")
+                    icon.source: "image://theme/icon-m-setting"
+                }
+            }
+
+            acceptDestination: "Sailfish.Pickers.FolderPickerPage"
+
+            onAcceptDestinationInstanceChanged: {
+                if (!acceptDestinationInstance) return
+                acceptDestinationInstance.selectedPathChanged.connect(function() {
+                    pageStack.completeAnimation()
+                    var page = pageStack.replace(loadingPage)
+                    py.exportHistory(selectedPath, historySwitch.checked, basicSwitch.checked, otherSwitch.checked, page.callback)
+                })
+            }
+        }
+    }
+
+    Component {
+        id: loadingPage
+        Page {
+            backNavigation: false
+
+            function showError(hintText, text) {
+                error.hintText = hintText
+                if (text) error.text = text
+                busyLabel.running = false
+            }
+
+            function callback(result, extraErrorName, extraErrorDescription) {
+                switch (result) {
+                case 0:
+                    pageStack.clear()
+                    pageStack.completeAnimation()
+                    pageStack.push(Qt.resolvedUrl('FirstPage.qml'))
+                    break
+                case 1:
+                    showError(extraErrorDescription, qsTr("Unknown error: %1").arg(extraErrorName))
+                    break
+                case 2:
+                    showError(qsTr("Insufficient permissions"))
+                    break
+                }
+            }
+
+            SilicaFlickable {
+                anchors.fill: parent
+                BusyLabel {
+                    id: busyLabel
+                    running: true
+                    text: qsTr("Export in progress")
+                }
+                ViewPlaceholder {
+                    id: error
+                    enabled: !busyLabel.running
+                    text: qsTr("An error occured")
+                }
+            }
         }
     }
 }
