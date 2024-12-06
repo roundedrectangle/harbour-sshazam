@@ -334,11 +334,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Items you select will be overwritten! If you select recognition history your current history will be overwritten!</source>
+        <source>Import in progress</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Import in progress</source>
+        <source>All items you select will be overwritten! If you select recognition history your current history will be overwritten!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

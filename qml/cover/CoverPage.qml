@@ -5,5 +5,7 @@ CoverBackground {
     CoverPlaceholder {
         text: "SShazam"
         icon.source: "image://theme/icon-l-music"
+        //icon.source: Qt.resolvedUrl('../../images/harbour-sshazam.png')
+        //icon.sourceSize: Qt.size(Theme.itemSizeMedium, Theme.itemSizeMedium)
     }
 }

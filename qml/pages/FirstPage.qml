@@ -51,7 +51,7 @@ Page {
                 anchors.horizontalCenter: parent.horizontalCenter
 
                 IconButton {
-                    icon.source: "image://theme/icon-l-music"
+                    icon.source: Qt.resolvedUrl('../../images/icon-xl-music.svg')
                     anchors.centerIn: parent
                     icon.fillMode: Image.Stretch
                     icon.sourceSize.height: height-Theme.paddingLarge*2
