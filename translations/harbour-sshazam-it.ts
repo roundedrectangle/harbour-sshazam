@@ -5,15 +5,15 @@
     <name>AboutPage</name>
     <message>
         <source>Shazam for SailfishOS</source>
-        <translation type="unfinished"></translation>
+        <translation>Shazam per SailfishOS</translation>
     </message>
     <message>
         <source>Translations</source>
-        <translation type="unfinished">Traduzioni</translation>
+        <translation>Traduzioni</translation>
     </message>
     <message>
         <source>Italian</source>
-        <translation type="unfinished">Italiano</translation>
+        <translation>Italiano</translation>
     </message>
 </context>
 <context>
@@ -67,7 +67,7 @@
     </message>
     <message>
         <source>About</source>
-        <translation type="unfinished">Info</translation>
+        <translation>Info</translation>
     </message>
 </context>
 <context>
@@ -281,67 +281,67 @@
     </message>
     <message>
         <source>Album arts and other static elements may not use proxy at all. App restart might be required</source>
-        <translation type="unfinished"></translation>
+        <translation>Copertine ed altri elementi statici potrebbero non usare il proxy del tutto. Un riavvio dell&apos;app potrebbe essere richiesto</translation>
     </message>
     <message>
         <source>Select items to backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Scegli oggetti da includere nel backup</translation>
     </message>
     <message>
         <source>Recognition history</source>
-        <translation type="unfinished"></translation>
+        <translation>Cronologia riconoscimenti</translation>
     </message>
     <message>
         <source>Basic settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Impostazioni di base</translation>
     </message>
     <message>
         <source>Include Recognition section</source>
-        <translation type="unfinished"></translation>
+        <translation>Includi sezione riconoscimenti</translation>
     </message>
     <message>
         <source>Other settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Altre impostazioni</translation>
     </message>
     <message>
         <source>Include Debugging and Networking sections</source>
-        <translation type="unfinished"></translation>
+        <translation>Includi sezioni Debugging e Rete</translation>
     </message>
     <message>
         <source>Unknown error: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore sconosciuto: %1</translation>
     </message>
     <message>
         <source>Insufficient permissions</source>
-        <translation type="unfinished"></translation>
+        <translation>Permessi insufficienti</translation>
     </message>
     <message>
         <source>Export in progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Esportazione in corso</translation>
     </message>
     <message>
         <source>An error occured</source>
-        <translation type="unfinished"></translation>
+        <translation>Si è verificato un errore</translation>
     </message>
     <message>
         <source>Select items to import</source>
-        <translation type="unfinished"></translation>
+        <translation>Scegli oggetti da importare</translation>
     </message>
     <message>
         <source>Import in progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Importazione in corso</translation>
     </message>
     <message>
         <source>All items you select will be overwritten! If you select recognition history your current history will be overwritten!</source>
-        <translation type="unfinished"></translation>
+        <translation>Tutti gli oggetti selezionati saranno sovrascritti! Se hai scelto la cronologia dei riconoscimenti la tua cronologia attuale verrà sovrascritta!</translation>
     </message>
     <message>
         <source>Export backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Esporta backup</translation>
     </message>
     <message>
         <source>Import backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Importa backup</translation>
     </message>
 </context>
 </TS>
