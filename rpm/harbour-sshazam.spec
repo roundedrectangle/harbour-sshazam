@@ -1,4 +1,4 @@
-%define package_library "yes"
+%define package_library "no"
 %define use_rust "no"
 # See README
 
@@ -22,6 +22,7 @@ Requires: pyotherside-qml-plugin-python3-qt5
 BuildRequires:  python3-base
 BuildRequires:  python3-devel
 BuildRequires: python3-pip
+#BuildRequires: git
 %endif
 
 %define __provides_exclude_from ^%{_datadir}/.*$

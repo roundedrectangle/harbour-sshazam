@@ -180,7 +180,7 @@ Page {
                 id: historyItem
                 width: parent.width - Theme.horizontalPageMargin*2
                 anchors.horizontalCenter: parent.horizontalCenter
-                height: Math.max(children[0].height, dateLbl.height)
+                height: Math.max(children[0].height, children[1].height)
                 Column {
                     width: parent.width - (date ? (dateLbl.width + Theme.paddingLarge) : 0)
                     Label {
@@ -200,7 +200,7 @@ Page {
                     id: dateLbl
                     anchors.right: parent.right
                     color: Theme.secondaryColor
-                    text: Format.formatDate(date, Formatter.TimepointRelative)
+                    text: date == -1 ? '' : Format.formatDate(new Date(date), Formatter.TimepointRelative)
                 }
             }
 
