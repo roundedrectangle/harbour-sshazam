@@ -38,6 +38,18 @@ ApplicationWindow {
             onValueChanged: py.applySettings()
         }
 
+        Component.onCompleted: {
+            if (history) { // Migrate to file-based history
+                shared.showInfo(qsTr("Legacy history system detected. Attempting to migrate"))
+                py.call('main.migrate_history', [history], function () {
+                    var page = pageStack.find(function (p) { return !!p ? p.__sshazam_firstPage : false })
+                    page.model.loadHistory()
+                    shared.showInfo(qsTr("Migration complete. If you see no errors it means it was succsessful"))
+                    history = ''
+                })
+            }
+        }
+
         function getHistory() { return JSON.parse(history) }
 
         function setHistory(newValue) {
@@ -90,11 +102,12 @@ ApplicationWindow {
             notifier.publish()
         }
 
-        function showError(text) {
+        function showError(text, summary) {
             notifier.appIcon = "image://theme/icon-lock-warning"
-            notifier.body = text
+            if (text) notifier.body = text
+            if (summary) notifier.summary = summary
             notifier.publish()
-            console.log(text)
+            console.log(text, summary)
         }
 
         function arrayToListModel(_parent, arr) {
@@ -137,17 +150,32 @@ ApplicationWindow {
         property string subtitle
         property var sections: []
         property int recognitionState: 0
+        property bool historyLoading: false
 
         onError: shared.showError(qsTranslate("Errors", "Python error: %1").arg(traceback))
         onReceived: console.log("got message from python: " + data)
 
         Component.onCompleted: {
             setHandler('recordingstate', function (state) { recognitionState = state })
+            setHandler('historyloaded', function() { historyLoading = false })
+            setHandler('history_unknown', function (name, text) { shared.showError(text, qsTranslate("Errors", "History was unable to load: %1").arg(name)) })
+            setHandler('history_json', function (name, text) { shared.showError(text, qsTranslate("Errors", "History contained invalid JSON: %1").arg(name)) })
+            setHandler('history_perms', function (name, text) { shared.showError(text, qsTranslate("Errors", "Insufficient permissions: %1").arg(name)) })
+            setHandler('history_notlist', function (name, text) { shared.showError(qsTranslate("Errors", "History is not a list or tuple")) })
+
 
             addImportPath(Qt.resolvedUrl("../python"))
             importModule('main', function() {
                 applySettings(true)
                 initialized = true
+            })
+        }
+
+        function setHistoryCallback(callback) {
+            while (!initialized);
+            setHandler('history', function (res, index) {
+                if (res[0])
+                    callback(index, res.slice(2))
             })
         }
 
@@ -158,6 +186,7 @@ ApplicationWindow {
                          appSettings.rate,
                          !!appSettings.language ? appSettings.language :  Qt.locale().uiLanguages[0],
                          shared.getProxy(),
+                         StandardPaths.data,
                      ])
         }
 
@@ -185,12 +214,12 @@ ApplicationWindow {
             })
         }
 
-        function loadHistoryRecord(record, callback) {
+        /*function loadHistoryRecord(record, callback) {
             call('main.load', [record], function (res) {
                 if (res[0])
                     callback(res[2], res[3], res[4], res[5])
             })
-        }
+        }*/
 
         function exportHistory(path, backupHistory, backupSettings, backupMiscSettings, callback) {
             var backup = {}
@@ -205,18 +234,23 @@ ApplicationWindow {
                 backup.proxyType = appSettings.proxyType
                 backup.customProxy = appSettings.customProxy
             }
-           call('main.export_history', [path, new Date().toLocaleString(Qt.locale(), Locale.ShortFormat), backup], function(res) {
+           call('main.export_data', [path, new Date().toLocaleString(Qt.locale(), Locale.ShortFormat), backup], function(res) {
                 if (res[0] === 1) callback(res[0], res[1], res[2])
                 else callback(res[0])
            })
         }
 
         function importHistory(path, callback) {
-            call('main.import_history', [path], function(res) {
+            call('main.import_data', [path], function(res) {
                 if (res[0] === 1) callback(res[0], res[1], res[2], res[3])
                 else if (res[0] === 0) callback(res[0], res[1])
                 else callback(res[0])
            })
+        }
+
+        function loadHistory() {
+            historyLoading = true
+            call('main.load_history', [])
         }
     }
 }

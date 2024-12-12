@@ -29,15 +29,23 @@ from util import convert_proxy, convert_sections, qml_date
 shazam = shazamio.Shazam()
 use_rust = 'recognize' in dir(shazam)
 
+settings_set = False
 duration = 10 # seconds
 rate = 41000
+history: Path
 proxy = None
 
-def set_settings(d, r, l, p):
-    global duration, rate, shazam, proxy
+
+def set_settings(d, r, l, p, data):
+    global settings_set, duration, rate, shazam, proxy, history
     duration, rate = d, r
     shazam.language = l
     proxy = convert_proxy(p)
+    history = Path(data) / 'history.json'
+    settings_set = True
+
+def wait_for_settings():
+    while not settings_set: pass
 
 def load(out, new=False):
     if isinstance(out, str):
@@ -68,9 +76,9 @@ def record():
     qsend('recordingstate', 3)
     return asyncio.run(_recognize(f.getvalue()))
 
-def export_history(path: Union[Path, str], dateLocaleString: str, backup) -> tuple:
-    dateLocaleString = dateLocaleString.replace('/', '-').replace(' ', '-')
-    path = Path(path) / f"sshazam-backup-{dateLocaleString}.json"
+def export_data(path: Union[Path, str], date_locale_str: str, backup) -> tuple:
+    date_locale_str = date_locale_str.replace('/', '-').replace(' ', '-')
+    path = Path(path) / f"sshazam-backup-{date_locale_str}.json"
     backup = json.dumps(backup)
     try:
         with open(path, 'w') as f:
@@ -79,7 +87,7 @@ def export_history(path: Union[Path, str], dateLocaleString: str, backup) -> tup
     except Exception as e: return (1, str(type(e)), str(e))
     return (0,)
 
-def import_history(path: Union[Path, str]):
+def import_data(path: Union[Path, str]):
     try:
         with open(path, 'r') as f:
             backup = f.read()
@@ -87,3 +95,35 @@ def import_history(path: Union[Path, str]):
     except PermissionError: return (2,)
     except Exception as e: return (1, '', str(type(e)), str(e))
     return (0, backup)
+
+def migrate_history(legacy: str):
+    with open(history, 'w') as f:
+        f.write(legacy)
+
+def load_history():
+    wait_for_settings()
+    try:
+        if not history.exists():
+            with open(history, 'w') as f:
+                f.write('[]')
+            qsend('historyloaded')
+            return
+        else:
+            with open(history) as f:
+                content = json.loads(f.read())
+    except PermissionError as e:
+        qsend('history_perms', str(e))
+        return
+    except json.JSONDecodeError as e:
+        qsend('history_json', str(e))
+        return
+    except Exception as e:
+        qsend('history_unknown', type(e).__name__, str(e))
+        return
+    if not isinstance(content, (list, tuple)):
+        qsend('history_notlist')
+        return
+    for i, entry in enumerate(content):
+        qsend('history', load(entry), i)
+    
+    qsend('historyloaded')

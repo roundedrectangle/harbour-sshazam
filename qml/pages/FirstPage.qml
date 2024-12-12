@@ -5,6 +5,8 @@ import "../modules/Opal/SmartScrollbar"
 
 Page {
     allowedOrientations: Orientation.All
+    property bool __sshazam_firstPage: true
+    property alias model: listView.model
 
     SilicaListView {
         id: listView
@@ -14,16 +16,29 @@ Page {
         }
         spacing: Theme.paddingLarge
         model: ListModel {
+            property bool initialized: false
             function loadHistory() {
+                if (py.historyLoading) return
                 py.trackFound = false
                 clear()
-                appConfiguration.getHistory().forEach(function (record, i) {
-                    py.loadHistoryRecord(record, function(t,s,se,d) {
-                        append({ arrIndex: i, raw: record, title: t, subtitle: s, sections: se, date: d })
-                    })
-                })
+                py.loadHistory()
             }
-            Component.onCompleted: loadHistory()
+
+            function setupCallback() {
+                if (initialized) return
+                py.setHistoryCallback(function(i, data) {
+                    listView.model.append({ arrIndex: i, title: data[0], subtitle: data[1], sections: data[2], date: data[3] })
+                })
+                initialized = true
+            }
+        }
+
+        Connections {
+            target: py
+            onInitializedChanged: if (py.initialized && !listView.model.initialized) {
+                                      listView.model.setupCallback()
+                                      listView.model.loadHistory()
+                                  }
         }
 
         PullDownMenu {
@@ -38,6 +53,7 @@ Page {
             MenuItem {
                 text: qsTr("Reload history")
                 onClicked: listView.model.loadHistory()
+                enabled: !py.historyLoading
             }
         }
 
