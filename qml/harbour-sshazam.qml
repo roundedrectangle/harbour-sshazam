@@ -16,13 +16,14 @@ ApplicationWindow {
         replacesId: 0
         onReplacesIdChanged: if (replacesId !== 0) replacesId = 0
         isTransient: !appSettings.infoInNotifications
+        appName: "SShazam"
     }
 
     ConfigurationGroup {
         path: '/apps/harbour-sshazam'
         id: appConfiguration
 
-        property string history: '[]'
+        property string history: ''
 
         ConfigurationGroup {
             id: appSettings
@@ -198,12 +199,6 @@ ApplicationWindow {
                     title = res[2]
                     subtitle = res[3]
                     sections = res[4]
-                    try { appConfiguration.addToHistory(res[1]) }
-                    catch (err) {
-                        console.log("Error adding to history "+err)
-                        //console.log("Proceeding with reset")
-                        //appConfiguration.history = '[]'
-                    }
                 } else {
                     trackFound = false
                     title = ''
@@ -213,13 +208,6 @@ ApplicationWindow {
                 finalCallback()
             })
         }
-
-        /*function loadHistoryRecord(record, callback) {
-            call('main.load', [record], function (res) {
-                if (res[0])
-                    callback(res[2], res[3], res[4], res[5])
-            })
-        }*/
 
         function exportHistory(path, backupHistory, backupSettings, backupMiscSettings, callback) {
             var backup = {}

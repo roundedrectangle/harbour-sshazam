@@ -5,7 +5,7 @@ from pathlib import Path
 import json
 import configparser
 from datetime import datetime
-from typing import Union
+from typing import Union, List
 
 logging.basicConfig()
 
@@ -24,7 +24,7 @@ while True: # FIXME
 
 import pasimple
 
-from util import convert_proxy, convert_sections, qml_date
+from util import convert_proxy, convert_sections, qml_date, history_safe, is_history
 
 shazam = shazamio.Shazam()
 use_rust = 'recognize' in dir(shazam)
@@ -52,6 +52,7 @@ def load(out, new=False):
         out = json.loads(out)
     if new:
         out['__sshazam_date'] = qml_date(datetime.now())
+    qsend(str(out))
     track = shazamio.Serialize.full_track(out).track
     if not track:
         return (False,)
@@ -64,7 +65,10 @@ async def _recognize(path):
     else:
         out = await shazam.recognize_song(path, proxy)
     qsend('recordingstate', 4)
-    return load(out, new=True)
+    loaded = load(out, new=True)
+    if loaded[0]:
+        add_to_history(loaded[1]) # pyright: ignore[reportGeneralTypeIssues]
+    return loaded
 
 def recognize(path):
     return asyncio.run(_recognize(path))
@@ -100,30 +104,58 @@ def migrate_history(legacy: str):
     with open(history, 'w') as f:
         f.write(legacy)
 
-def load_history():
+@history_safe
+def create_history(force = False):
+    """Returns if history was created, or None if an error occured."""
+    if not history.exists() or force:
+        with open(history, 'w') as f:
+            f.write('[]')
+        return True
+    return False
+
+@history_safe
+def get_history():
     wait_for_settings()
-    try:
-        if not history.exists():
-            with open(history, 'w') as f:
-                f.write('[]')
-            qsend('historyloaded')
-            return
-        else:
-            with open(history) as f:
-                content = json.loads(f.read())
-    except PermissionError as e:
-        qsend('history_perms', str(e))
+    create = create_history()
+    if create is None:
         return
-    except json.JSONDecodeError as e:
-        qsend('history_json', str(e))
+    if create:
+        return create, []
+    with open(history) as f:
+        content = f.read()
+        if content.strip() == '':
+            create_history(force=True)
+            content = '[]'
+    content = json.loads(content)
+    if not is_history(content):
         return
-    except Exception as e:
-        qsend('history_unknown', type(e).__name__, str(e))
+    return create, content
+
+@history_safe
+def load_history():
+    history = get_history()
+    if history is None:
         return
-    if not isinstance(content, (list, tuple)):
-        qsend('history_notlist')
+    create, content = history
+    if create:
+        qsend('historyloaded')
         return
+
     for i, entry in enumerate(content):
         qsend('history', load(entry), i)
-    
+
     qsend('historyloaded')
+
+@history_safe
+def add_to_history(entry):
+    _history = get_history()
+    if _history is None:
+        return
+    content: List[str]
+    _, content = _history
+    
+    content.insert(0, entry)
+    res = json.dumps(content)
+
+    with open(history, 'w') as f:
+        f.write(res)
