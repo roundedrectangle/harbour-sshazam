@@ -23,8 +23,6 @@ ApplicationWindow {
         path: '/apps/harbour-sshazam'
         id: appConfiguration
 
-        property string history: ''
-
         ConfigurationGroup {
             id: appSettings
             path: 'settings'
@@ -40,26 +38,14 @@ ApplicationWindow {
         }
 
         Component.onCompleted: {
-            if (history) { // Migrate to file-based history
+            if (value('history')) { // Migrate to file-based history
                 shared.showInfo(qsTr("Legacy history system detected. Attempting to migrate"))
-                py.call('main.migrate_history', [history], function () {
+                py.call('main.migrate_history', [value('history')], function () {
                     py.reloadHistoryModel()
                     shared.showInfo(qsTr("Migration complete. If you see no errors it means it was succsessful"))
-                    history = ''
+                    setValue('history', undefined)
                 })
             }
-        }
-
-        function getHistory() { return JSON.parse(history) }
-
-        function setHistory(newValue) {
-            history = JSON.stringify(newValue)
-        }
-
-        function addToHistory(value) {
-            var parsed = getHistory()
-            parsed.splice(0, 0, value)
-            setHistory(parsed)
         }
     }
 
@@ -96,10 +82,12 @@ ApplicationWindow {
     QtObject {
         id: shared
 
-        function showInfo(text) {
+        function showInfo(text, summary) {
             notifier.appIcon = "image://theme/icon-lock-information"
-            notifier.body = text
+            if (text) notifier.body = text
+            if (summary) notifier.summary = summary
             notifier.publish()
+            console.log(text, summary)
         }
 
         function showError(text, summary) {
@@ -152,7 +140,7 @@ ApplicationWindow {
         property var sections: []
         property int recognitionState: 0
         property bool historyLoading: false
-        property var reloadHistoryModel: function() { shared.showInfo(qsTranslate("Errors", "Couldn't reload history: app is not initialized!")) }
+        property var reloadHistoryModel: function() { shared.showError(qsTranslate("Errors", "Couldn't reload history: app is not initialized!")) }
 
         onError: shared.showError(qsTranslate("Errors", "Python error: %1").arg(traceback))
         onReceived: console.log("got message from python: " + data)

@@ -122,6 +122,9 @@ Page {
                         })
                     }
                 }
+            }
+            Item { width:1; height: Theme.paddingLarge }
+            ButtonLayout {
                 Button {
                     text: qsTr("Rebuild history")
                     onClicked: py.rebuildHistory()
