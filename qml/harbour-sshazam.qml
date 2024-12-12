@@ -43,8 +43,7 @@ ApplicationWindow {
             if (history) { // Migrate to file-based history
                 shared.showInfo(qsTr("Legacy history system detected. Attempting to migrate"))
                 py.call('main.migrate_history', [history], function () {
-                    var page = pageStack.find(function (p) { return !!p ? p.__sshazam_firstPage : false })
-                    page.model.loadHistory()
+                    py.reloadHistoryModel()
                     shared.showInfo(qsTr("Migration complete. If you see no errors it means it was succsessful"))
                     history = ''
                 })
@@ -152,6 +151,7 @@ ApplicationWindow {
         property var sections: []
         property int recognitionState: 0
         property bool historyLoading: false
+        property var reloadHistoryModel: function() { shared.showInfo(qsTranslate("Errors", "Couldn't reload history: app is not initialized!")) }
 
         onError: shared.showError(qsTranslate("Errors", "Python error: %1").arg(traceback))
         onReceived: console.log("got message from python: " + data)
@@ -163,7 +163,10 @@ ApplicationWindow {
             setHandler('history_json', function (name, text) { shared.showError(text, qsTranslate("Errors", "History contained invalid JSON: %1").arg(name)) })
             setHandler('history_perms', function (name, text) { shared.showError(text, qsTranslate("Errors", "Insufficient permissions: %1").arg(name)) })
             setHandler('history_notlist', function (name, text) { shared.showError(qsTranslate("Errors", "History is not a list or tuple")) })
-
+            setHandler('history_outdated', function (latest, outdated) {
+                reloadHistoryModel()
+                shared.showError(qsTranslate("Errors", "History was outdated. Latest length: %1, previously loaded length: %2").arg(latest).arg(outdated), qsTranslate("Errors", "Could not remove record. Please try again"))
+            })
 
             addImportPath(Qt.resolvedUrl("../python"))
             importModule('main', function() {
@@ -172,11 +175,12 @@ ApplicationWindow {
             })
         }
 
-        function setHistoryCallback(callback) {
+        function setCallbacks(history, reload) {
             while (!initialized);
+            reloadHistoryModel = reload
             setHandler('history', function (res, index) {
                 if (res[0])
-                    callback(index, res.slice(2))
+                    history(index, res.slice(2))
             })
         }
 

@@ -26,9 +26,9 @@ Page {
 
             function setupCallback() {
                 if (initialized) return
-                py.setHistoryCallback(function(i, data) {
+                py.setCallbacks(function(i, data) {
                     listView.model.append({ arrIndex: i, title: data[0], subtitle: data[1], sections: data[2], date: data[3] })
-                })
+                }, loadHistory)
                 initialized = true
             }
         }
@@ -225,14 +225,7 @@ Page {
                     MenuItem {
                         text: qsTr("Remove")
                         onClicked: {
-                            var history = appConfiguration.getHistory()
-                            if (history.length === listView.model.length) {
-                                listView.model.loadHistory()
-                                shared.showError(qsTr("Could not remove record. Please try again. History was outdated"))
-                                return
-                            }
-                            history.splice(arrIndex, 1)
-                            appConfiguration.setHistory(history)
+                            py.call('main.remove_from_history', [arrIndex, listView.model.count])
                             listView.model.loadHistory()
                         }
                     }

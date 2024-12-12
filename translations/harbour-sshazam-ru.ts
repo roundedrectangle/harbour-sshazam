@@ -22,6 +22,34 @@
         <source>Python error: %1</source>
         <translation>Ошибка Python: %1</translation>
     </message>
+    <message>
+        <source>History was unable to load: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>History contained invalid JSON: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Insufficient permissions: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>History is not a list or tuple</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Couldn&apos;t reload history: app is not initialized!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Could not remove record. Please try again</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>History was outdated. Latest length: %1, previously loaded length: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>FirstPage</name>
@@ -44,10 +72,6 @@
     <message>
         <source>Remove</source>
         <translation>Удалить</translation>
-    </message>
-    <message>
-        <source>Could not remove record. Please try again. History was outdated</source>
-        <translation>Не удалось удалить запись. Пожалуйста, попробуйте ещё раз. История была устаревшей</translation>
     </message>
     <message>
         <source>Recording</source>
@@ -340,6 +364,17 @@
     <message>
         <source>Import backup</source>
         <translation>Импорт бэкапа</translation>
+    </message>
+</context>
+<context>
+    <name>harbour-sshazam</name>
+    <message>
+        <source>Legacy history system detected. Attempting to migrate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Migration complete. If you see no errors it means it was succsessful</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

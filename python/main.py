@@ -52,7 +52,6 @@ def load(out, new=False):
         out = json.loads(out)
     if new:
         out['__sshazam_date'] = qml_date(datetime.now())
-    qsend(str(out))
     track = shazamio.Serialize.full_track(out).track
     if not track:
         return (False,)
@@ -147,15 +146,34 @@ def load_history():
     qsend('historyloaded')
 
 @history_safe
-def add_to_history(entry):
+def modify_history(do):
     _history = get_history()
     if _history is None:
         return
     content: List[str]
     _, content = _history
     
-    content.insert(0, entry)
+    content = do(content)
+    if content is None:
+        return
     res = json.dumps(content)
 
     with open(history, 'w') as f:
         f.write(res)
+
+add_to_history = lambda entry: modify_history(lambda h: [entry] + h)
+
+def remove_from_history(index, length):
+    try: index = int(index)
+    except Exception as e:
+        qsend('history_unknown', type(e).__name__, str(e))
+        return
+    def f(h):
+        if len(h) != length:
+            qsend('history_outdated', len(h), length)
+            return
+        del h[index]
+        return h
+    return modify_history(f)
+
+# remove_from_history = lambda index: modify_history(lambda h: (h.pop(index), h)[1])
