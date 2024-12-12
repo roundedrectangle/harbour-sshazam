@@ -125,8 +125,7 @@ ApplicationWindow {
             }
         }
 
-        function applyBackup(backup, backupHistory, backupSettings, backupMiscSettings, callback) {
-            if (backupHistory) appConfiguration.history = backup.history
+        function applyBackup(backup, callback, backupHistory, backupSettings, backupMiscSettings) {
             if (backupSettings) {
                 appSettings.recognitionTime = backup.recognitionTime
                 appSettings.rate = backup.rate
@@ -137,6 +136,8 @@ ApplicationWindow {
                 appSettings.proxyType = backup.proxyType
                 appSettings.customProxy = backup.customProxy
             }
+            if (backupHistory) py.call('main.import_history', [backup.history], callback)
+            else callback()
         }
     }
 
@@ -213,26 +214,25 @@ ApplicationWindow {
             })
         }
 
-        function exportHistory(path, backupHistory, backupSettings, backupMiscSettings, callback) {
-            var backup = {}
-            if (backupHistory) backup.history = appConfiguration.history
-            if (backupSettings) {
-                backup.recognitionTime = appSettings.recognitionTime
-                backup.rate = appSettings.rate
-                backup.language = appSettings.language
-            }
-            if (backupMiscSettings) {
-                backup.infoInNotifications = appSettings.infoInNotifications
-                backup.proxyType = appSettings.proxyType
-                backup.customProxy = appSettings.customProxy
-            }
-           call('main.export_data', [path, new Date().toLocaleString(Qt.locale(), Locale.ShortFormat), backup], function(res) {
+        function exportData(path, backupHistory, backupSettings, backupMiscSettings, callback) {
+           var backup = {}
+           if (backupSettings) {
+               backup.recognitionTime = appSettings.recognitionTime
+               backup.rate = appSettings.rate
+               backup.language = appSettings.language
+           }
+           if (backupMiscSettings) {
+               backup.infoInNotifications = appSettings.infoInNotifications
+               backup.proxyType = appSettings.proxyType
+               backup.customProxy = appSettings.customProxy
+           }
+           call('main.export_data', [path, new Date().toLocaleString(Qt.locale(), Locale.ShortFormat), backup, backupHistory], function(res) {
                 if (res[0] === 1) callback(res[0], res[1], res[2])
                 else callback(res[0])
            })
         }
 
-        function importHistory(path, callback) {
+        function importData(path, callback) {
             call('main.import_data', [path], function(res) {
                 if (res[0] === 1) callback(res[0], res[1], res[2], res[3])
                 else if (res[0] === 0) callback(res[0], res[1])

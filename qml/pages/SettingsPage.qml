@@ -118,7 +118,7 @@ Page {
                         var dialog = pageStack.push("Sailfish.Pickers.FilePickerPage", { nameFilters: ['*.json'] })
                         dialog.selectedContentPropertiesChanged.connect(function () {
                             var page = pageStack.push(loadingPage)
-                            py.importHistory(dialog.selectedContentProperties.filePath, page.importCallback)
+                            py.importData(dialog.selectedContentProperties.filePath, page.importCallback)
                         })
                     }
                 }
@@ -176,12 +176,12 @@ Page {
                 acceptDestinationInstance.selectedPathChanged.connect(function() {
                     pageStack.completeAnimation()
                     var page = pageStack.replace(loadingPage)
-                    py.exportHistory(acceptDestinationInstance.selectedPath, historySwitch.checked, basicSwitch.checked, otherSwitch.checked, page.callback)
+                    py.exportData(acceptDestinationInstance.selectedPath, historySwitch.checked, basicSwitch.checked, otherSwitch.checked, page.callback)
                 })
             }
             onAccepted: {
-                shared.applyBackup(importData, historySwitch.checked, basicSwitch.checked, otherSwitch.checked)
-                acceptDestinationInstance.finish()
+                if (doExport) return
+                shared.applyBackup(importData, acceptDestinationInstance.finish, historySwitch.checked, basicSwitch.checked, otherSwitch.checked)
             }
         }
     }

@@ -31,14 +31,20 @@ Page {
                 }, loadHistory)
                 initialized = true
             }
+
+            function checkForCallback() {
+                if (py.initialized && !initialized) {
+                    setupCallback()
+                    loadHistory()
+                }
+            }
+
+            Component.onCompleted: checkForCallback()
         }
 
         Connections {
             target: py
-            onInitializedChanged: if (py.initialized && !listView.model.initialized) {
-                                      listView.model.setupCallback()
-                                      listView.model.loadHistory()
-                                  }
+            onInitializedChanged: listView.model.checkForCallback()
         }
 
         PullDownMenu {

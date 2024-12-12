@@ -79,7 +79,7 @@ def record():
     qsend('recordingstate', 3)
     return asyncio.run(_recognize(f.getvalue()))
 
-def export_data(path: Union[Path, str], date_locale_str: str, backup) -> tuple:
+def _export_data(path: Union[Path, str], date_locale_str: str, backup) -> tuple:
     date_locale_str = date_locale_str.replace('/', '-').replace(' ', '-')
     path = Path(path) / f"sshazam-backup-{date_locale_str}.json"
     backup = json.dumps(backup)
@@ -90,7 +90,17 @@ def export_data(path: Union[Path, str], date_locale_str: str, backup) -> tuple:
     except Exception as e: return (1, str(type(e)), str(e))
     return (0,)
 
+def export_data(path: Union[Path, str], date_locale_str: str, backup: dict, add_history: bool) -> tuple:
+    backup = backup or {}
+    if add_history:
+        history = get_history()
+        if history is not None:
+            _, content = history
+            backup['history'] = content
+    return _export_data(path, date_locale_str, backup)
+
 def import_data(path: Union[Path, str]):
+    # TODO: convert history to list only if required
     try:
         with open(path, 'r') as f:
             backup = f.read()
@@ -98,6 +108,11 @@ def import_data(path: Union[Path, str]):
     except PermissionError: return (2,)
     except Exception as e: return (1, '', str(type(e)), str(e))
     return (0, backup)
+
+def import_history(data: Union[str, list]):
+    if isinstance(data, str):
+        data = json.loads(data)
+    modify_history(lambda _: data)
 
 def migrate_history(legacy: str):
     with open(history, 'w') as f:
