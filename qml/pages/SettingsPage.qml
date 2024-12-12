@@ -3,6 +3,7 @@ import Sailfish.Silica 1.0
 import Sailfish.Pickers 1.0
 
 Page {
+    id: settingsPage
     allowedOrientations: Orientation.All
 
     SilicaFlickable {
@@ -101,15 +102,15 @@ Page {
             ButtonLayout {
                 Button {
                     text: qsTr("Clear history")
-                    onClicked: {
+                    onClicked: Remorse.popupAction(settingsPage, qsTr("History cleared"), function() {
                         py.call('main.create_history', [true])
                         py.reloadHistoryModel()
-                    }
+                    })
                 }
 
                 Button {
                     text: qsTr("Reset settings")
-                    onClicked: appSettings.clear()
+                    onClicked: Remorse.popupAction(settingsPage, qsTranslate("SettingsPage", "Settings reset", "Past tense"), appSettings.clear)
                 }
                 Button {
                     text: qsTr("Export backup")
@@ -130,7 +131,7 @@ Page {
             ButtonLayout {
                 Button {
                     text: qsTr("Rebuild history")
-                    onClicked: py.rebuildHistory()
+                    onClicked: Remorse.popupAction(settingsPage, qsTr("History rebuilt"), py.rebuildHistory)
                 }
             }
 

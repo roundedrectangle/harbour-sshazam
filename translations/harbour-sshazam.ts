@@ -369,6 +369,19 @@
         <source>Rebuild history</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>History cleared</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Settings reset</source>
+        <comment>Past tense</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>History rebuilt</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>harbour-sshazam</name>
