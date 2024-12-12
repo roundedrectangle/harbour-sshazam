@@ -365,6 +365,10 @@
         <source>Import backup</source>
         <translation>Импорт бэкапа</translation>
     </message>
+    <message>
+        <source>Rebuild history</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>harbour-sshazam</name>

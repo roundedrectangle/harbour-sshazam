@@ -244,5 +244,7 @@ ApplicationWindow {
             historyLoading = true
             call('main.load_history', [])
         }
+
+        function rebuildHistory() { call('main.rebuild_history', [], reloadHistoryModel) }
     }
 }

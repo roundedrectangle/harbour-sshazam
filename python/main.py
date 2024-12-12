@@ -56,7 +56,7 @@ def load(out, new=False):
     if not track:
         return (False,)
 
-    return (True, json.dumps(out), track.title, track.subtitle, convert_sections(track.sections), out.get('__sshazam_date', -1))
+    return (True, out, track.title, track.subtitle, convert_sections(track.sections), out.get('__sshazam_date', -1))
 
 async def _recognize(path):
     if use_rust:
@@ -100,7 +100,6 @@ def export_data(path: Union[Path, str], date_locale_str: str, backup: dict, add_
     return _export_data(path, date_locale_str, backup)
 
 def import_data(path: Union[Path, str]):
-    # TODO: convert history to list only if required
     try:
         with open(path, 'r') as f:
             backup = f.read()
@@ -192,3 +191,11 @@ def remove_from_history(index, length):
     return modify_history(f)
 
 # remove_from_history = lambda index: modify_history(lambda h: (h.pop(index), h)[1])
+
+# we absolutely LOVE complicated stuff...
+# though with line breaks it's pretty clear
+rebuild_history = lambda: modify_history(lambda h: sorted(
+    [json.loads(e) if isinstance(e, str) else e for e in h],
+    key=lambda e: (e.get('__sshazam_date', None) is not None, e.get('__sshazam_date', None)),
+    reverse=True
+))
