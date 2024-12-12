@@ -101,7 +101,10 @@ Page {
             ButtonLayout {
                 Button {
                     text: qsTr("Clear history")
-                    onClicked: appConfiguration.history = '[]'
+                    onClicked: {
+                        py.call('main.create_history', [true])
+                        py.reloadHistoryModel()
+                    }
                 }
 
                 Button {
