@@ -19,8 +19,12 @@
 <context>
     <name>Errors</name>
     <message>
+        <source>Couldn&apos;t reload history: app is not initialized!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Python error: %1</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>History was unable to load: %1</source>
@@ -39,15 +43,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Couldn&apos;t reload history: app is not initialized!</source>
+        <source>History was outdated. Latest length: %1, previously loaded length: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Could not remove record. Please try again</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>History was outdated. Latest length: %1, previously loaded length: %2</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -388,11 +388,11 @@
 <context>
     <name>harbour-sshazam</name>
     <message>
-        <source>Legacy history system detected. Attempting to migrate</source>
+        <source>Migration complete. If you see no errors it means it was succsessful</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Migration complete. If you see no errors it means it was succsessful</source>
+        <source>Legacy history system detected. Attempting to migrate</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

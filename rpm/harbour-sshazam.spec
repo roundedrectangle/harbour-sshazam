@@ -1,4 +1,4 @@
-%define package_library "yes"
+%define package_library "no"
 %define use_rust "no"
 # See README
 

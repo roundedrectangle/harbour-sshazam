@@ -5,50 +5,50 @@
     <name>AboutPage</name>
     <message>
         <source>Shazam for SailfishOS</source>
-        <translation type="unfinished"></translation>
+        <translation>Shazam для SailfishOS</translation>
     </message>
     <message>
         <source>Translations</source>
-        <translation type="unfinished">Перевод</translation>
+        <translation>Перевод</translation>
     </message>
     <message>
         <source>Italian</source>
-        <translation type="unfinished">Итальянский</translation>
+        <translation>Итальянский</translation>
     </message>
 </context>
 <context>
     <name>Errors</name>
+    <message>
+        <source>Couldn&apos;t reload history: app is not initialized!</source>
+        <translation>Не удалось перезагрузить историю: приложение не инициализировано!</translation>
+    </message>
     <message>
         <source>Python error: %1</source>
         <translation>Ошибка Python: %1</translation>
     </message>
     <message>
         <source>History was unable to load: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Не удалось загрузить историю: %1</translation>
     </message>
     <message>
         <source>History contained invalid JSON: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>История содержала неправильный JSON: %1</translation>
     </message>
     <message>
         <source>Insufficient permissions: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Недостаточно прав: %1</translation>
     </message>
     <message>
         <source>History is not a list or tuple</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Couldn&apos;t reload history: app is not initialized!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Could not remove record. Please try again</source>
-        <translation type="unfinished"></translation>
+        <translation>История не список или кортеж</translation>
     </message>
     <message>
         <source>History was outdated. Latest length: %1, previously loaded length: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>История устарела. Новейшая длина: %1, длина загруженная ранее: %2</translation>
+    </message>
+    <message>
+        <source>Could not remove record. Please try again</source>
+        <translation>Не удалось удалить запись. Пожалуйста, попробуйте ещё раз</translation>
     </message>
 </context>
 <context>
@@ -367,31 +367,31 @@
     </message>
     <message>
         <source>Rebuild history</source>
-        <translation type="unfinished"></translation>
+        <translation>Пересобрать историю</translation>
     </message>
     <message>
         <source>History cleared</source>
-        <translation type="unfinished"></translation>
+        <translation>История очищена</translation>
     </message>
     <message>
         <source>Settings reset</source>
         <comment>Past tense</comment>
-        <translation type="unfinished"></translation>
+        <translation>Настройки сброшены</translation>
     </message>
     <message>
         <source>History rebuilt</source>
-        <translation type="unfinished"></translation>
+        <translation>История пересобрана</translation>
     </message>
 </context>
 <context>
     <name>harbour-sshazam</name>
     <message>
-        <source>Legacy history system detected. Attempting to migrate</source>
-        <translation type="unfinished"></translation>
+        <source>Migration complete. If you see no errors it means it was succsessful</source>
+        <translation>Миграция завершена. Если вы не видите ошибок, она была успешной</translation>
     </message>
     <message>
-        <source>Migration complete. If you see no errors it means it was succsessful</source>
-        <translation type="unfinished"></translation>
+        <source>Legacy history system detected. Attempting to migrate</source>
+        <translation>Обнаружена устаревшая система истории. Производится попытка миграции</translation>
     </message>
 </context>
 </TS>
