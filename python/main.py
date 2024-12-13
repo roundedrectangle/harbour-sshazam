@@ -109,13 +109,10 @@ def import_data(path: Union[Path, str]):
     return (0, backup)
 
 def import_history(data: Union[str, list]):
-    if isinstance(data, str):
+    while isinstance(data, str):
         data = json.loads(data)
     modify_history(lambda _: data)
-
-def migrate_history(legacy: str):
-    with open(history, 'w') as f:
-        f.write(legacy)
+    qsend('import_complete')
 
 @history_safe
 def create_history(force = False):
