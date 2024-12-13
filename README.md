@@ -24,3 +24,10 @@ Make sure to set the variables in SPEC file corrently. They're placed at the top
 ## TODO
 
 - optimze SVGs
+
+## Credits
+
+- Various [Opal](https://github.com/Pretty-SFOS/opal) modules
+- [ShazamIO](https://github.com/shazamio/ShazamIO)
+- [pasimple](https://github.com/henrikschnor/pasimple)
+- pyotherside
