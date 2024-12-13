@@ -236,7 +236,7 @@ Page {
             function importCallback(result, data, extraErrorName, extraErrorDescription) {
                 callbackBase(function () {
                     pageStack.completeAnimation()
-                    pageStack.push(itemsDialog, { importData: data, doExport: false })
+                    pageStack.replace(itemsDialog, { importData: data, doExport: false })
                 }, result, extraErrorName, extraErrorDescription)
             }
 
