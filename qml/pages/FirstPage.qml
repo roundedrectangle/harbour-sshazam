@@ -147,15 +147,15 @@ Page {
             }
 
             BackgroundItem {
-                contentHeight: Theme.itemSizeExtraLarge
-                visible: py.trackFound
-                opacity: visible ? 1 : 0
-                height: visible ? implicitHeight : 0
+                contentHeight: resultColumn.height
+                opacity: py.trackFound ? 1 : 0
+                height: py.trackFound ? implicitHeight : 0
                 Behavior on opacity { FadeAnimation {} }
                 Behavior on height { NumberAnimation { duration: 200 } }
                 onHeightChanged: listView.positionViewAtBeginning()
 
                 Column {
+                    id: resultColumn
                     width: parent.width - Theme.horizontalPageMargin*2
                     anchors.horizontalCenter: parent.horizontalCenter
                     Label {

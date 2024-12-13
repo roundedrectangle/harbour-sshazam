@@ -233,7 +233,6 @@ ApplicationWindow {
             historyLoading = true
             call('main.load_history', [])
         }
-        signal p;
 
         function rebuildHistory() { call('main.rebuild_history', [], reloadHistoryModel) }
 
