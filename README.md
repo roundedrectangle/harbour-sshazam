@@ -7,7 +7,7 @@ You can click on a track in history or the recognition result to show metadata a
 ## Known issues
 
 - armv7hl builds are slow at processing. This is because armv7hl doesn't use Rust for now
-- recognition button is blurry
+- no i486 builds are provided
 
 ## Translating
 
