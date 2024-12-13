@@ -39,13 +39,13 @@ ApplicationWindow {
 
         Component.onCompleted: {
             if (value('history')) { // Migrate to file-based history
-                shared.showInfo(qsTr("Legacy history system detected. Attempting to migrate"))
                 py.setHandler('import_complete', function() {
                     py.reloadHistoryModel()
                     shared.showInfo(qsTr("Migration complete. If you see no errors it means it was succsessful"))
                     setValue('history', undefined)
                 })
-                py.call('main.import_history', [value('history')])
+                py.migrateHistory()
+                shared.showInfo(qsTr("Legacy history system detected. Attempting to migrate"))
             }
         }
     }
@@ -233,7 +233,20 @@ ApplicationWindow {
             historyLoading = true
             call('main.load_history', [])
         }
+        signal p;
 
         function rebuildHistory() { call('main.rebuild_history', [], reloadHistoryModel) }
+
+        function migrateHistory() {
+            var f = function() { call('main.import_history', [appConfiguration.value('history')]) }
+            var f1 = function() {
+                if (initialized) {
+                    f()
+                    initializedChanged.disconnect(f)
+                }
+            }
+            if (initialized) f()
+            else initializedChanged.connect(f1)
+        }
     }
 }
