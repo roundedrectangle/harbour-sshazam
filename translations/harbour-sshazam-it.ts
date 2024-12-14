@@ -20,35 +20,35 @@
     <name>Errors</name>
     <message>
         <source>Couldn&apos;t reload history: app is not initialized!</source>
-        <translation type="unfinished"></translation>
+        <translation>Non sono riuscito a ricaricare la cronologia: l&apos;app non è inizializzata!</translation>
     </message>
     <message>
         <source>Python error: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore python: %1</translation>
     </message>
     <message>
         <source>History was unable to load: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile caricare la cronologia: %1</translation>
     </message>
     <message>
         <source>History contained invalid JSON: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>La cronologia conteneva  un file JSON invalido: %1</translation>
     </message>
     <message>
         <source>Insufficient permissions: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Permessi insufficienti: %1</translation>
     </message>
     <message>
         <source>History is not a list or tuple</source>
-        <translation type="unfinished"></translation>
+        <translation>La cronologia non è una lista o un insieme di valori</translation>
     </message>
     <message>
         <source>History was outdated. Latest length: %1, previously loaded length: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>La cronologia non era aggiornata. Ultimo aggiornamento: %1, aggiornamento precedente: %2</translation>
     </message>
     <message>
         <source>Could not remove record. Please try again</source>
-        <translation type="unfinished"></translation>
+        <translation>Non posso eliminare lo storico. Per favore prova di nuovo</translation>
     </message>
 </context>
 <context>
@@ -369,31 +369,31 @@
     </message>
     <message>
         <source>Rebuild history</source>
-        <translation type="unfinished"></translation>
+        <translation>Ricostruisci cronologia</translation>
     </message>
     <message>
         <source>History cleared</source>
-        <translation type="unfinished"></translation>
+        <translation>Cronologia eliminata</translation>
     </message>
     <message>
         <source>Settings reset</source>
         <comment>Past tense</comment>
-        <translation type="unfinished"></translation>
+        <translation>Reset impostazioni</translation>
     </message>
     <message>
         <source>History rebuilt</source>
-        <translation type="unfinished"></translation>
+        <translation>Cronologia ricostruita</translation>
     </message>
 </context>
 <context>
     <name>harbour-sshazam</name>
     <message>
         <source>Migration complete. If you see no errors it means it was succsessful</source>
-        <translation type="unfinished"></translation>
+        <translation>Migrazione completata. Se non vedi errori vuol dire che il processo ha avuto successo</translation>
     </message>
     <message>
         <source>Legacy history system detected. Attempting to migrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Rilevato vecchio sistema. Cerco di effettuare la migrazione</translation>
     </message>
 </context>
 </TS>
