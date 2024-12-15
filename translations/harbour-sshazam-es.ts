@@ -98,7 +98,7 @@
     <name>LicenseListPart</name>
     <message>
         <source>License text</source>
-        <translation>Texto de licensia</translation>
+        <translation>Texto de la licencia</translation>
     </message>
 </context>
 <context>
@@ -117,11 +117,11 @@
     </message>
     <message>
         <source>show contributors</source>
-        <translation>Mostrar contribuyentes</translation>
+        <translation>Mostrar contribuidores</translation>
     </message>
     <message>
         <source>Homepage</source>
-        <translation>Página principal</translation>
+        <translation>Página web</translation>
     </message>
     <message>
         <source>Changelog</source>
@@ -133,7 +133,7 @@
     </message>
     <message>
         <source>Source Code</source>
-        <translation>Código fuente</translation>
+        <translation>Código Fuente</translation>
     </message>
     <message>
         <source>Donations</source>
@@ -141,21 +141,21 @@
     </message>
     <message>
         <source>License</source>
-        <translation>Licensia</translation>
+        <translation>Licencia</translation>
     </message>
     <message numerus="yes">
         <source>show license(s)</source>
         <translation>
-            <numerusform>Mostrar Licensias</numerusform>
+            <numerusform>Mostrar licencia</numerusform>
         </translation>
     </message>
     <message>
         <source>News</source>
-        <translation>Nuevos</translation>
+        <translation>Novedades</translation>
     </message>
     <message>
         <source>Changes since version %1</source>
-        <translation>Cambios desde versión %1</translation>
+        <translation>Cambios desde la versión %1</translation>
     </message>
     <message>
         <source>show details</source>
@@ -171,11 +171,11 @@
     </message>
     <message>
         <source>Contributors</source>
-        <translation>Contribuyentes</translation>
+        <translation>Colaboradores</translation>
     </message>
     <message>
         <source>Acknowledgements</source>
-        <translation>Agradecimientos</translation>
+        <translation>Reconocimientos</translation>
     </message>
     <message>
         <source>External Link</source>
@@ -183,48 +183,218 @@
     </message>
     <message>
         <source>Open in browser</source>
-        <translation>Abrir en navegador</translation>
+        <translation>Abrir en el navegador</translation>
     </message>
     <message>
         <source>Copied to clipboard: %1</source>
-        <translation>Copiado</translation>
+        <translation>Copiado al portapapeles: %1</translation>
     </message>
     <message>
         <source>Copy to clipboard</source>
-        <translation>Copiar</translation>
+        <translation>Copiar al portapapeles</translation>
     </message>
     <message>
         <source>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</source>
-        <translation>Referirse a &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
+        <translation>Vea &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Download license texts</source>
-        <translation>Bajar texto de licensia</translation>
+        <translation>Descargar los textos de las licencias</translation>
     </message>
     <message numerus="yes">
         <source>License(s)</source>
         <translation>
-            <numerusform>Licensias</numerusform>
+            <numerusform>Licencia</numerusform>
         </translation>
     </message>
     <message>
         <source>Note: please check the source code for most accurate information.</source>
-        <translation>Nota: Consultar código fuente para obtener información precisa.</translation>
+        <translation>Nota: compruebe el código fuente para la información más precisa.</translation>
     </message>
 </context>
 <context>
     <name>Opal.About.Common</name>
     <message>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
-        <translation>Apoyar el trabajo, con tazas de café.</translation>
+        <translation>Si quieres apoyar mi trabajo, puedes comprarme un café.</translation>
     </message>
     <message>
         <source>You can support this project by contributing, or by donating using any of these services.</source>
-        <translation>Apoyar el proyecto contribuyendo o donando utilizando los servicios.</translation>
+        <translation>Puedes apoyar este proyecto contribuyendo o donando por cualquiera de estos servicios.</translation>
     </message>
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
-        <translation>Contribuciones a traducciones o código son bienvenidas.</translation>
+        <translation>Tus contribuciones a traducir o escribir código serán bien recibidas.</translation>
+    </message>
+    <message>
+        <source>Author</source>
+        <translation>Autor</translation>
+    </message>
+    <message numerus="yes">
+        <source>Author(s)</source>
+        <translation>
+            <numerusform>Autor</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Maintainer</source>
+        <translation>Mantenedor</translation>
+    </message>
+    <message numerus="yes">
+        <source>Maintainer(s)</source>
+        <translation>
+            <numerusform>Mantenedor</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Programming</source>
+        <translation>Programación</translation>
+    </message>
+    <message>
+        <source>Icon Design</source>
+        <translation>Diseño de icono</translation>
+    </message>
+    <message>
+        <source>Third-party libraries</source>
+        <translation>Bibliotecas de terceros</translation>
+    </message>
+    <message>
+        <source>Data</source>
+        <translation>Datos</translation>
+    </message>
+    <message>
+        <source>Data License</source>
+        <translation>Licencia de los datos</translation>
+    </message>
+    <message numerus="yes">
+        <source>Data License(s)</source>
+        <translation>
+            <numerusform>Licencia de los datos</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Terms of Use</source>
+        <translation>Términos de uso</translation>
+    </message>
+    <message>
+        <source>Belarusian</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Chinese</source>
+        <translation>Chino</translation>
+    </message>
+    <message>
+        <source>Czech</source>
+        <translation>Checo</translation>
+    </message>
+    <message>
+        <source>Dutch</source>
+        <translation>Holandés</translation>
+    </message>
+    <message>
+        <source>English</source>
+        <translation>Inglés</translation>
+    </message>
+    <message>
+        <source>Estonian</source>
+        <translation>Estonio</translation>
+    </message>
+    <message>
+        <source>Finnish</source>
+        <translation>Finlandés</translation>
+    </message>
+    <message>
+        <source>French</source>
+        <translation>Francés</translation>
+    </message>
+    <message>
+        <source>German</source>
+        <translation>Alemán</translation>
+    </message>
+    <message>
+        <source>Greek</source>
+        <translation>Griego</translation>
+    </message>
+    <message>
+        <source>Hungarian</source>
+        <translation>Húngaro</translation>
+    </message>
+    <message>
+        <source>Indonesian</source>
+        <translation>Indonesio</translation>
+    </message>
+    <message>
+        <source>Italian</source>
+        <translation>Italiano</translation>
+    </message>
+    <message>
+        <source>Lithuanian</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Norwegian Bokmål</source>
+        <translation>Noruego (Bokmål)</translation>
+    </message>
+    <message>
+        <source>Polish</source>
+        <translation>Polaco</translation>
+    </message>
+    <message>
+        <source>Portuguese</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Brazilian Portuguese</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Romanian</source>
+        <translation>Rumano</translation>
+    </message>
+    <message>
+        <source>Russian</source>
+        <translation>Ruso</translation>
+    </message>
+    <message>
+        <source>Serbian</source>
+        <translation>Serbio</translation>
+    </message>
+    <message>
+        <source>Slovak</source>
+        <translation>Eslovaco</translation>
+    </message>
+    <message>
+        <source>Spanish</source>
+        <translation>Español</translation>
+    </message>
+    <message>
+        <source>Swedish</source>
+        <translation>Sueco</translation>
+    </message>
+    <message>
+        <source>Tamil</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Turkish</source>
+        <translation>Turco</translation>
+    </message>
+    <message>
+        <source>Ukrainian</source>
+        <translation>Ucraniano</translation>
+    </message>
+    <message>
+        <source>Norwegian Nynorsk</source>
+        <translation>Noruego (Nynorsk)</translation>
+    </message>
+    <message>
+        <source>Latvian</source>
+        <translation>Letón</translation>
+    </message>
+    <message>
+        <source>Dutch (Belgium)</source>
+        <translation>Neerlandés (Bélgica)</translation>
     </message>
 </context>
 <context>

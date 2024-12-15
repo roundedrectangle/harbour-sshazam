@@ -226,6 +226,176 @@
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation>Ваш вклад в перевод или код будет только приветствоваться.</translation>
     </message>
+    <message>
+        <source>Author</source>
+        <translation>Автор</translation>
+    </message>
+    <message numerus="yes">
+        <source>Author(s)</source>
+        <translation>
+            <numerusform>Автор</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Maintainer</source>
+        <translation>Сопровождающий</translation>
+    </message>
+    <message numerus="yes">
+        <source>Maintainer(s)</source>
+        <translation>
+            <numerusform>Сопровождающий</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Programming</source>
+        <translation>Программирование</translation>
+    </message>
+    <message>
+        <source>Icon Design</source>
+        <translation>Дизайн иконок</translation>
+    </message>
+    <message>
+        <source>Third-party libraries</source>
+        <translation>Сторонние библиотеки</translation>
+    </message>
+    <message>
+        <source>Data</source>
+        <translation>Данные</translation>
+    </message>
+    <message>
+        <source>Data License</source>
+        <translation>Лицензия на работу с данными</translation>
+    </message>
+    <message numerus="yes">
+        <source>Data License(s)</source>
+        <translation>
+            <numerusform>Лицензия на работу с данными</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Terms of Use</source>
+        <translation>Условия использования</translation>
+    </message>
+    <message>
+        <source>Belarusian</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Chinese</source>
+        <translation>Китайский</translation>
+    </message>
+    <message>
+        <source>Czech</source>
+        <translation>Чешский</translation>
+    </message>
+    <message>
+        <source>Dutch</source>
+        <translation>Голландский</translation>
+    </message>
+    <message>
+        <source>English</source>
+        <translation>Английский</translation>
+    </message>
+    <message>
+        <source>Estonian</source>
+        <translation>Эстонский</translation>
+    </message>
+    <message>
+        <source>Finnish</source>
+        <translation>Финский</translation>
+    </message>
+    <message>
+        <source>French</source>
+        <translation>Французский</translation>
+    </message>
+    <message>
+        <source>German</source>
+        <translation>Немецкий</translation>
+    </message>
+    <message>
+        <source>Greek</source>
+        <translation>Греческий</translation>
+    </message>
+    <message>
+        <source>Hungarian</source>
+        <translation>Венгерский</translation>
+    </message>
+    <message>
+        <source>Indonesian</source>
+        <translation>Индонезийский</translation>
+    </message>
+    <message>
+        <source>Italian</source>
+        <translation>Итальянский</translation>
+    </message>
+    <message>
+        <source>Lithuanian</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Norwegian Bokmål</source>
+        <translation type="unfinished">Норвежский букмол</translation>
+    </message>
+    <message>
+        <source>Polish</source>
+        <translation>Польский</translation>
+    </message>
+    <message>
+        <source>Portuguese</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Brazilian Portuguese</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Romanian</source>
+        <translation>Румынский</translation>
+    </message>
+    <message>
+        <source>Russian</source>
+        <translation>Русский</translation>
+    </message>
+    <message>
+        <source>Serbian</source>
+        <translation>Сербский</translation>
+    </message>
+    <message>
+        <source>Slovak</source>
+        <translation>Словацкий</translation>
+    </message>
+    <message>
+        <source>Spanish</source>
+        <translation>Испанский</translation>
+    </message>
+    <message>
+        <source>Swedish</source>
+        <translation>Шведский</translation>
+    </message>
+    <message>
+        <source>Tamil</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Turkish</source>
+        <translation>Турецкий</translation>
+    </message>
+    <message>
+        <source>Ukrainian</source>
+        <translation>Украинский</translation>
+    </message>
+    <message>
+        <source>Norwegian Nynorsk</source>
+        <translation>Норвежский нюнорск</translation>
+    </message>
+    <message>
+        <source>Latvian</source>
+        <translation>Латышский</translation>
+    </message>
+    <message>
+        <source>Dutch (Belgium)</source>
+        <translation>Голландский (Бельгия)</translation>
+    </message>
 </context>
 <context>
     <name>SettingsPage</name>
