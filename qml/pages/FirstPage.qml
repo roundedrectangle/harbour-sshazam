@@ -95,6 +95,7 @@ Page {
                         }
                     }
 
+                    enabled: py.initialized
                     onClicked: {
                         if (animationTimer.running) return
                         animationTimer.start()
