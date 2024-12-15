@@ -63,7 +63,7 @@
     </message>
     <message>
         <source>Recognition Result</source>
-        <translation>Результат распознования</translation>
+        <translation>Результат распознавания</translation>
     </message>
     <message>
         <source>History</source>
