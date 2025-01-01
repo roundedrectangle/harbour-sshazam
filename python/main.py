@@ -23,11 +23,12 @@ while True: # FIXME
     break
 
 import pasimple
+import shazam as shazam_py
 
 from util import convert_proxy, convert_sections, qml_date, history_safe, is_history
 
 shazam = shazamio.Shazam()
-use_rust = 'recognize' in dir(shazam)
+# use_rust = 'recognize' in dir(shazam)
 
 settings_set = False
 duration = 10 # seconds
@@ -58,26 +59,32 @@ def load(out, new=False):
 
     return (True, out, track.title, track.subtitle, convert_sections(track.sections), out.get('__sshazam_date', -1))
 
-async def _recognize(path):
-    if use_rust:
-        out = await shazam.recognize(path, proxy)
-    else:
-        out = await shazam.recognize_song(path, proxy)
-    qsend('recordingstate', 4)
-    loaded = load(out, new=True)
-    if loaded[0]:
-        add_to_history(loaded[1]) # pyright: ignore[reportGeneralTypeIssues]
-    return loaded
+# async def _recognize(path):
+#     if use_rust:
+#         out = await shazam.recognize(path, proxy)
+#     else:
+#         out = await shazam.recognize_song(path, proxy)
+#     qsend('recordingstate', 4)
+#     loaded = load(out, new=True)
+#     if loaded[0]:
+#         add_to_history(loaded[1]) # pyright: ignore[reportGeneralTypeIssues]
+#     return loaded
 
-def recognize(path):
-    return asyncio.run(_recognize(path))
+def recognize(data):
+    # return asyncio.run(_recognize(path))
+    with shazam_py.Shazam(data) as s:
+        qsend('recordingstate', 4)
+        loaded = load(s.result, new=True)
+        if loaded[0]:
+            add_to_history(loaded[1]) # pyright: ignore[reportGeneralTypeIssues]
+        return loaded
 
 def record():
     qsend('recordingstate', 2)
     f = io.BytesIO()
     pasimple.record_wav(f, duration, sample_rate=rate)
     qsend('recordingstate', 3)
-    return asyncio.run(_recognize(f.getvalue()))
+    return recognize(f.getvalue())
 
 def _export_data(path: Union[Path, str], date_locale_str: str, backup) -> tuple:
     date_locale_str = date_locale_str.replace('/', '-').replace(' ', '-')
