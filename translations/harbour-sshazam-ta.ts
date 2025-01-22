@@ -9,11 +9,11 @@
     </message>
     <message>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">மொழிபெயர்ப்புகள்</translation>
     </message>
     <message>
         <source>Italian</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">இத்தாலிய</translation>
     </message>
 </context>
 <context>
@@ -91,6 +91,17 @@
     </message>
     <message>
         <source>About</source>
+        <translation type="unfinished">பற்றி</translation>
+    </message>
+</context>
+<context>
+    <name>General</name>
+    <message>
+        <source>Copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 by %2</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -225,176 +236,6 @@
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation>மொழிபெயர்ப்புகள் அல்லது குறியீட்டிற்கான உங்கள் பங்களிப்புகள் மிகவும் வரவேற்கப்படும்.</translation>
-    </message>
-    <message>
-        <source>Author</source>
-        <translation>நூலாசிரியர்</translation>
-    </message>
-    <message numerus="yes">
-        <source>Author(s)</source>
-        <translation>
-            <numerusform>நூலாசிரியர்</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Maintainer</source>
-        <translation>பராமரிப்பாளர்</translation>
-    </message>
-    <message numerus="yes">
-        <source>Maintainer(s)</source>
-        <translation>
-            <numerusform>பராமரிப்பாளர்</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation>நிரலாக்க</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation>படவுரு வடிவமைப்பு</translation>
-    </message>
-    <message>
-        <source>Third-party libraries</source>
-        <translation>மூன்றாம் தரப்பு நூலகங்கள்</translation>
-    </message>
-    <message>
-        <source>Data</source>
-        <translation>தகவல்கள்</translation>
-    </message>
-    <message>
-        <source>Data License</source>
-        <translation>தரவு உரிமம்</translation>
-    </message>
-    <message numerus="yes">
-        <source>Data License(s)</source>
-        <translation>
-            <numerusform>தரவு உரிமம்</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Terms of Use</source>
-        <translation>பயன்பாட்டு விதிமுறைகள்</translation>
-    </message>
-    <message>
-        <source>Belarusian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation>சீன</translation>
-    </message>
-    <message>
-        <source>Czech</source>
-        <translation>செக்</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation>டச்சு</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation>ஆங்கிலம்</translation>
-    </message>
-    <message>
-        <source>Estonian</source>
-        <translation>எச்டோனிய</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation>பின்னிச்</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation>பிரஞ்சு</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation>செர்மன்</translation>
-    </message>
-    <message>
-        <source>Greek</source>
-        <translation>கிரேக்கம்</translation>
-    </message>
-    <message>
-        <source>Hungarian</source>
-        <translation>அங்கேரியன்</translation>
-    </message>
-    <message>
-        <source>Indonesian</source>
-        <translation>இந்தோனேசிய</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation>இத்தாலிய</translation>
-    </message>
-    <message>
-        <source>Lithuanian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Norwegian Bokmål</source>
-        <translation>நார்வேசியன் பொக்மால்</translation>
-    </message>
-    <message>
-        <source>Polish</source>
-        <translation>போலீச்</translation>
-    </message>
-    <message>
-        <source>Portuguese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Brazilian Portuguese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Romanian</source>
-        <translation>ருமேனிய</translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation>ரச்ய</translation>
-    </message>
-    <message>
-        <source>Serbian</source>
-        <translation>செர்பிய</translation>
-    </message>
-    <message>
-        <source>Slovak</source>
-        <translation>ச்லோவாக்</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation>ச்பானிச்</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation>ச்வீடிச்</translation>
-    </message>
-    <message>
-        <source>Tamil</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Turkish</source>
-        <translation>துருக்கிய</translation>
-    </message>
-    <message>
-        <source>Ukrainian</source>
-        <translation>உக்ரேனிய</translation>
-    </message>
-    <message>
-        <source>Norwegian Nynorsk</source>
-        <translation>நார்வேசியன் நியூநார்ச்க்</translation>
-    </message>
-    <message>
-        <source>Latvian</source>
-        <translation>லாட்வியன்</translation>
-    </message>
-    <message>
-        <source>Dutch (Belgium)</source>
-        <translation>டச்சு (பெல்சியம்)</translation>
     </message>
 </context>
 <context>

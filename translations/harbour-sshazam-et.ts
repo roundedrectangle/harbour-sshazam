@@ -9,11 +9,11 @@
     </message>
     <message>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tõlked</translation>
     </message>
     <message>
         <source>Italian</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">itaalia</translation>
     </message>
 </context>
 <context>
@@ -91,6 +91,17 @@
     </message>
     <message>
         <source>About</source>
+        <translation type="unfinished">Rakenduse teave</translation>
+    </message>
+</context>
+<context>
+    <name>General</name>
+    <message>
+        <source>Copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 by %2</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -225,176 +236,6 @@
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation>Sinu panus tõlgete või rakenduse koodi näol oleks väga teretulnud.</translation>
-    </message>
-    <message>
-        <source>Author</source>
-        <translation>Autor</translation>
-    </message>
-    <message numerus="yes">
-        <source>Author(s)</source>
-        <translation>
-            <numerusform>Autor</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Maintainer</source>
-        <translation>Jätkuarendaja</translation>
-    </message>
-    <message numerus="yes">
-        <source>Maintainer(s)</source>
-        <translation>
-            <numerusform>Jätkuarendaja</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation>Koodi kirjutamine</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation>Ikooni kujundus</translation>
-    </message>
-    <message>
-        <source>Third-party libraries</source>
-        <translation>Kolmandate osapoolte teegid</translation>
-    </message>
-    <message>
-        <source>Data</source>
-        <translation>Andmed</translation>
-    </message>
-    <message>
-        <source>Data License</source>
-        <translation>Andmete litsents</translation>
-    </message>
-    <message numerus="yes">
-        <source>Data License(s)</source>
-        <translation>
-            <numerusform>Andmete litsents</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Terms of Use</source>
-        <translation>Kasutustingimused</translation>
-    </message>
-    <message>
-        <source>Belarusian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation>hiina</translation>
-    </message>
-    <message>
-        <source>Czech</source>
-        <translation>tšehhi</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation>hollandi</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation>inglise</translation>
-    </message>
-    <message>
-        <source>Estonian</source>
-        <translation>eesti</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation>soome</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation>prantsuse</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation>saksa</translation>
-    </message>
-    <message>
-        <source>Greek</source>
-        <translation>kreeka</translation>
-    </message>
-    <message>
-        <source>Hungarian</source>
-        <translation>ungari</translation>
-    </message>
-    <message>
-        <source>Indonesian</source>
-        <translation>indoneesia</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation>itaalia</translation>
-    </message>
-    <message>
-        <source>Lithuanian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Norwegian Bokmål</source>
-        <translation>norra bokmål</translation>
-    </message>
-    <message>
-        <source>Polish</source>
-        <translation>poola</translation>
-    </message>
-    <message>
-        <source>Portuguese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Brazilian Portuguese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Romanian</source>
-        <translation>rumeenia keel</translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation>vene</translation>
-    </message>
-    <message>
-        <source>Serbian</source>
-        <translation>serbia keel</translation>
-    </message>
-    <message>
-        <source>Slovak</source>
-        <translation>slovaki</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation>hispaania</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation>rootsi</translation>
-    </message>
-    <message>
-        <source>Tamil</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Turkish</source>
-        <translation>türgi</translation>
-    </message>
-    <message>
-        <source>Ukrainian</source>
-        <translation>ukraina</translation>
-    </message>
-    <message>
-        <source>Norwegian Nynorsk</source>
-        <translation>uusnorra</translation>
-    </message>
-    <message>
-        <source>Latvian</source>
-        <translation>läti</translation>
-    </message>
-    <message>
-        <source>Dutch (Belgium)</source>
-        <translation>hollandi (Belgia)</translation>
     </message>
 </context>
 <context>

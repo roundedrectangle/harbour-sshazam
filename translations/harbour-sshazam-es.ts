@@ -95,6 +95,17 @@
     </message>
 </context>
 <context>
+    <name>General</name>
+    <message>
+        <source>Copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 by %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>LicenseListPart</name>
     <message>
         <source>License text</source>
@@ -225,176 +236,6 @@
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation>Tus contribuciones a traducir o escribir código serán bien recibidas.</translation>
-    </message>
-    <message>
-        <source>Author</source>
-        <translation>Autor</translation>
-    </message>
-    <message numerus="yes">
-        <source>Author(s)</source>
-        <translation>
-            <numerusform>Autor</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Maintainer</source>
-        <translation>Mantenedor</translation>
-    </message>
-    <message numerus="yes">
-        <source>Maintainer(s)</source>
-        <translation>
-            <numerusform>Mantenedor</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation>Programación</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation>Diseño de icono</translation>
-    </message>
-    <message>
-        <source>Third-party libraries</source>
-        <translation>Bibliotecas de terceros</translation>
-    </message>
-    <message>
-        <source>Data</source>
-        <translation>Datos</translation>
-    </message>
-    <message>
-        <source>Data License</source>
-        <translation>Licencia de los datos</translation>
-    </message>
-    <message numerus="yes">
-        <source>Data License(s)</source>
-        <translation>
-            <numerusform>Licencia de los datos</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Terms of Use</source>
-        <translation>Términos de uso</translation>
-    </message>
-    <message>
-        <source>Belarusian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation>Chino</translation>
-    </message>
-    <message>
-        <source>Czech</source>
-        <translation>Checo</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation>Holandés</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation>Inglés</translation>
-    </message>
-    <message>
-        <source>Estonian</source>
-        <translation>Estonio</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation>Finlandés</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation>Francés</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation>Alemán</translation>
-    </message>
-    <message>
-        <source>Greek</source>
-        <translation>Griego</translation>
-    </message>
-    <message>
-        <source>Hungarian</source>
-        <translation>Húngaro</translation>
-    </message>
-    <message>
-        <source>Indonesian</source>
-        <translation>Indonesio</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation>Italiano</translation>
-    </message>
-    <message>
-        <source>Lithuanian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Norwegian Bokmål</source>
-        <translation>Noruego (Bokmål)</translation>
-    </message>
-    <message>
-        <source>Polish</source>
-        <translation>Polaco</translation>
-    </message>
-    <message>
-        <source>Portuguese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Brazilian Portuguese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Romanian</source>
-        <translation>Rumano</translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation>Ruso</translation>
-    </message>
-    <message>
-        <source>Serbian</source>
-        <translation>Serbio</translation>
-    </message>
-    <message>
-        <source>Slovak</source>
-        <translation>Eslovaco</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation>Español</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation>Sueco</translation>
-    </message>
-    <message>
-        <source>Tamil</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Turkish</source>
-        <translation>Turco</translation>
-    </message>
-    <message>
-        <source>Ukrainian</source>
-        <translation>Ucraniano</translation>
-    </message>
-    <message>
-        <source>Norwegian Nynorsk</source>
-        <translation>Noruego (Nynorsk)</translation>
-    </message>
-    <message>
-        <source>Latvian</source>
-        <translation>Letón</translation>
-    </message>
-    <message>
-        <source>Dutch (Belgium)</source>
-        <translation>Neerlandés (Bélgica)</translation>
     </message>
 </context>
 <context>

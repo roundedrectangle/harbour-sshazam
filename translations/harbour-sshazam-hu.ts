@@ -9,11 +9,11 @@
     </message>
     <message>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fordítások</translation>
     </message>
     <message>
         <source>Italian</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Olasz</translation>
     </message>
 </context>
 <context>
@@ -91,6 +91,17 @@
     </message>
     <message>
         <source>About</source>
+        <translation type="unfinished">Névjegy</translation>
+    </message>
+</context>
+<context>
+    <name>General</name>
+    <message>
+        <source>Copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 by %2</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -225,176 +236,6 @@
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation>A hozzájárulásaid a fordításokhoz, vagy a kódhoz nagyon szívesen fogadjuk.</translation>
-    </message>
-    <message>
-        <source>Author</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message numerus="yes">
-        <source>Author(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Maintainer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message numerus="yes">
-        <source>Maintainer(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation>Programozás</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation>Ikon design</translation>
-    </message>
-    <message>
-        <source>Third-party libraries</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Data</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Data License</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message numerus="yes">
-        <source>Data License(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Terms of Use</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Belarusian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation>kínai</translation>
-    </message>
-    <message>
-        <source>Czech</source>
-        <translation>Cseh</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation>Holland</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation>Angol</translation>
-    </message>
-    <message>
-        <source>Estonian</source>
-        <translation>Észt</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation>Finn</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation>Francia</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation>Német</translation>
-    </message>
-    <message>
-        <source>Greek</source>
-        <translation>Görög</translation>
-    </message>
-    <message>
-        <source>Hungarian</source>
-        <translation>Magyar</translation>
-    </message>
-    <message>
-        <source>Indonesian</source>
-        <translation>Indonéz</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation>Olasz</translation>
-    </message>
-    <message>
-        <source>Lithuanian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Norwegian Bokmål</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Polish</source>
-        <translation>Lengyel</translation>
-    </message>
-    <message>
-        <source>Portuguese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Brazilian Portuguese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Romanian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation>Orosz</translation>
-    </message>
-    <message>
-        <source>Serbian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slovak</source>
-        <translation>Szlovák</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation>Spanyol</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation>Svéd</translation>
-    </message>
-    <message>
-        <source>Tamil</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Turkish</source>
-        <translation>Török</translation>
-    </message>
-    <message>
-        <source>Ukrainian</source>
-        <translation>Ukrán</translation>
-    </message>
-    <message>
-        <source>Norwegian Nynorsk</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Latvian</source>
-        <translation>Lett</translation>
-    </message>
-    <message>
-        <source>Dutch (Belgium)</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

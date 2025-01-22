@@ -9,11 +9,11 @@
     </message>
     <message>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Terjemahan</translation>
     </message>
     <message>
         <source>Italian</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bahasa Italia</translation>
     </message>
 </context>
 <context>
@@ -91,6 +91,17 @@
     </message>
     <message>
         <source>About</source>
+        <translation type="unfinished">Tentang</translation>
+    </message>
+</context>
+<context>
+    <name>General</name>
+    <message>
+        <source>Copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 by %2</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -225,176 +236,6 @@
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation>Kontribusi Anda terhadap terjemahan atau kode akan sangat disambut baik.</translation>
-    </message>
-    <message>
-        <source>Author</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message numerus="yes">
-        <source>Author(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Maintainer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message numerus="yes">
-        <source>Maintainer(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation>Pemrograman</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation>Desain Ikon</translation>
-    </message>
-    <message>
-        <source>Third-party libraries</source>
-        <translation>Pustaka pihak ketiga</translation>
-    </message>
-    <message>
-        <source>Data</source>
-        <translation>Data</translation>
-    </message>
-    <message>
-        <source>Data License</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message numerus="yes">
-        <source>Data License(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Terms of Use</source>
-        <translation>Ketentuan penggunaan</translation>
-    </message>
-    <message>
-        <source>Belarusian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation>Bahasa Cina</translation>
-    </message>
-    <message>
-        <source>Czech</source>
-        <translation>Bahasa Ceko</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation>Bahasa Belanda</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation>Bahasa Inggris</translation>
-    </message>
-    <message>
-        <source>Estonian</source>
-        <translation>Bahasa Estonia</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation>Bahasa Finlandia</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation>Bahasa Prancis</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation>Bahasa Jerman</translation>
-    </message>
-    <message>
-        <source>Greek</source>
-        <translation>Bahasa Yunani</translation>
-    </message>
-    <message>
-        <source>Hungarian</source>
-        <translation>Bahasa Hungaria</translation>
-    </message>
-    <message>
-        <source>Indonesian</source>
-        <translation>Bahasa Indonesia</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation>Bahasa Italia</translation>
-    </message>
-    <message>
-        <source>Lithuanian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Norwegian Bokmål</source>
-        <translation>Bokmål Norwegia</translation>
-    </message>
-    <message>
-        <source>Polish</source>
-        <translation>Bahasa Polandia</translation>
-    </message>
-    <message>
-        <source>Portuguese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Brazilian Portuguese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Romanian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation>Bahasa Rusia</translation>
-    </message>
-    <message>
-        <source>Serbian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slovak</source>
-        <translation>Bahasa Slovakia</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation>Bahasa Spanyol</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation>Bahasa Swedia</translation>
-    </message>
-    <message>
-        <source>Tamil</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Turkish</source>
-        <translation>Bahasa Turki</translation>
-    </message>
-    <message>
-        <source>Ukrainian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Norwegian Nynorsk</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Latvian</source>
-        <translation>Bahasa Latvia</translation>
-    </message>
-    <message>
-        <source>Dutch (Belgium)</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -236,6 +236,10 @@ Page {
                             listView.model.loadHistory()
                         }
                     }
+                    MenuItem {
+                        text: qsTranslate("General", "Copy")
+                        onClicked: Clipboard.text = qsTranslate("General", "%1 by %2").arg(title).arg(subtitle)
+                    }
                 } }
         }
     }

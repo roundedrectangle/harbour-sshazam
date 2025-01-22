@@ -9,11 +9,11 @@
     </message>
     <message>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Переклади</translation>
     </message>
     <message>
         <source>Italian</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Італійська</translation>
     </message>
 </context>
 <context>
@@ -91,6 +91,17 @@
     </message>
     <message>
         <source>About</source>
+        <translation type="unfinished">Про застосунок</translation>
+    </message>
+</context>
+<context>
+    <name>General</name>
+    <message>
+        <source>Copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 by %2</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -225,176 +236,6 @@
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation>Ваш внесок у переклади або код буде дуже доречним.</translation>
-    </message>
-    <message>
-        <source>Author</source>
-        <translation>Автор</translation>
-    </message>
-    <message numerus="yes">
-        <source>Author(s)</source>
-        <translation>
-            <numerusform>Автор</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Maintainer</source>
-        <translation>Супроводжувач</translation>
-    </message>
-    <message numerus="yes">
-        <source>Maintainer(s)</source>
-        <translation>
-            <numerusform>Супроводжувач</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation>Програмування</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation>Дизайн іконок</translation>
-    </message>
-    <message>
-        <source>Third-party libraries</source>
-        <translation>Сторонні бібліотеки</translation>
-    </message>
-    <message>
-        <source>Data</source>
-        <translation>Дані</translation>
-    </message>
-    <message>
-        <source>Data License</source>
-        <translation>Ліцензія на передачу даних</translation>
-    </message>
-    <message numerus="yes">
-        <source>Data License(s)</source>
-        <translation>
-            <numerusform>Ліцензія на передачу даних</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Terms of Use</source>
-        <translation>Умови використання</translation>
-    </message>
-    <message>
-        <source>Belarusian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation>Китайська</translation>
-    </message>
-    <message>
-        <source>Czech</source>
-        <translation>Чеська</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation>Нідерландська</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation>Англійська</translation>
-    </message>
-    <message>
-        <source>Estonian</source>
-        <translation>Естонська</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation>Фінська</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation>Французька</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation>Німецька</translation>
-    </message>
-    <message>
-        <source>Greek</source>
-        <translation>Грецька</translation>
-    </message>
-    <message>
-        <source>Hungarian</source>
-        <translation>Угорська</translation>
-    </message>
-    <message>
-        <source>Indonesian</source>
-        <translation>Індонезійська</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation>Італійська</translation>
-    </message>
-    <message>
-        <source>Lithuanian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Norwegian Bokmål</source>
-        <translation>Норвезька (Букмол)</translation>
-    </message>
-    <message>
-        <source>Polish</source>
-        <translation>Польська</translation>
-    </message>
-    <message>
-        <source>Portuguese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Brazilian Portuguese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Romanian</source>
-        <translation>Румунська</translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation>Російська</translation>
-    </message>
-    <message>
-        <source>Serbian</source>
-        <translation>Сербська</translation>
-    </message>
-    <message>
-        <source>Slovak</source>
-        <translation>Словацька</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation>Іспанська</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation>Шведська</translation>
-    </message>
-    <message>
-        <source>Tamil</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Turkish</source>
-        <translation>Турецька</translation>
-    </message>
-    <message>
-        <source>Ukrainian</source>
-        <translation>Українська</translation>
-    </message>
-    <message>
-        <source>Norwegian Nynorsk</source>
-        <translation>Норвезька (Нюнорск)</translation>
-    </message>
-    <message>
-        <source>Latvian</source>
-        <translation>Латвійська</translation>
-    </message>
-    <message>
-        <source>Dutch (Belgium)</source>
-        <translation>Нідерландська (Бельгія)</translation>
     </message>
 </context>
 <context>
