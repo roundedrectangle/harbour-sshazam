@@ -147,12 +147,16 @@ Page {
                 onHeightChanged: listView.positionViewAtBeginning()
             }
 
-            BackgroundItem {
+            ListItem {
+                id: recognitionListItem
                 contentHeight: resultColumn.height
                 opacity: py.trackFound ? 1 : 0
                 height: py.trackFound ? implicitHeight : 0
                 Behavior on opacity { FadeAnimation {} }
-                Behavior on height { NumberAnimation { duration: 200 } }
+                Behavior on height {
+                    enabled: !(recognitionListItem.highlighted || recognitionListItem.down || recognitionListItem.menuOpen)
+                    NumberAnimation { duration: 200 }
+                }
                 onHeightChanged: listView.positionViewAtBeginning()
 
                 Column {
@@ -173,6 +177,13 @@ Page {
                 }
 
                 onClicked: pageStack.push(Qt.resolvedUrl('SongPage.qml'), { title: py.title, subtitle: py.subtitle, sections: py.sections })
+
+                menu: Component { ContextMenu {
+                        MenuItem {
+                            text: qsTranslate("General", "Copy")
+                            onClicked: Clipboard.text = qsTranslate("General", "%1 by %2").arg(py.title).arg(py.subtitle)
+                        }
+                    } }
             }
 
             SectionHeader {
@@ -228,13 +239,16 @@ Page {
 
             onClicked: pageStack.push(Qt.resolvedUrl('SongPage.qml'), { title: title, subtitle: subtitle, sections: sections })
 
+            function remove() {
+                remorseAction(qsTr("Deleted"), function (){
+                    py.call('main.remove_from_history', [arrIndex, listView.model.count])
+                    listView.model.loadHistory()
+                })
+            }
             menu: Component { ContextMenu {
                     MenuItem {
                         text: qsTr("Remove")
-                        onClicked: {
-                            py.call('main.remove_from_history', [arrIndex, listView.model.count])
-                            listView.model.loadHistory()
-                        }
+                        onClicked: remove()
                     }
                     MenuItem {
                         text: qsTranslate("General", "Copy")
