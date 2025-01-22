@@ -93,6 +93,10 @@
         <source>About</source>
         <translation>О программе</translation>
     </message>
+    <message>
+        <source>Deleted</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>General</name>

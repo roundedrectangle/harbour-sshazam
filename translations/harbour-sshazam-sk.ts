@@ -93,6 +93,10 @@
         <source>About</source>
         <translation type="unfinished">O aplikácii</translation>
     </message>
+    <message>
+        <source>Deleted</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>General</name>

@@ -93,6 +93,10 @@
         <source>About</source>
         <translation>Om</translation>
     </message>
+    <message>
+        <source>Deleted</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>General</name>
