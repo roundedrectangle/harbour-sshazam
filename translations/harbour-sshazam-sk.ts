@@ -9,11 +9,11 @@
     </message>
     <message>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Preklady</translation>
     </message>
     <message>
         <source>Italian</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Taliančina</translation>
     </message>
 </context>
 <context>
@@ -91,6 +91,21 @@
     </message>
     <message>
         <source>About</source>
+        <translation type="unfinished">O aplikácii</translation>
+    </message>
+    <message>
+        <source>Deleted</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>General</name>
+    <message>
+        <source>Copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 by %2</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -225,176 +240,6 @@
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation>Vaša pomoc s prekladom alebo programovaním by bola veľmi vítaná.</translation>
-    </message>
-    <message>
-        <source>Author</source>
-        <translation>Autor</translation>
-    </message>
-    <message numerus="yes">
-        <source>Author(s)</source>
-        <translation>
-            <numerusform>Autor</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Maintainer</source>
-        <translation>Správce</translation>
-    </message>
-    <message numerus="yes">
-        <source>Maintainer(s)</source>
-        <translation>
-            <numerusform>Správca</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation>Programovanie</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation>Návrh ikon</translation>
-    </message>
-    <message>
-        <source>Third-party libraries</source>
-        <translation>Knižnice tretích strán</translation>
-    </message>
-    <message>
-        <source>Data</source>
-        <translation>Dáta</translation>
-    </message>
-    <message>
-        <source>Data License</source>
-        <translation>Dátová licencia</translation>
-    </message>
-    <message numerus="yes">
-        <source>Data License(s)</source>
-        <translation>
-            <numerusform>Dátová licencia</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Terms of Use</source>
-        <translation>Podmienky použitia</translation>
-    </message>
-    <message>
-        <source>Belarusian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation>Čínština</translation>
-    </message>
-    <message>
-        <source>Czech</source>
-        <translation>Čeština</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation>Holandčina</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation>Angličtina</translation>
-    </message>
-    <message>
-        <source>Estonian</source>
-        <translation>Estónčina</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation>Fínčina</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation>Francúzština</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation>Nemčina</translation>
-    </message>
-    <message>
-        <source>Greek</source>
-        <translation>Gréčtina</translation>
-    </message>
-    <message>
-        <source>Hungarian</source>
-        <translation>Maďarčina</translation>
-    </message>
-    <message>
-        <source>Indonesian</source>
-        <translation>Indonézština</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation>Taliančina</translation>
-    </message>
-    <message>
-        <source>Lithuanian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Norwegian Bokmål</source>
-        <translation>Nórčina Bokmål</translation>
-    </message>
-    <message>
-        <source>Polish</source>
-        <translation>Poľština</translation>
-    </message>
-    <message>
-        <source>Portuguese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Brazilian Portuguese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Romanian</source>
-        <translation>Rumunčina</translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation>Ruština</translation>
-    </message>
-    <message>
-        <source>Serbian</source>
-        <translation>Srbština</translation>
-    </message>
-    <message>
-        <source>Slovak</source>
-        <translation>Slovenčina</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation>Španielčina</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation>Švédčina</translation>
-    </message>
-    <message>
-        <source>Tamil</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Turkish</source>
-        <translation>Turečtina</translation>
-    </message>
-    <message>
-        <source>Ukrainian</source>
-        <translation>Ukrajinčina</translation>
-    </message>
-    <message>
-        <source>Norwegian Nynorsk</source>
-        <translation>Nórčina (Nynorsk)</translation>
-    </message>
-    <message>
-        <source>Latvian</source>
-        <translation>Litvinština</translation>
-    </message>
-    <message>
-        <source>Dutch (Belgium)</source>
-        <translation>Holandčina (Belgicko)</translation>
     </message>
 </context>
 <context>

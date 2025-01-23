@@ -9,11 +9,11 @@
     </message>
     <message>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Traductions</translation>
     </message>
     <message>
         <source>Italian</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">italien</translation>
     </message>
 </context>
 <context>
@@ -91,6 +91,21 @@
     </message>
     <message>
         <source>About</source>
+        <translation type="unfinished">À propos</translation>
+    </message>
+    <message>
+        <source>Deleted</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>General</name>
+    <message>
+        <source>Copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 by %2</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -225,176 +240,6 @@
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation>Vos contributions aux traductions ou au code seront les bienvenues.</translation>
-    </message>
-    <message>
-        <source>Author</source>
-        <translation>Auteur</translation>
-    </message>
-    <message numerus="yes">
-        <source>Author(s)</source>
-        <translation>
-            <numerusform>Auteur</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Maintainer</source>
-        <translation>Mainteneur/mainteneuse</translation>
-    </message>
-    <message numerus="yes">
-        <source>Maintainer(s)</source>
-        <translation>
-            <numerusform>Mainteneur</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation>Programmation</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation>Design de l&apos;icône</translation>
-    </message>
-    <message>
-        <source>Third-party libraries</source>
-        <translation>Bibliothèques tierces</translation>
-    </message>
-    <message>
-        <source>Data</source>
-        <translation>Données</translation>
-    </message>
-    <message>
-        <source>Data License</source>
-        <translation>Licence de données</translation>
-    </message>
-    <message numerus="yes">
-        <source>Data License(s)</source>
-        <translation>
-            <numerusform>Licence de données</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Terms of Use</source>
-        <translation>Conditions d&apos;utilisation</translation>
-    </message>
-    <message>
-        <source>Belarusian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation>chinois</translation>
-    </message>
-    <message>
-        <source>Czech</source>
-        <translation>tchèque</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation>néerlandais</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation>anglais</translation>
-    </message>
-    <message>
-        <source>Estonian</source>
-        <translation>estonien</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation>finnois</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation>français</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation>allemand</translation>
-    </message>
-    <message>
-        <source>Greek</source>
-        <translation>grec</translation>
-    </message>
-    <message>
-        <source>Hungarian</source>
-        <translation>hongrois</translation>
-    </message>
-    <message>
-        <source>Indonesian</source>
-        <translation>indonésien</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation>italien</translation>
-    </message>
-    <message>
-        <source>Lithuanian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Norwegian Bokmål</source>
-        <translation>norvégien (Bokmål)</translation>
-    </message>
-    <message>
-        <source>Polish</source>
-        <translation>polonais</translation>
-    </message>
-    <message>
-        <source>Portuguese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Brazilian Portuguese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Romanian</source>
-        <translation>Roumain</translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation>russe</translation>
-    </message>
-    <message>
-        <source>Serbian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slovak</source>
-        <translation>slovaque</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation>espagnol</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation>suédois</translation>
-    </message>
-    <message>
-        <source>Tamil</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Turkish</source>
-        <translation>turc</translation>
-    </message>
-    <message>
-        <source>Ukrainian</source>
-        <translation>Ukrainien</translation>
-    </message>
-    <message>
-        <source>Norwegian Nynorsk</source>
-        <translation>norvégien (Nynorsk)</translation>
-    </message>
-    <message>
-        <source>Latvian</source>
-        <translation>letton</translation>
-    </message>
-    <message>
-        <source>Dutch (Belgium)</source>
-        <translation>Flamand</translation>
     </message>
 </context>
 <context>

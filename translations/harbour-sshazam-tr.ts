@@ -9,11 +9,11 @@
     </message>
     <message>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çeviriler</translation>
     </message>
     <message>
         <source>Italian</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İtalyanca</translation>
     </message>
 </context>
 <context>
@@ -91,6 +91,21 @@
     </message>
     <message>
         <source>About</source>
+        <translation type="unfinished">Hakkında</translation>
+    </message>
+    <message>
+        <source>Deleted</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>General</name>
+    <message>
+        <source>Copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 by %2</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -225,176 +240,6 @@
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation>Çevirilere veya kodlara katkılarınız memnuniyetle karşılanacaktır.</translation>
-    </message>
-    <message>
-        <source>Author</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message numerus="yes">
-        <source>Author(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Maintainer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message numerus="yes">
-        <source>Maintainer(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation>Programlama</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation>Simge Tasarımı</translation>
-    </message>
-    <message>
-        <source>Third-party libraries</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Data</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Data License</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message numerus="yes">
-        <source>Data License(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Terms of Use</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Belarusian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation>Çince</translation>
-    </message>
-    <message>
-        <source>Czech</source>
-        <translation>Çekçe</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation>Felemenkçe</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation>İngilizce</translation>
-    </message>
-    <message>
-        <source>Estonian</source>
-        <translation>Estonca</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation>Fince</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation>Fransızca</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation>Almanca</translation>
-    </message>
-    <message>
-        <source>Greek</source>
-        <translation>Yunanca</translation>
-    </message>
-    <message>
-        <source>Hungarian</source>
-        <translation>Macarca</translation>
-    </message>
-    <message>
-        <source>Indonesian</source>
-        <translation>Endonezce</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation>İtalyanca</translation>
-    </message>
-    <message>
-        <source>Lithuanian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Norwegian Bokmål</source>
-        <translation>Norveççe (Bokmål)</translation>
-    </message>
-    <message>
-        <source>Polish</source>
-        <translation>Lehçe</translation>
-    </message>
-    <message>
-        <source>Portuguese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Brazilian Portuguese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Romanian</source>
-        <translation>Rumence</translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation>Rusça</translation>
-    </message>
-    <message>
-        <source>Serbian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slovak</source>
-        <translation>Slovakça</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation>İspanyolca</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation>İsveççe</translation>
-    </message>
-    <message>
-        <source>Tamil</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Turkish</source>
-        <translation>Türkçe</translation>
-    </message>
-    <message>
-        <source>Ukrainian</source>
-        <translation>Ukraynaca</translation>
-    </message>
-    <message>
-        <source>Norwegian Nynorsk</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Latvian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Dutch (Belgium)</source>
-        <translation>Felemenkçe (Belçika)</translation>
     </message>
 </context>
 <context>
