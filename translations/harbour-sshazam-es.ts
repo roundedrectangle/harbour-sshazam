@@ -5,7 +5,7 @@
     <name>AboutPage</name>
     <message>
         <source>Shazam for SailfishOS</source>
-        <translation>Shazam para Sailfish SO</translation>
+        <translation>Un cliente Shazam para Sailfish SO</translation>
     </message>
     <message>
         <source>Translations</source>
@@ -48,7 +48,7 @@
     </message>
     <message>
         <source>Could not remove record. Please try again</source>
-        <translation>Error al quitar registro. Intente de nuevo</translation>
+        <translation>Error al borrar registro. Intente de nuevo</translation>
     </message>
 </context>
 <context>
@@ -71,7 +71,7 @@
     </message>
     <message>
         <source>Remove</source>
-        <translation>Quitar</translation>
+        <translation>Borrar</translation>
     </message>
     <message>
         <source>Recording</source>
@@ -95,25 +95,25 @@
     </message>
     <message>
         <source>Deleted</source>
-        <translation type="unfinished"></translation>
+        <translation>Borrado</translation>
     </message>
 </context>
 <context>
     <name>General</name>
     <message>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Copiar</translation>
     </message>
     <message>
         <source>%1 by %2</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 por %2</translation>
     </message>
 </context>
 <context>
     <name>LicenseListPart</name>
     <message>
         <source>License text</source>
-        <translation>Texto de la licencia</translation>
+        <translation>Texto de licencia</translation>
     </message>
 </context>
 <context>
@@ -161,7 +161,7 @@
     <message numerus="yes">
         <source>show license(s)</source>
         <translation>
-            <numerusform>Mostrar licencia</numerusform>
+            <numerusform>Mostrar licencias</numerusform>
         </translation>
     </message>
     <message>
@@ -198,7 +198,7 @@
     </message>
     <message>
         <source>Open in browser</source>
-        <translation>Abrir en el navegador</translation>
+        <translation>Abrir en navegador</translation>
     </message>
     <message>
         <source>Copied to clipboard: %1</source>
@@ -214,32 +214,32 @@
     </message>
     <message>
         <source>Download license texts</source>
-        <translation>Descargar los textos de las licencias</translation>
+        <translation>Bajar textos de licencias</translation>
     </message>
     <message numerus="yes">
         <source>License(s)</source>
         <translation>
-            <numerusform>Licencia</numerusform>
+            <numerusform>Licencias</numerusform>
         </translation>
     </message>
     <message>
         <source>Note: please check the source code for most accurate information.</source>
-        <translation>Nota: compruebe el código fuente para la información más precisa.</translation>
+        <translation>Nota: comprobar código fuente para información más precisa.</translation>
     </message>
 </context>
 <context>
     <name>Opal.About.Common</name>
     <message>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
-        <translation>Si quieres apoyar mi trabajo, puedes comprarme un café.</translation>
+        <translation>Soportar el proyecto, regalando cafés.</translation>
     </message>
     <message>
         <source>You can support this project by contributing, or by donating using any of these services.</source>
-        <translation>Puedes apoyar este proyecto contribuyendo o donando por cualquiera de estos servicios.</translation>
+        <translation>El proyecto puede ser soportado por contribuciones y donaciones a cualquiera de estos servicios.</translation>
     </message>
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
-        <translation>Tus contribuciones a traducir o escribir código serán bien recibidas.</translation>
+        <translation>Las contribuciones de traduciones y código serán bien recibidas.</translation>
     </message>
 </context>
 <context>
@@ -314,11 +314,11 @@
     </message>
     <message>
         <source>Example: en-US. Leave empty to use system language</source>
-        <translation>Ejemplo: EN-US. Deja vacío para usar lenguaje del sistema</translation>
+        <translation>Ejemplo: EN-US. Dejar vacío para lenguaje de sistema</translation>
     </message>
     <message>
         <source>Album arts and other static elements may not use proxy at all. App restart might be required</source>
-        <translation>Artes del álbum y otros elementos estáticos pueden no usar proxy en absoluto. Se requere reinicio de aplicación</translation>
+        <translation>Artes de álbum y otros elementos estáticos pueden no usar proxy en absoluto. Se requere reinicio de aplicación</translation>
     </message>
     <message>
         <source>Select items to backup</source>
@@ -374,15 +374,15 @@
     </message>
     <message>
         <source>Export backup</source>
-        <translation>Respaldo de exportación</translation>
+        <translation>Respaldar exportación</translation>
     </message>
     <message>
         <source>Import backup</source>
-        <translation>Importación de respaldo</translation>
+        <translation>Importar respaldo</translation>
     </message>
     <message>
         <source>Rebuild history</source>
-        <translation>Historia reconstruida</translation>
+        <translation>Reconstruir historia</translation>
     </message>
     <message>
         <source>History cleared</source>
@@ -402,11 +402,11 @@
     <name>harbour-sshazam</name>
     <message>
         <source>Migration complete. If you see no errors it means it was succsessful</source>
-        <translation>Migración completada. Sin errores significa que fue exitoso</translation>
+        <translation>Migración completada. Sin errores significa que es exitoso</translation>
     </message>
     <message>
         <source>Legacy history system detected. Attempting to migrate</source>
-        <translation>Sistema de historia legada detectada. Intentando migrar</translation>
+        <translation>Detectado un sistema de historia legada. Intentando migrar</translation>
     </message>
 </context>
 </TS>
