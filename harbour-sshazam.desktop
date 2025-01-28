@@ -4,18 +4,13 @@ X-Nemo-Application-Type=silica-qt5
 Icon=harbour-sshazam
 Exec=harbour-sshazam
 Name=SShazam
-# translation example:
-# your app name in German locale (de)
-#
-# Remember to comment out the following line, if you do not want to use
-# a different app name in German locale (de).
-Name[de]=harbour-sshazam
 Categories=AudioVideo;Audio
 
 [X-Sailjail]
-# Replace with your organization as a reverse domain name
 OrganizationName=io.github.roundedrectangle
-# ApplicationName does not have to be identical to Name
 ApplicationName=harbour-sshazam
-# Add the required permissions here
 Permissions=Audio;Internet;Compatibility
+
+[X-HarbourBackup]
+BackupPathList=.local/share/io.github.roundedrectangle/harbour-sshazam
+BackupConfigList=/apps/harbour-sshazam/

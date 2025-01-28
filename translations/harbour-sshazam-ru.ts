@@ -63,7 +63,7 @@
     </message>
     <message>
         <source>Recognition Result</source>
-        <translation>Результат распознования</translation>
+        <translation>Результат распознавания</translation>
     </message>
     <message>
         <source>History</source>
@@ -92,6 +92,21 @@
     <message>
         <source>About</source>
         <translation>О программе</translation>
+    </message>
+    <message>
+        <source>Deleted</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>General</name>
+    <message>
+        <source>Copy</source>
+        <translation>Скопировать</translation>
+    </message>
+    <message>
+        <source>%1 by %2</source>
+        <translation>%1 от %2</translation>
     </message>
 </context>
 <context>

@@ -5,7 +5,7 @@
 Name:       harbour-sshazam
 
 Summary:    Shazam for SailfishOS
-Version:    0.1b5
+Version:    1.0.3
 Release:    1
 License:    LICENSE
 URL:        http://example.org/
@@ -22,7 +22,7 @@ Requires: pyotherside-qml-plugin-python3-qt5
 BuildRequires:  python3-base
 BuildRequires:  python3-devel
 BuildRequires: python3-pip
-#BuildRequires: git
+BuildRequires: git
 %endif
 
 %define __provides_exclude_from ^%{_datadir}/.*$

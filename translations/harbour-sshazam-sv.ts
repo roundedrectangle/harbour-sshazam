@@ -1,286 +1,286 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.1" language="sv">
 <context>
     <name>AboutPage</name>
     <message>
         <source>Shazam for SailfishOS</source>
-        <translation>Shazam per SailfishOS</translation>
+        <translation>Shazam för Sailfish OS</translation>
     </message>
     <message>
         <source>Translations</source>
-        <translation>Traduzioni</translation>
+        <translation>Översättningar</translation>
     </message>
     <message>
         <source>Italian</source>
-        <translation>Italiano</translation>
+        <translation>Italienska</translation>
     </message>
 </context>
 <context>
     <name>Errors</name>
     <message>
         <source>Couldn&apos;t reload history: app is not initialized!</source>
-        <translation>Non sono riuscito a ricaricare la cronologia: l&apos;app non è inizializzata!</translation>
+        <translation>Kunde inte uppdatera historiken: Appen är inte startad!</translation>
     </message>
     <message>
         <source>Python error: %1</source>
-        <translation>Errore python: %1</translation>
+        <translation>Pythonfel: %1</translation>
     </message>
     <message>
         <source>History was unable to load: %1</source>
-        <translation>Impossibile caricare la cronologia: %1</translation>
+        <translation>Historiken kunde inte läsas in: %1</translation>
     </message>
     <message>
         <source>History contained invalid JSON: %1</source>
-        <translation>La cronologia conteneva  un file JSON invalido: %1</translation>
+        <translation>Historiken innehåller ogiltig JSON: %1</translation>
     </message>
     <message>
         <source>Insufficient permissions: %1</source>
-        <translation>Permessi insufficienti: %1</translation>
+        <translation>Otillräckliga behörigheter: %1</translation>
     </message>
     <message>
         <source>History is not a list or tuple</source>
-        <translation>La cronologia non è una lista o un insieme di valori</translation>
+        <translation>Historiken är inte en lista eller en tupel</translation>
     </message>
     <message>
         <source>History was outdated. Latest length: %1, previously loaded length: %2</source>
-        <translation>La cronologia non era aggiornata. Ultimo aggiornamento: %1, aggiornamento precedente: %2</translation>
+        <translation>Historiken är utdaterad. Senaste längd: %1, tidigare inläst längd: %2</translation>
     </message>
     <message>
         <source>Could not remove record. Please try again</source>
-        <translation>Non posso eliminare lo storico. Per favore prova di nuovo</translation>
+        <translation>Kunde inte ta bort inspelning. Försök igen!</translation>
     </message>
 </context>
 <context>
     <name>FirstPage</name>
     <message>
-        <source>Recognition Result</source>
-        <translation>Traccia riconosciuta</translation>
-    </message>
-    <message>
-        <source>History</source>
-        <translation>Cronologia</translation>
-    </message>
-    <message>
         <source>Settings</source>
-        <translation>Impostazioni</translation>
+        <translation>Inställningar</translation>
     </message>
     <message>
         <source>Reload history</source>
-        <translation>Ricarica cronologia</translation>
+        <translation>Uppdatera historik</translation>
+    </message>
+    <message>
+        <source>Recognition Result</source>
+        <translation>Igenkänningsresultat</translation>
+    </message>
+    <message>
+        <source>History</source>
+        <translation>Historik</translation>
     </message>
     <message>
         <source>Remove</source>
-        <translation>Rimuovi</translation>
+        <translation>Ta bort</translation>
     </message>
     <message>
         <source>Recording</source>
-        <translation>Sto registrando</translation>
+        <translation>Spelar in</translation>
     </message>
     <message>
         <source>Processing</source>
-        <translation>Sto processando</translation>
+        <translation>Bearbetar</translation>
     </message>
     <message>
         <source>Almost done</source>
-        <translation>Quasi fatto</translation>
+        <translation>Strax klar</translation>
     </message>
     <message>
         <source>Loading</source>
-        <translation>Caricamento</translation>
+        <translation>Läser in</translation>
     </message>
     <message>
         <source>About</source>
-        <translation>Info</translation>
+        <translation>Om</translation>
     </message>
     <message>
         <source>Deleted</source>
-        <translation type="unfinished"></translation>
+        <translation>Borttaget</translation>
     </message>
 </context>
 <context>
     <name>General</name>
     <message>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopiera</translation>
     </message>
     <message>
         <source>%1 by %2</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 av %2</translation>
     </message>
 </context>
 <context>
     <name>LicenseListPart</name>
     <message>
         <source>License text</source>
-        <translation>Testo di licenza</translation>
+        <translation>Licenstext</translation>
     </message>
 </context>
 <context>
     <name>Opal.About</name>
     <message>
         <source>About</source>
-        <translation>Info</translation>
+        <translation>Om</translation>
     </message>
     <message>
         <source>Version %1</source>
-        <translation>Versione %1</translation>
+        <translation>Version %1</translation>
     </message>
     <message>
         <source>Development</source>
-        <translation>Sviluppo</translation>
+        <translation>Utveckling</translation>
     </message>
     <message>
         <source>show contributors</source>
-        <translation>mostra contributori</translation>
+        <translation>visa medverkande</translation>
     </message>
     <message>
         <source>Homepage</source>
-        <translation>Pagina iniziale</translation>
+        <translation>Hemsida</translation>
     </message>
     <message>
         <source>Changelog</source>
-        <translation>Cambiamenti</translation>
+        <translation>Ändringslogg</translation>
     </message>
     <message>
         <source>Translations</source>
-        <translation>Traduzioni</translation>
+        <translation>Översättningar</translation>
     </message>
     <message>
         <source>Source Code</source>
-        <translation>Codice sorgente</translation>
+        <translation>Källkod</translation>
     </message>
     <message>
         <source>Donations</source>
-        <translation>Donazioni</translation>
+        <translation>Donationer</translation>
     </message>
     <message>
         <source>License</source>
-        <translation>Licenza</translation>
+        <translation>Licens</translation>
     </message>
     <message numerus="yes">
         <source>show license(s)</source>
         <translation>
-            <numerusform>mostra licenza</numerusform>
-            <numerusform>mostra licenze</numerusform>
+            <numerusform>visa licens</numerusform>
+            <numerusform>visa licenser</numerusform>
         </translation>
     </message>
     <message>
+        <source>News</source>
+        <translation>Nyheter</translation>
+    </message>
+    <message>
+        <source>Changes since version %1</source>
+        <translation>Ändrat sedan version %1</translation>
+    </message>
+    <message>
         <source>show details</source>
-        <translation>mostra dettagli</translation>
-    </message>
-    <message>
-        <source>Contributors</source>
-        <translation>Contributori</translation>
-    </message>
-    <message>
-        <source>Acknowledgements</source>
-        <translation>Informazioni</translation>
+        <translation>visa detaljerat</translation>
     </message>
     <message>
         <source>Thank you!</source>
-        <translation>Grazie mille!</translation>
+        <translation>Tack!</translation>
     </message>
     <message>
         <source>Details</source>
-        <translation>Dettagli</translation>
+        <translation>Detaljerat</translation>
+    </message>
+    <message>
+        <source>Contributors</source>
+        <translation>Medverkande</translation>
+    </message>
+    <message>
+        <source>Acknowledgements</source>
+        <translation>Bekräftelser</translation>
+    </message>
+    <message>
+        <source>External Link</source>
+        <translation>Extern länk</translation>
+    </message>
+    <message>
+        <source>Open in browser</source>
+        <translation>Öppna i webbläsare</translation>
+    </message>
+    <message>
+        <source>Copied to clipboard: %1</source>
+        <translation>Kopierat till urklipp: %1</translation>
+    </message>
+    <message>
+        <source>Copy to clipboard</source>
+        <translation>Kopiera till urklipp</translation>
+    </message>
+    <message>
+        <source>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</source>
+        <translation>Se &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Download license texts</source>
-        <translation>Scarica testi di licenza</translation>
+        <translation>Ladda ner licenstexter</translation>
     </message>
     <message numerus="yes">
         <source>License(s)</source>
         <translation>
-            <numerusform>Licenza</numerusform>
-            <numerusform>Licenze</numerusform>
+            <numerusform>Licens</numerusform>
+            <numerusform>Licenser</numerusform>
         </translation>
     </message>
     <message>
         <source>Note: please check the source code for most accurate information.</source>
-        <translation>Nota: controlla il codice sorgente per avere le informazioni più accurate.</translation>
-    </message>
-    <message>
-        <source>External Link</source>
-        <translation>Collegamento esterno</translation>
-    </message>
-    <message>
-        <source>Open in browser</source>
-        <translation>Apri nel browser</translation>
-    </message>
-    <message>
-        <source>Copied to clipboard: %1</source>
-        <translation>Copiato negli appunti %1</translation>
-    </message>
-    <message>
-        <source>Copy to clipboard</source>
-        <translation>Copia negli appunti</translation>
-    </message>
-    <message>
-        <source>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</source>
-        <translation>Per favore fai riferimento a &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
-    </message>
-    <message>
-        <source>News</source>
-        <translation>Novità</translation>
-    </message>
-    <message>
-        <source>Changes since version %1</source>
-        <translation>Cambiamenti dalla versione %1</translation>
+        <translation>Notis: Kontrollera källkoden för mest korrekt information.</translation>
     </message>
 </context>
 <context>
     <name>Opal.About.Common</name>
     <message>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
-        <translation>Se vuoi supportare il mio lavoro puoi offrirmi una tazza di caffè.</translation>
+        <translation>Om du vill stödja mitt arbete, kan du bjuda mig på en kopp kaffe.</translation>
     </message>
     <message>
         <source>You can support this project by contributing, or by donating using any of these services.</source>
-        <translation>Puoi supportare questo progetto contribuendo o donando con uno di questi servizi.</translation>
+        <translation>Du kan stödja projektet genom kodbidrag eller donation med hjälp av dessa tjänster.</translation>
     </message>
     <message>
         <source>Your contributions to translations or code would be most welcome.</source>
-        <translation>Le tue contribuzioni per le traduzioni o per il codice sono le benvenute.</translation>
+        <translation>Kodbidrag eller översättningar är väldigt välkommet.</translation>
     </message>
 </context>
 <context>
     <name>SettingsPage</name>
     <message>
         <source>Settings</source>
-        <translation>Impostazioni</translation>
+        <translation>Inställningar</translation>
     </message>
     <message>
         <source>Recognition time</source>
-        <translation>Durata riconoscimento</translation>
+        <translation>Igenkänningsstid</translation>
     </message>
     <message>
         <source>Clear history</source>
-        <translation>Elimina cronologia</translation>
+        <translation>Rensa historik</translation>
     </message>
     <message>
         <source>Reset settings</source>
-        <translation>Resetta impostazioni</translation>
+        <translation>Återställ inställningar</translation>
     </message>
     <message>
         <source>Show info messages in notifications</source>
-        <translation>Mostra messaggi d&apos;informazione nelle notifiche</translation>
+        <translation>Visa infomeddelanden i notifieringsfältet</translation>
     </message>
     <message>
         <source>Recognition</source>
-        <translation>Riconoscimento</translation>
+        <translation>Igenkänning</translation>
     </message>
     <message>
         <source>Sample rate</source>
-        <translation>Frequenza campionamento</translation>
+        <translation>Samplingsfrekvens</translation>
     </message>
     <message>
         <source>Debugging</source>
-        <translation>Debugging</translation>
+        <translation>Felsökning</translation>
     </message>
     <message>
         <source>Networking</source>
-        <translation>Rete</translation>
+        <translation>Nätverk</translation>
     </message>
     <message>
         <source>Proxy</source>
@@ -288,127 +288,127 @@
     </message>
     <message>
         <source>global proxy</source>
-        <translation>proxy globale</translation>
+        <translation>global proxy</translation>
     </message>
     <message>
         <source>disable</source>
-        <translation>disabilita</translation>
+        <translation>inaktivera</translation>
     </message>
     <message>
         <source>custom</source>
-        <translation>personalizzato</translation>
+        <translation>anpassa</translation>
     </message>
     <message>
         <source>HTTP proxy address</source>
-        <translation>Indirizzo proxy HTTP</translation>
+        <translation>HTTP proxyadress</translation>
     </message>
     <message>
         <source>Specify port by semicolon, if required</source>
-        <translation>Specifica la porta con un punto e virgola, se necessario</translation>
+        <translation>Specificera port med semikolon, vid behov</translation>
     </message>
     <message>
         <source>Storage</source>
-        <translation>Memoria</translation>
+        <translation>Lagring</translation>
     </message>
     <message>
         <source>Shazam language</source>
-        <translation>Lingua di Shazam</translation>
+        <translation>Shazam-språk</translation>
     </message>
     <message>
         <source>Example: en-US. Leave empty to use system language</source>
-        <translation>Esempio: it-IT. Lascia vuoto per usare la lingua di sistema</translation>
+        <translation>Exempel: en-US. Lämnas tom för systemets språkinställning</translation>
     </message>
     <message>
         <source>Album arts and other static elements may not use proxy at all. App restart might be required</source>
-        <translation>Copertine ed altri elementi statici potrebbero non usare il proxy del tutto. Un riavvio dell&apos;app potrebbe essere richiesto</translation>
+        <translation>Albumbilder och andra statiska element kanske inte använder proxy överhuvudtaget. Omstart av appen kan krävas.</translation>
     </message>
     <message>
         <source>Select items to backup</source>
-        <translation>Scegli oggetti da includere nel backup</translation>
+        <translation>Välj objekt att säkerhetskopiera</translation>
     </message>
     <message>
         <source>Recognition history</source>
-        <translation>Cronologia riconoscimenti</translation>
+        <translation>Igenkänningshistorik</translation>
     </message>
     <message>
         <source>Basic settings</source>
-        <translation>Impostazioni di base</translation>
+        <translation>Grundläggande inställningar</translation>
     </message>
     <message>
         <source>Include Recognition section</source>
-        <translation>Includi sezione riconoscimenti</translation>
+        <translation>Inkludera igenkänningssektion</translation>
     </message>
     <message>
         <source>Other settings</source>
-        <translation>Altre impostazioni</translation>
+        <translation>Andra inställningar</translation>
     </message>
     <message>
         <source>Include Debugging and Networking sections</source>
-        <translation>Includi sezioni Debugging e Rete</translation>
+        <translation>Inkludera felsöknings- och nätverkssektioner</translation>
     </message>
     <message>
         <source>Unknown error: %1</source>
-        <translation>Errore sconosciuto: %1</translation>
+        <translation>Okänt fel: %1</translation>
     </message>
     <message>
         <source>Insufficient permissions</source>
-        <translation>Permessi insufficienti</translation>
+        <translation>Otillräckliga behörigheter</translation>
     </message>
     <message>
         <source>Export in progress</source>
-        <translation>Esportazione in corso</translation>
+        <translation>Export pågår</translation>
     </message>
     <message>
         <source>An error occured</source>
-        <translation>Si è verificato un errore</translation>
+        <translation>Ett fel inträffade</translation>
     </message>
     <message>
         <source>Select items to import</source>
-        <translation>Scegli oggetti da importare</translation>
+        <translation>Välj objekt att importera</translation>
     </message>
     <message>
         <source>Import in progress</source>
-        <translation>Importazione in corso</translation>
+        <translation>Import pågår</translation>
     </message>
     <message>
         <source>All items you select will be overwritten! If you select recognition history your current history will be overwritten!</source>
-        <translation>Tutti gli oggetti selezionati saranno sovrascritti! Se hai scelto la cronologia dei riconoscimenti la tua cronologia attuale verrà sovrascritta!</translation>
+        <translation>Alla objekt du väljer kommer att skrivas över! Om du väljer igenkänningshistorik kommer din nuvarande historik att skrivas över!</translation>
     </message>
     <message>
         <source>Export backup</source>
-        <translation>Esporta backup</translation>
+        <translation>Exportera säkerhetskopia</translation>
     </message>
     <message>
         <source>Import backup</source>
-        <translation>Importa backup</translation>
+        <translation>Importera säkerhetskopia</translation>
     </message>
     <message>
         <source>Rebuild history</source>
-        <translation>Ricostruisci cronologia</translation>
+        <translation>Återskapa historik</translation>
     </message>
     <message>
         <source>History cleared</source>
-        <translation>Cronologia eliminata</translation>
+        <translation>Historik rensad</translation>
     </message>
     <message>
         <source>Settings reset</source>
         <comment>Past tense</comment>
-        <translation>Reset impostazioni</translation>
+        <translation>Inställningar återställda</translation>
     </message>
     <message>
         <source>History rebuilt</source>
-        <translation>Cronologia ricostruita</translation>
+        <translation>Historik återskapad</translation>
     </message>
 </context>
 <context>
     <name>harbour-sshazam</name>
     <message>
         <source>Migration complete. If you see no errors it means it was succsessful</source>
-        <translation>Migrazione completata. Se non vedi errori vuol dire che il processo ha avuto successo</translation>
+        <translation>Migreringen är klar. Om du inte ser några fel betyder det att det lyckades.</translation>
     </message>
     <message>
         <source>Legacy history system detected. Attempting to migrate</source>
-        <translation>Rilevato vecchio sistema. Cerco di effettuare la migrazione</translation>
+        <translation>Äldre historiksystem har identifierats. Försöker migrera.</translation>
     </message>
 </context>
 </TS>

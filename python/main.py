@@ -118,6 +118,7 @@ def import_history(data: Union[str, list]):
 def create_history(force = False):
     """Returns if history was created, or None if an error occured."""
     if not history.exists() or force:
+        history.parent.mkdir(parents=True, exist_ok=True)
         with open(history, 'w') as f:
             f.write('[]')
         return True

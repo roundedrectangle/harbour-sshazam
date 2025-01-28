@@ -12,6 +12,13 @@ Page {
         anchors.fill: parent
         model: shared.arrayToListModel(parent, sections)
 
+        PullDownMenu {
+            MenuItem {
+                text: qsTranslate("General", "Copy")
+                onClicked: Clipboard.text = qsTranslate("General", "%1 by %2").arg(title).arg(subtitle)
+            }
+        }
+
         delegate: Loader {
             width: parent.width
             sourceComponent: switch (type) {

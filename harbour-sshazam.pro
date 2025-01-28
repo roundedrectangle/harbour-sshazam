@@ -38,8 +38,35 @@ CONFIG += sailfishapp_i18n
 # planning to localize your app, remember to comment out the
 # following TRANSLATIONS line. And also do not forget to
 # modify the localized app name in the the .desktop file.
-TRANSLATIONS += translations/harbour-sshazam-it.ts \
-    translations/harbour-sshazam-ru.ts
+TRANSLATIONS += translations/harbour-sshazam-ru.ts \
+    translations/harbour-sshazam-ab.ts \
+    translations/harbour-sshazam-be.ts \
+    translations/harbour-sshazam-cs.ts \
+    translations/harbour-sshazam-de.ts \
+    translations/harbour-sshazam-el.ts \
+    translations/harbour-sshazam-et.ts \
+    translations/harbour-sshazam-fi.ts \
+    translations/harbour-sshazam-fr.ts \
+    translations/harbour-sshazam-hu.ts \
+    translations/harbour-sshazam-id.ts \
+    translations/harbour-sshazam-es.ts \
+    translations/harbour-sshazam-it.ts \
+    translations/harbour-sshazam-lt.ts \
+    translations/harbour-sshazam-nb_NO.ts \
+    translations/harbour-sshazam-nn.ts \
+    translations/harbour-sshazam-pl.ts \
+    translations/harbour-sshazam-pt.ts \
+    translations/harbour-sshazam-pt_BR.ts \
+    translations/harbour-sshazam-ro.ts \
+    translations/harbour-sshazam-sk.ts \
+    translations/harbour-sshazam-sr.ts \
+    translations/harbour-sshazam-sv.ts \
+    translations/harbour-sshazam-ta.ts \
+    translations/harbour-sshazam-tr.ts \
+    translations/harbour-sshazam-uk.ts \
+    translations/harbour-sshazam-zh_CN.ts \
+    translations/harbour-sshazam-nl.ts \
+    translations/harbour-sshazam-nl_BE.ts
 
 images.files = images
 images.path = /usr/share/$${TARGET}
