@@ -37,6 +37,22 @@ AboutPageBase {
                 ContributionGroup {
                     title: qsTr("Italian")
                     entries: ["247"]
+                },
+                ContributionGroup {
+                    title: qsTr("Swedish")
+                    entries: ["eson57"]
+                },
+                ContributionGroup {
+                    title: qsTr("Spanish")
+                    entries: ["carlosgonz0"]
+                },
+                ContributionGroup {
+                    title: qsTr("Dutch")
+                    entries: ["MPolleke"]
+                },
+                ContributionGroup {
+                    title: qsTr("Belgium")
+                    entries: ["MPolleke"]
                 }
             ]
         }
