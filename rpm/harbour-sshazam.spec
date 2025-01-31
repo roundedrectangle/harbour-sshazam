@@ -5,7 +5,7 @@
 Name:       harbour-sshazam
 
 Summary:    Shazam for SailfishOS
-Version:    1.0.3
+Version:    1.0.4
 Release:    1
 License:    LICENSE
 URL:        http://example.org/
