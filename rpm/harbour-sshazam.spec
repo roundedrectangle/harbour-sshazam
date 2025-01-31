@@ -17,18 +17,14 @@ BuildRequires:  pkgconfig(Qt5Qml)
 BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  desktop-file-utils
 
+Requires: ffmpeg
+
 %if %{package_library} == "yes"
 Requires: pyotherside-qml-plugin-python3-qt5
 BuildRequires:  python3-base
 BuildRequires:  python3-devel
 BuildRequires: python3-pip
 BuildRequires: git
-%endif
-
-%define __provides_exclude_from ^%{_datadir}/.*$
-
-%if %{package_library} == "yes" && %{use_rust} == "yes"
-Requires: ffmpeg
 %endif
 
 %if %{package_library} == "no"
