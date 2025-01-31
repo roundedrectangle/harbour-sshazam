@@ -7,9 +7,10 @@ Name=SShazam
 Categories=AudioVideo;Audio
 
 [X-Sailjail]
-OrganizationName=io.github.roundedrectangle
-ApplicationName=harbour-sshazam
-Permissions=Audio;Internet;Compatibility
+Sandboxing=Disabled
+#OrganizationName=io.github.roundedrectangle
+#ApplicationName=harbour-sshazam
+#Permissions=Audio;Internet;Compatibility
 
 [X-HarbourBackup]
 BackupPathList=.local/share/io.github.roundedrectangle/harbour-sshazam
