@@ -17,7 +17,7 @@
     </message>
     <message>
         <source>Swedish</source>
-        <translation type="unfinished"></translation>
+        <translation>Svensk</translation>
     </message>
     <message>
         <source>Spanish</source>
