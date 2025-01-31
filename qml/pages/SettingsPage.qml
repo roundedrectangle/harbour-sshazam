@@ -19,19 +19,19 @@ Page {
             SectionHeader { text: qsTr("Recognition") }
             TextField {
                 id: timeField
-                label: qsTr("Recognition time")
+                label: qsTr("Recognition period, in seconds")
                 inputMethodHints: Qt.ImhDigitsOnly // ImhDigitsOnly and ImhFormattedNumbersOnly seem to have no difference
                 validator: RegExpValidator { regExp: /^\d+$/ }
                 text: appSettings.recognitionTime
                 onTextChanged: if (validator.regExp.test(text)) appSettings.recognitionTime = Number(text)
 
                 rightItem: IconButton {
-                    onClicked: timeField.text = "10"
+                    onClicked: timeField.text = "8"
 
                     width: icon.width
                     height: icon.height
                     icon.source: "image://theme/icon-splus-remove"
-                    opacity: timeField.text == "10" ? 0 : 1
+                    opacity: timeField.text == "8" ? 0 : 1
                     Behavior on opacity { FadeAnimator{} }
                 }
             }

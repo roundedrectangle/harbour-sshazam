@@ -267,10 +267,6 @@
         <translation>Impostazioni</translation>
     </message>
     <message>
-        <source>Recognition time</source>
-        <translation>Durata riconoscimento</translation>
-    </message>
-    <message>
         <source>Clear history</source>
         <translation>Elimina cronologia</translation>
     </message>
@@ -414,6 +410,10 @@
     <message>
         <source>History rebuilt</source>
         <translation>Cronologia ricostruita</translation>
+    </message>
+    <message>
+        <source>Recognition period, in seconds</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

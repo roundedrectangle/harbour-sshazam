@@ -267,10 +267,6 @@
         <translation>Inställningar</translation>
     </message>
     <message>
-        <source>Recognition time</source>
-        <translation>Igenkänningsstid</translation>
-    </message>
-    <message>
         <source>Clear history</source>
         <translation>Rensa historik</translation>
     </message>
@@ -414,6 +410,10 @@
     <message>
         <source>History rebuilt</source>
         <translation>Historik återskapad</translation>
+    </message>
+    <message>
+        <source>Recognition period, in seconds</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

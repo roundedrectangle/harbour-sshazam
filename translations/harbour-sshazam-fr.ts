@@ -265,10 +265,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Recognition time</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Clear history</source>
         <translation type="unfinished"></translation>
     </message>
@@ -411,6 +407,10 @@
     </message>
     <message>
         <source>History rebuilt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Recognition period, in seconds</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

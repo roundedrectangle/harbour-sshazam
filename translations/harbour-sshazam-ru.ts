@@ -265,10 +265,6 @@
         <translation>Настройки</translation>
     </message>
     <message>
-        <source>Recognition time</source>
-        <translation>Время распознования</translation>
-    </message>
-    <message>
         <source>Clear history</source>
         <translation>Очистить историю</translation>
     </message>
@@ -412,6 +408,10 @@
     <message>
         <source>History rebuilt</source>
         <translation>История пересобрана</translation>
+    </message>
+    <message>
+        <source>Recognition period, in seconds</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

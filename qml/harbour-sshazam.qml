@@ -27,7 +27,7 @@ ApplicationWindow {
             id: appSettings
             path: 'settings'
 
-            property int recognitionTime: 10
+            property int recognitionTime: 8
             property int rate: 41000
             property string language: ""
             property bool infoInNotifications: true

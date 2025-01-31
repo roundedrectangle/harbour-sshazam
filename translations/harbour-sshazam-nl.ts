@@ -265,10 +265,6 @@
         <translation>Instellingen</translation>
     </message>
     <message>
-        <source>Recognition time</source>
-        <translation>Tijd voor herkennen</translation>
-    </message>
-    <message>
         <source>Clear history</source>
         <translation>Geschiedenis wissen</translation>
     </message>
@@ -412,6 +408,10 @@
     <message>
         <source>History rebuilt</source>
         <translation>De geschiedenis is opnieuw opgebouwd</translation>
+    </message>
+    <message>
+        <source>Recognition period, in seconds</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -265,10 +265,6 @@
         <translation>Ajustes</translation>
     </message>
     <message>
-        <source>Recognition time</source>
-        <translation>Tiempo de reconocimiento</translation>
-    </message>
-    <message>
         <source>Clear history</source>
         <translation>Limpiar historia</translation>
     </message>
@@ -412,6 +408,10 @@
     <message>
         <source>History rebuilt</source>
         <translation>Reconstruir historia</translation>
+    </message>
+    <message>
+        <source>Recognition period, in seconds</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
