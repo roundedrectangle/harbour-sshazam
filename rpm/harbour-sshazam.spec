@@ -16,6 +16,8 @@ BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
 BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  desktop-file-utils
+Requires: ffmpeg
+
 
 %if %{package_library} == "yes"
 Requires: pyotherside-qml-plugin-python3-qt5
@@ -23,9 +25,8 @@ BuildRequires:  python3-base
 BuildRequires:  python3-devel
 BuildRequires: python3-pip
 BuildRequires: git
+BuildRequires: pkgconfig
 %endif
-
-%define __provides_exclude_from ^%{_datadir}/.*$
 
 %if %{package_library} == "no"
 Requires:  python3-base
@@ -56,7 +57,8 @@ Uses Shazam's API to recognize music
 %if %{package_library} == "yes"
 
 %if %{use_custom_wheels} == "yes"
-python3 -m pip install https://github.com/roundedrectangle/shazam.py/releases/download/1/shazam.py-1.0.0-cp38-cp38-manylinux_2_28_armv7l.whl --upgrade --target=%_builddir/deps -v
+# python3 -m pip install https://github.com/roundedrectangle/shazam.py/releases/download/1/shazam.py-1.0.0-cp38-cp38-manylinux_2_28_armv7l.whl --upgrade --target=%_builddir/deps -v
+python3 -m pip install git+https://github.com/roundedrectangle/shazam.py --upgrade --target=%_builddir/deps -v
 python3 -m pip install git+https://github.com/roundedrectangle/ShazamIO --target=%_builddir/deps
 %else
 python3 -m pip install shazamio --target=%_builddir/deps -v
