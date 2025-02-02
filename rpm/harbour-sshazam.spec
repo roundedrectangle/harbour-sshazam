@@ -18,6 +18,7 @@ BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  desktop-file-utils
 
 Requires: ffmpeg
+Requires: ffmpeg-tools
 
 %if %{package_library} == "yes"
 Requires: pyotherside-qml-plugin-python3-qt5
