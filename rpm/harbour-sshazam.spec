@@ -1,11 +1,11 @@
-%define package_library "no"
-%define use_rust "no"
+%define package_library "yes"
+%define use_rust "yes"
 # See README
 
 Name:       harbour-sshazam
 
 Summary:    Shazam for SailfishOS
-Version:    1.0.5
+Version:    1.0.6
 Release:    1
 License:    LICENSE
 URL:        http://example.org/
