@@ -29,7 +29,7 @@
     </message>
     <message>
         <source>Belgium</source>
-        <translation type="unfinished"></translation>
+        <translation>Belgiska</translation>
     </message>
 </context>
 <context>
@@ -413,7 +413,7 @@
     </message>
     <message>
         <source>Recognition period, in seconds</source>
-        <translation type="unfinished"></translation>
+        <translation>Igenkänningsperiod, i sekunder</translation>
     </message>
 </context>
 <context>
